@@ -1,0 +1,8 @@
+{
+  "facebook": {
+    "token": "Add facebook token here"
+  },
+  "google": {
+    "token": "Add google token here"
+  }
+}
