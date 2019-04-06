@@ -4,13 +4,13 @@ require './auth/googleinit.php';
 
 if(isset($_SESSION['access_token'])){
     ?>
-    </br>
+    <br/>
     <a href="logout.php">Logout</a>
     <?php
 }
 else if(isset($_SESSION['accesstoken'])){
     ?>
-    </br>
+    <br/>
     <a href="logout.php">Logout</a>
     <?php
 }
