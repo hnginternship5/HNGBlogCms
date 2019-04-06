@@ -1,6 +1,8 @@
 {
   "facebook": {
-    "token": "Add facebook token here"
+    "app_id": "Add facebook app id",
+    "app_secret": "Add facebook secret key",
+    "default_graph_version": "Add facebook app version number"
   },
   "google": {
     "token": "Add google token here"
