@@ -1,30 +1,18 @@
 <?php
 require './auth/facebookinit.php';
 require './auth/googleinit.php';
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/home-page.css">
-    <link rel="shortcut icon" href="./favicon.ico" />
-    <title>Login/SignUp</title>
-</head>
-
-<?php
 if(isset($_SESSION['access_token'])){
     ?>
-    <br/>
+    </br>
     <a href="logout.php">Logout</a>
-<?php
-} else if (isset($_SESSION['accesstoken'])) {
+    <?php
+}
+else if(isset($_SESSION['accesstoken'])){
     ?>
-    <br/>
+    </br>
     <a href="logout.php">Logout</a>
-<?php
+    <?php
 }
 else{
 ?>
