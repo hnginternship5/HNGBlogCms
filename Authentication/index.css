@@ -78,3 +78,30 @@ button:hover {
 .policy a:visited {
 	color: #0769c3;
 }
+
+@media (max-width: 638px) {
+	.section {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		padding: 0;
+		border-radius: 0;
+	}
+
+	.logo {
+		margin: 30px auto;
+	}
+
+	.login_buttons {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.google_login,
+	.facebook_login {
+		margin: 0.5rem;
+		align-self: center;
+		width: 80%;
+	}
+}
