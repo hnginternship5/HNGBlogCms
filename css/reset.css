@@ -1,62 +1,183 @@
-/*=====================
-    Reset
-=====================*/
+/* ***********************************
+ *
+ *    Ire's CSS Reset & Base
+ *
+ * *********************************** */
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* Reset margin, padding, border
+ * *********************************** */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+em,
+small,
+strong,
+sub,
+sup,
+mark,
+del,
+ins,
+strike,
+abbr,
+dfn,
+blockquote,
+q,
+cite,
+code,
+pre,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+div,
+section,
+article,
+main,
+aside,
+nav,
+header,
+hgroup,
+footer,
+img,
+figure,
+figcaption,
+address,
+time,
+audio,
+video,
+canvas,
+iframe,
+details,
+summary,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+
+/* Typography
+ * *********************************** */
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	line-height: 1.4;
+}
+
+* {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+a,
+a:visited {
+	color: inherit;
+}
+
+/* Layout
+ * *********************************** */
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
 	display: block;
 }
-body {
-	line-height: 1;
+
+* {
+	box-sizing: border-box;
 }
-ol, ul {
-	list-style: none;
+
+*:before,
+*:after {
+	box-sizing: inherit;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
+
+/* Elements
+ * *********************************** */
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
-/*=================
-INIT
-==================*/
+ol,
+ul {
+	list-style: none;
+}
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+img,
+video {
+	max-width: 100%;
+}
+
+img {
+	border-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+	content: '';
+	content: none;
+}
+
+/* Attributes & states
+ * *********************************** */
+
+[hidden] {
+	display: none !important;
+}
+
+[disabled] {
+	cursor: not-allowed;
+}
+
+:focus:not(:focus-visible) {
+	outline: none;
+}
+
+/* Utility classes
+ * *********************************** */
+
+.sr-only {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	left: -9999px;
+	top: -9999px;
 }
