@@ -24,8 +24,7 @@ require './auth/googleinit.php';
                 <div>
                     
                     <ul class="menu-wrapper d-flex flex-column">
-                        <a href=""><li class="menu-item text-center">Login</li></a>
-                        <a href="#"><li class="menu-item text-center">Sign Up</li> </a>
+                        <a href="/Authentication/login.php"><li class="menu-item text-center">Login</li></a>
                         
 
                     </ul>
