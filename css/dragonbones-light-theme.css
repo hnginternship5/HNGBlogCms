@@ -189,6 +189,11 @@ Articles
     margin-top: 0;
 }
 
+.article-content > div:first-child h4 {
+    font-size: .5em;
+    color: #333;
+}
+
 .article-content > h2 {
     font-weight: bold;
 }
