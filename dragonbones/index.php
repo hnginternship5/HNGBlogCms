@@ -39,74 +39,18 @@
                 <div class="make-post-editor">
                     <h4>Share an update</h4>
                     <div></div>
-                    <textarea placeholder="WRITE SOMETHING ..."></textarea>
+                    <form method="POST" action="https://ziki.hng.tech/post.php">
+                    <textarea name="body" placeholder="WRITE SOMETHING ..."></textarea>
 
                     <button class="button-publish">Post</button>
+                    </form>
                 </div>
 
                 <div class="main-section-articles">
-                    <div>
-                        <div class="img-holder">
-                        </div>
-                        <div class="article-content">
-                            <div>
-                                <h2>CSS animation for Beginners</h2>
-                                <h4>10 hours ago</h4>
-                            </div>
-
-                            <h4>By Ogungiji Bolade</h4>
-                            <p>
-                                Learn the new tricks in using css to animate object in our web browser without using
-                                javascript. Selectors and Visual Rules. In this course, you will learn how to style
-                                individual and groups of elements using various visual CSS rules
-                            </p>
-                            <div>
-                                <h6>Microsoft group</h6>
-                                <button class="comment-button">comment</button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div>
-                        <div class="img-holder"></div>
-                        <div class="article-content">
-                            <div>
-                                <h2>CSS animation for Beginners</h2>
-                                <h4>10 hours ago</h4>
-                            </div>
-                            <h4>By Ogungiji Bolade</h4>
-                            <p>
-                                Learn the new tricks in using css to animate object in our web browser without using
-                                javascript. Selectors and Visual Rules. In this course, you will learn how to style
-                                individual and groups of elements using various visual CSS rules
-                            </p>
-                            <div>
-                                <h6>Microsoft group</h6>
-                                <button class="comment-button">comment</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="img-holder"></div>
-                        <div class="article-content">
-                            <div>
-                                <h2>CSS animation for Beginners</h2>
-                                <h4>10 hours ago</h4>
-                            </div>
-                            <h4>By Ogungiji Bolade</h4>
-                            <p>
-                                Learn the new tricks in using css to animate object in our web browser without using
-                                javascript. Selectors and Visual Rules. In this course, you will learn how to style
-                                individual and groups of elements using various visual CSS rules
-                            </p>
-                            <div>
-                                <h6>Microsoft group</h6>
-                                <button class="comment-button">comment</button>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </section>
         </div>
     </body>
+    <script src="https://ziki.hng.tech/post.php/dragonbones/app.js"></script>
 </html>
