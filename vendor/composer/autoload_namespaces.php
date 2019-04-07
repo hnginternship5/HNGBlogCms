@@ -7,4 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),
-);
+    
+        'Google_Service_' => array($vendorDir . '/google/apiclient-services/src'),
+        'Google_' => array($vendorDir . '/google/apiclient/src'),
+    );

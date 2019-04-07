@@ -37,7 +37,7 @@ body {
     }
 }
 
-/* To get the second theme;
+/* To get the second theme; 
 this is the only styling it needs */
 .fega-main-container.dark-theme {
     background: #07223E;
@@ -63,7 +63,7 @@ this is the only styling it needs */
 
 
 .auth-btns {
-    margin-top: 2.5rem;
+    margin-top: 2.5rem; 
     position: relative;
     z-index: 1;
 }
@@ -120,12 +120,4 @@ p.demarcation-or {
     .demarcation-or::before, .demarcation-or::after {
         width: 100px;
     }
-}
-a.f {
-
-color: white;
-}
-a {
-  text-decoration: none;
-text-decoration-color: white;
 }

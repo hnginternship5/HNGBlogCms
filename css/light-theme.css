@@ -23,7 +23,7 @@ a{
 
 .header-img{
 	width: 100%;
-	min-height: 340px;
+	height: 340px;
 }
 
 .profile-section{
@@ -179,7 +179,7 @@ color: #3667E7;
 	border-radius: 50%;
 	max-width: 50px;
 	height: 40px;
-	margin-right:  10px ;
+	margin-right:  10px ; 
 	border: 0.5px solid rgba(0, 0, 0, 0.5);
 }
 .blog-item-content{
@@ -333,5 +333,12 @@ color: #333333;
 
 .post-filter-title{
 	font-weight: normal;
+}
+
+@media (max-width: 1439px) {
+
+	.header-img{
+		height: 240px;
+	}
 }
 
