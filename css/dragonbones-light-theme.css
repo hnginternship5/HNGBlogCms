@@ -1,0 +1,269 @@
+
+/*====================
+container 
+=====================*/
+.container {
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+/*===================
+    aside
+====================*/
+.side-bar {
+    width: 20em;
+    padding-left: 2em;
+    background: #FFFEFE;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: black;
+}
+
+.side-bar-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7em;
+    margin-bottom: 3em;
+}
+
+.side-bar-info > * {
+    padding-bottom: .5em;
+}
+
+.side-bar .user-name {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5em;
+    line-height: normal;
+}
+
+.side-bar .user-skill {
+    font-size: .9em;
+}
+
+.side-bar .view-profile {
+    font-size: .7em;
+}
+
+.side-bar-menu {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.side-bar-menu li{
+    margin: 0 25%;
+    padding-bottom: 2em;
+}
+
+.social-media > ul {
+    display: flex;
+}
+
+.social-media li {
+    padding: 0 .5em;
+}
+
+/*====================
+image
+====================*/
+.img-holder {
+    width: 200px;
+    height: 200px;
+    background-image: url('https://images.unsplash.com/photo-1516790987203-731c5d30f489?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80-');
+    background-size: cover;
+    display: block;
+    border-radius: 100px;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.main-section-articles .img-holder {
+    width: 120px;
+    height: 60px;
+}
+
+
+
+/*====================
+Main section 
+=====================*/
+.main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 2em;
+}
+
+.main-section > div {
+    width: 50em;
+    border: 1px solid #ccc;
+    margin: 0 4em;
+    margin-bottom: 2em;
+}
+
+/*=====================
+Post block
+=====================*/
+.make-post-editor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 15em;
+    padding: 1em .5em;
+    background: #FFFEFE;
+    opacity: 0.5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1.2em;
+}
+
+.make-post-editor h4 {
+    padding-left: 2em;
+}
+
+.make-post-editor h4 + div {
+    border: .6px solid #AAAAAA;
+    margin-bottom: 2em;
+}
+
+.make-post-editor h4 + div::before {
+    content: "";
+    display: block;
+    border: .5px solid #1275BD;
+    width: 4em;
+    margin-left: 2em;
+}
+.make-post-editor textarea {
+    border: none;
+    resize: none;
+    overflow: hidden;
+    outline: none;
+    height: 15em;
+    padding-left: 2em;
+}
+
+/*=====================
+Articles 
+======================*/
+
+.main-section > .main-section-articles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: none;
+    background: #FFFEFE;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1.2em;
+}
+
+.main-section-articles > div {
+    display: flex;
+    justify-content: space-around;
+    padding: .2em 3em;
+    margin-bottom: 2em;
+}
+
+.main-section-articles .article-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.main-section-articles .img-holder {
+    margin-right: 1em;
+}
+
+.article-content > div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.article-content > div:first-child{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+.article-content > div:first-child h4 {
+    font-size: .5em;
+    color: #333;
+}
+
+.article-content > h2 {
+    font-weight: bold;
+}
+
+.article-content h6 {
+    font-size: .7em;
+}
+
+.article-content > h4 {
+    margin-bottom: 1em;
+    color: #AAAAAA;
+}
+
+/*=======================
+    Buttons
+========================*/
+
+.make-post-editor .button-publish {
+    width: 8em;
+    height: 3em;
+    padding: .5em 1em;
+    background: #487AC4;
+    border: none;
+    border-radius: .3em;
+    color: white;
+    align-self: flex-end;
+    box-shadow: none;
+}
+
+.button-publish:focus {
+    outline: none;
+}
+
+.comment-button {
+    align-self: flex-end;
+    padding: 0;
+    border: none;
+    background: none;
+    color: #1275BD;
+}
+
+.button-setting {
+    background: transparent;
+    padding: .5em .3em;
+    border: .1em solid #39D39F;
+    border-radius: .5em;
+    color: #39D39F;
+    outline: none;
+}
+
+/*=======================
+ICONS
+=======================*/
+.fa-image {
+    color: #39D39F;
+}
+
+.fas {
+    font-size: 2em;
+    margin-right: .5em;
+}
+
+.fa-bars, .fa-bars+ul > li:first-child {
+    color: #E84933
+}
+
+.fa-user {
+    color: #8BE8C4;
+}
+
+.fa-envelope {
+    color: #47BAFF;
+}
