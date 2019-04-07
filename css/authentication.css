@@ -54,13 +54,16 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	text-decoration: none;
 }
 
-button > img {
+.facebook_login > img,
+.google_login > img {
 	margin-right: 10px;
 }
 
-button:hover {
+.facebook_login:hover,
+.google_login:hover {
 	border: 2px solid #0769c3;
 }
 
