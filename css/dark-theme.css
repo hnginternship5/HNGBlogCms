@@ -1,0 +1,313 @@
+/* importing reset to the css file */
+@import 'reset.css';
+
+body {
+	display: flex;
+	font-family: 'Lato';
+}
+.sidebar {
+	height: 100vh;
+	overflow-y: auto;
+	flex: 0 0 20%;
+	background-color: #000000;
+	color: white;
+	display: flex;
+	flex-direction: column;
+}
+.sidebar::-webkit-scrollbar {
+	width: 10px;
+}
+.sidebar_picture_box {
+	text-align: center;
+	margin: 2rem 0;
+	border-bottom: 1px solid white;
+}
+.sidebar_image {
+	width: 100px;
+	margin: 0 auto;
+}
+.sidebar_name {
+	font-weight: bold;
+	font-size: 18px;
+	color: #ffffff;
+}
+.sidebar_work {
+	font-size: 14px;
+	color: #ffffff;
+}
+.sidebar_profile_social {
+	color: #ffffff;
+	margin-bottom: 2rem;
+}
+
+.sidebar_profile_social > a,
+.profile_social > a {
+	margin: 0 0.5rem;
+}
+.nav_list {
+	margin-left: 2rem;
+}
+
+.nav_list > ul {
+	margin: 3rem 0;
+}
+
+.nav_list > ul img {
+	margin-right: 10px;
+}
+
+li > ul {
+	margin-left: 40px;
+}
+.nav_list a {
+	font-size: 14px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.nav_list a:hover {
+	color: #39d39f;
+}
+.stories_list {
+}
+.about_list {
+}
+.contact_list {
+}
+
+.main {
+	padding: 3rem;
+	height: 100vh;
+	overflow-y: auto;
+}
+
+.profile_box {
+	border: 1px solid #aaaaaa;
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: space-between;
+	padding: 3rem;
+	margin: 6rem 0;
+}
+.profile_box > div {
+	flex: 1;
+	padding: 0 3em; /* add some padding ?*/
+}
+
+.profile_picture_name {
+	text-align: center;
+	flex: 0;
+}
+.picture_image {
+	text-align: center;
+	/* height: 170px;
+	width: 170px; */
+}
+.profile_name {
+	font-weight: bold;
+	font-size: 20px;
+	letter-spacing: 0.03em;
+	color: #333333;
+	margin: 1rem 0;
+}
+.profile_social {
+}
+.profile_bio {
+	flex: 0;
+	/* width: 30%; */
+	border-left: 1px dashed #c4c4c4;
+	border-right: 1px dashed #c4c4c4;
+	/* padding: 3rem; */
+}
+.profile_bio_header,
+.profile_contact_header {
+	font-weight: bold;
+	font-size: 14px;
+	line-height: normal;
+	color: #034d79;
+	padding: 2rem 0;
+}
+.profile_contact {
+	/* border-left: 1px dashed #c4c4c4; */
+	padding: 3rem;
+	flex: 0;
+	border: none; /* remove border ? */
+}
+
+.profile_contact_mail {
+}
+.profile_contact_number {
+}
+.profile_setting {
+	position: absolute;
+	right: 50px;
+	top: 20px;
+	color: #39d39f;
+	background-color: #ffffff;
+	border-radius: 0.5rem;
+	border: 1px solid #39d39f;
+	width: 100px;
+	height: 34px;
+	outline: none;
+}
+
+.profile_setting:hover {
+	color: #ffffff;
+	background-color: #39d39f;
+	border-radius: 0.5rem;
+	border: 1px solid #39d39f;
+}
+
+.blog_creator {
+	display: flex;
+	/* width: 100%; */
+	border: 1px solid #aaaaaa;
+	border-radius: 0.5rem;
+	justify-content: space-evenly;
+}
+
+.profile_picture {
+	/* width: 20%; */
+	display: flex;
+	justify-content: center;
+}
+
+.profile_picture > img {
+	width: 70px;
+	height: 70px;
+	margin-top: 3rem;
+}
+
+.blog_form {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	margin: 3rem 0;
+}
+
+.blog_title {
+	border-bottom: none;
+	border-width: 1px;
+	resize: none;
+	white-space: nowrap;
+	overflow: hidden;
+	border-radius: 5px 5px 0 0;
+	padding: 0.5rem 2rem;
+	font-size: 2.4rem;
+
+	/* border-style: solid; */
+}
+
+.blog_content {
+	border-top: none;
+	border-radius: 0 0 5px 5px;
+	padding: 0.5rem 2rem;
+	font-size: 1.8rem;
+}
+
+.blog_title:focus,
+.blog_content:focus {
+	border-color: ash;
+	-webkit-box-shadow: none;
+	outline: none;
+}
+
+input[type='file'] {
+	display: none;
+}
+
+.blog_submit {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2rem 0;
+}
+.file-upload {
+	cursor: pointer;
+	display: flex;
+}
+.upload_text {
+	margin-left: 0.2rem;
+}
+
+.submit_blog_post {
+	color: #ffffff;
+	background-color: #39d39f;
+	border-radius: 0.5rem;
+	border: none;
+	width: 16rem;
+	height: 35px;
+	outline: none;
+}
+
+.submit_blog_post:hover {
+	color: #39d39f;
+	background-color: #ffffff;
+	border: 1px solid #39d39f;
+}
+
+.submit_blog_post:active,
+.profile_setting:active {
+	transform: translateY(2px);
+	outline: none;
+}
+
+.latest_stories {
+	font-weight: 500;
+	font-size: 20px;
+	letter-spacing: 0.03em;
+	color: #212121;
+}
+
+.headline {
+	margin: 6rem 0 3rem 0;
+}
+
+.blog_post_container {
+	display: flex;
+	justify-content: space-evenly;
+	border: 1px solid #aaaaaa;
+	border-radius: 5px;
+	padding: 2rem;
+	margin: 2rem auto;
+}
+.blog_picture {
+	margin-right: 2rem;
+}
+.blog_post_article {
+	display: flex;
+	flex-direction: column;
+}
+
+.blog_post_title {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	color: #000000;
+}
+.blog_author {
+	font-size: 13px;
+	color: #aaaaaa;
+}
+.blog_post {
+	font-size: 13px;
+	color: #000000;
+}
+.blog_comment {
+	font-size: 13px;
+	color: #aaaaaa;
+	align-self: flex-end;
+	cursor: pointer;
+}
+@media (max-width: 700px) {
+	.blog_creator {
+		border-radius: 0.5rem;
+		margin: 0;
+		flex-direction: column;
+	}
+	.blog_form {
+		margin: 0rem auto;
+	}
+}
+

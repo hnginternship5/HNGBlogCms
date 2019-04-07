@@ -1,10 +1,8 @@
-<!-- mylo carson 2019-->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<?php
+require './auth/facebookinit.php';
+require './auth/googleinit.php';
+?>
     <title>Blog Task</title>
     <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -12,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="css/light-theme.css">
 </head>
 <body>
-    <div class="container-fluid">
 
 
         <div class="row">
