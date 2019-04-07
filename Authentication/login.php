@@ -1,56 +1,51 @@
 <?php
 require './auth/facebookinit.php';
 require './auth/googleinit.php';
+?>
 
-if (isset($_SESSION['access_token'])) {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/home-page.css">
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <title>Login/SignUp</title>
+</head>
+
+<?php
+if(isset($_SESSION['access_token'])){
     ?>
-    </br>
+    <br/>
     <a href="logout.php">Logout</a>
 <?php
 } else if (isset($_SESSION['accesstoken'])) {
     ?>
-    </br>
+    <br/>
     <a href="logout.php">Logout</a>
 <?php
-} else {
-    ?>
-
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="../css/authentication.css">
-        <title>DragonBones</title>
-        <link rel="shortcut icon" href="./favicon.ico" />
-    </head>
-
+}
+else{
+?>
     <body>
-        <main class="main">
-            <section class="section">
-                <img src="./logo.png" alt="Dragon bones Logo" class="logo">
-                <p class="login_text">Login to DB</p>
-                <p class="login_text_instruction">Click on the following to proceed</p>
-                <div class="login_buttons">
-                    <a class="facebook_login" href="<?php echo $login_url; ?>"> <img src="./fbook.svg" alt=" logo">
-                        Facebook
-                    </a>
-                    <a class="google_login" href="<?php echo $glogin_url; ?>">
-                        <img src="./Google.svg" alt="Google logo">
-                        Google
-                    </a>
-                </div>
-                <p class="privacy_policy">By logging in you agree to <span class="policy"> <a href="#">Terms & Conditions</a></span></br> and <span class="policy"><a href="#">Privacy Policy</a></span> of DB</p>
-
-            </section>
-        </main>
+        <div class="box">
+            <img class="home-logo" src="/img/DB.png" alt="FB Image">
+            <h3>Login to DB</h3>
+            <p>Click on the following to proceed</p>
+            <div class="social-links">
+                <a href="<?php echo $login_url;?>">
+                    <img class="social-icon" src="/img/fb.png" alt="">Login with facebook
+                </a>
+                <a href="<?php echo $glogin_url;?>">
+                    <img class="social-icon" src="/img/google.png" alt="">Login with Google
+                </a>
+            </div>
+            <p class="conditions">By logging in you agree to <a href="#">Terms &amp; Conditions</a><br>and <a href="#">Privacy Policy</a> of DB.</p>
+        </div>
+    
     </body>
-
-    </html>
-
-
+</html>
 <?php
 }
 ?>
