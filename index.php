@@ -1,6 +1,6 @@
 <?php
 include 'config.php';
-if (isset($_SESSION['access_token'])) {
+if (!isset($_SESSION['access_token'])) {
   echo 'Signed-in';
   echo "<br>";
   echo "<br>";
@@ -14,6 +14,6 @@ if (isset($_SESSION['access_token'])) {
 }else {
 
 //  print_r ($_SESSION);
-  include 'landing-page.php';
+  include 'login.php';
 }
 ?>
