@@ -12,7 +12,6 @@ if (!isset($_SESSION['loggedUserId'])) {
 $data = file_get_contents("posts.json");
 $posts = json_decode($data, true);
 $getAllPosts = Post::fetchAllPosts($posts);
-var_dump($getAllPosts);
 $posts = array();
 if (!empty($getAllPosts)) {
     foreach ($getAllPosts as $blog) {

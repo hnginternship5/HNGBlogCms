@@ -26,7 +26,7 @@
                     <img class="profile-img" src="img/profile.png">
                 </div>
                 <div class="profile-main">
-                    <h1 class="profile-name">Paul Jephtah</h1>
+                    <h1 class="profile-name">Paulinus Jephtah</h1>
                     <p class="profile-technologies"><span>UX Designer</span> | <span>Product Designer</span> | <span>Frontend Newbie </span></p>
                     <p class="profile-motto">I’m kinda weird in a very good way.... I design for survival</p>
                 </div>

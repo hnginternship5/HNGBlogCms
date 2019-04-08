@@ -1,32 +1,34 @@
+<?php include('common.php') ?>
+
 <!DOCTYPE html>
-	<html>
+    <html>
         <?php include'includes/head.php'; ?>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-	<body>
-		<div class="parent">
-			<div class="container padd">
-				<div class="row">
-					<div class="col-sm-3">
-						<?php include'includes/nav.php'; ?>
-					</div>
+    <body>
+        <div class="parent">
+            <div class="container padd">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <?php include'includes/nav.php'; ?>
+                    </div>
 
-					<div class="col-sm-9">
-						<div class="row">
-							<div class="col-sm-6">
-								<h4 class="text-left my-journal">MY JOURNAL</h4>
-							</div>
-							<div class="col-sm-6">
-								<h4 class="text-right"><a href="/" class="was-cta">Write a story</a></h4>
-							</div>
-						</div>
-						<br><br>
-						<div>
-							<div class="draft-heading">
-								<!-- replace 10 in sub tag with a php variable for number of published works -->
-								<span class="published-link"><a href="/">Published</a><sub class="no_of_pub font-italic">10</sub></span> <a href="/" class="drafts-link">Drafts</a> <hr>
-							</div>
+                    <div class="col-sm-9">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h4 class="text-left my-journal">MY JOURNAL</h4>
+                            </div>
+                            <div class="col-sm-6">
+                                <h4 class="text-right"><a href="/" class="was-cta">Write a story</a></h4>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div>
+                            <div class="draft-heading">
+                                <!-- replace 10 in sub tag with a php variable for number of published works -->
+                                <span class="published-link"><a href="/">Published</a><sub class="no_of_pub font-italic">10</sub></span> <a href="/" class="drafts-link">Drafts</a> <hr>
+                            </div>
 
                             <div class="row">
                                 <div class="col-sm-12">
@@ -110,11 +112,11 @@
 
 
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
-	</html>	
-	
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html> 
+    

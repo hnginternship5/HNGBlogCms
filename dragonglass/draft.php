@@ -1,3 +1,5 @@
+<?php include('common.php') ?>
+
 <!DOCTYPE html>
 	<html>
 		<?php include 'includes/head.php'; ?>

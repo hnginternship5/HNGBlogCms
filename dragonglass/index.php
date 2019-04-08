@@ -1,3 +1,5 @@
+<?php include('common.php') ?>
+
 <!DOCTYPE html>
 <html>
 	<?php include 'includes/head.php'; ?>
@@ -25,11 +27,9 @@
 									<button class="tool fa fa-scribd" onclick="document.execCommand('selectAll',false,'')"></button>
 									<button class="tool fa fa-align-center" onclick="document.execCommand('justifyCenter',false,'')"></button>
 									<button class="tool fa fa-align-left" onclick="document.execCommand('justifyLeft',false,'')"></button>
-									<button class="tool fa fa-align-right" onclick="document.execCommand('justifyRight',false,'')"></button>			
+									<button class="tool fa fa-align-right" onclick="document.execCommand('justifyRight',false,'')"></button>
 								</div>
-								<div class="editor" contenteditable>
-									<p>Please enter a post</p>
-								</div>
+								<div class="editor" contentEditable=true data-text="Please enter a post"></div>
 							</div>
 						</div>
 					</div>
@@ -134,43 +134,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- Modal -->
-<div class="modal fade" id="profile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <!-- <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div> -->
-      <div class="modal-body">
-		<div class="avatar text-center">
-			<img src="https://res.cloudinary.com/djxdnzlej/image/upload/v1554376001/pp.jpg" class="img-circle"/>
-		</div>
-		<div class="profile-form">
-			<form role="form" class="form-horizontal">
-				<div class="form-group col-sm-12">
-					<label>Name</label>
-					<input class="form-control" type="text" name="" value="Toni Aturanse" />
-				</div>
-				<div class="form-group col-sm-12">
-					<label>Bio</label>
-					<textarea class="form-control"  name=""> Software Engineer at AWS, design enthusiast and music lover</textarea>
-				</div>
-				<div class="form-group col-sm-12">
-					<label>Website</label>
-					<input class="form-control" type="text" name="" value="www.hng.com/toni">
-				</div>
-			</form>
-		</div>
-      </div>
-	  <div class="clearfix"></div>
-      <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
-        <button type="button" class="btn btn-default center-block">Save</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 	<script src="app.js"></script>
 </body>
 </html>

@@ -1,1 +1,1 @@
-<?php header('refresh:0;url=../dragonglass/') ?>
+<?php header('refresh:0;url=../light-timeline.php') ?>
