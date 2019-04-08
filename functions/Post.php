@@ -88,8 +88,8 @@ class Post {
         if ($this->id == -1) {
 
             //Saving new post 
-            $filename = md5($this->userId.$this->storyTitle).date("Y-m-d h:i:sa");
-            $postfile = fopen(SITE_ROOT."/markdowns/me.md", "w") or die("failed while creating file");
+            $filename = md5($this->userId.$this->storyTitle.date("Y-m-d h:i:sa"));
+            $postfile = fopen(SITE_ROOT."/markdowns/{$filename}", "w") or die("failed while creating file");
             $result = fwrite($postfile, $this->storyTitle.$this->storyBody);
             fclose($postfile);
             if ($result == true) {
