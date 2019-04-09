@@ -55,8 +55,8 @@ button {
 }
 
 .logo {
-    width: 1.5em;
-    height: 1.5em;
+	width: 1.5em;
+	height: 1.5em;
 }
 
 /* ==========================
@@ -222,7 +222,7 @@ this is the only styling it needs */
 	position: relative;
 	z-index: 1;
 }
-.auth-btns button {
+.auth-btns a {
 	transition: 0.3s;
 	border: none;
 	outline: none;
@@ -235,20 +235,20 @@ this is the only styling it needs */
 	align-items: center;
 	justify-content: center;
 }
-.auth-btns button svg {
+.auth-btns a svg {
 	margin-right: 0.25rem;
 }
-.auth-btns button:hover {
+.auth-btns a:hover {
 	transition: 0.3s;
 	opacity: 0.7;
 	cursor: pointer;
 }
-.auth-btns button.auth-google-btn {
+.auth-btns .auth-google-btn {
 	background: #ffffff;
 	color: #656565;
 	border: 1px solid #656565;
 }
-.auth-btns button.auth-facebook-btn {
+.auth-btns .auth-facebook-btn {
 	background: #385c8e;
 	color: #ffffff;
 }
