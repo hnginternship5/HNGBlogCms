@@ -50,7 +50,7 @@ button {
     /* padding-left: 160px; */
 }
 
-.motuns-side-bar p {
+.motuns-side-bar a {
     font-size: 24px;
 }
 
@@ -88,6 +88,7 @@ input {
     padding: 10px 10px;
     margin: 1rem 0 35px 0;
     width: 100%;
+    outline: none;
 }
 
 .d-flx {
@@ -121,8 +122,10 @@ input {
     text-transform: uppercase;
     width: 100px;
     height: 45px;
-    margin: 0 auto;
-    border: none
+    text-align: center;
+    outline: none;
+    background-color: #3667E7;
+    color: #ffffff;
 }
 
 .capitalize {
@@ -154,17 +157,68 @@ input {
     color: #000000;
     border: 1px solid #000000;
     margin-top: 1rem;
+    padding: .5rem 1rem;
+    background-image:       url("/uploads/drop.svg");
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+    outline: none;
 }
 
 .togg {
     margin-top: 2rem;
 }
 
-.toggle {
-    background-color: #E0E0E0;
-    display: inline-flex;
+.switch {
+    position: relative;
+    display: inline-block;
     width: 40px;
-    border-radius: 50px;
+    height: 20px;
+  }
+  
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #E0E0E0;;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 3px;
+    background-color: #000000;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+    -moz-transform: translateX(16px);
+    -o-transform: translateX(16px);
 }
 
 .no-justify {
@@ -193,16 +247,16 @@ input {
     .motuns-side-bar h3 {
         font-size: 25px;
         color: #3667E7;
-        padding-top: 20%;
+        padding-top: 15%;
         padding-left: 47%;
+        margin-bottom: 3rem;
     }
 
-    .motuns-side-bar p {
+    .motuns-side-bar a {
         font-size: 24px;
-        padding-left: 47%;
         margin-top: 2rem;
         background-color: #ffffff;
-        padding: .5rem 0 .5rem 47%
+        padding: .5rem 50% .5rem 47%
     }
     .container {
         width: 65%;
