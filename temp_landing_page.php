@@ -55,13 +55,13 @@ print_r($_SESSION);
         ?>
             <div id="information-container">
                 <div class="information">
-                    <label>Name</label><span><?= $user_info['name'] ?></span>
+                    <label>Name</label><span><?= $user_info['name'] || $_SESSION['name'] ?></span>
                 </div>
                 <div class="information">
-                    <label>Email</label><span><?= $user_info['email'] ?></span>
+                    <label>Email</label><span><?= $user_info['email'] || $_SESSION['email'] ?></span>
                 </div>
                 <div class="information">
-                    <label>Picture</label><img src="<?= $user_info['picture'] ?>" />
+                    <label>Picture</label><img src="<?= $user_info['picture']  || " " ?>" />
                 </div>
             </div>
         <?php
