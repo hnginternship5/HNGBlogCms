@@ -1,5 +1,9 @@
 <?php
 require_once './authentication/auth/googleinit.php';
+if (!session_id()) {
+  session_start();
+}
+
 $fb = new Facebook\Facebook([
 
   'app_id' => '325441314824736',
@@ -10,7 +14,7 @@ $fb = new Facebook\Facebook([
 $helper = $fb->getRedirectLoginHelper();
 
 $permissions = ['email']; // Optional permissions
-$loginUrl = $helper->getLoginUrl('http://localhost:8000/fb-callback.php', $permissions);
+$fb_loginUrl = $helper->getLoginUrl('http://localhost:8000/fb-callback.php', $permissions);
 
 ?>
 <!DOCTYPE html>
@@ -59,7 +63,7 @@ $loginUrl = $helper->getLoginUrl('http://localhost:8000/fb-callback.php', $permi
           <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.191598 6.3912H1.49358V11.8065C1.49358 11.9134 1.57932 12 1.68516 12H3.89272C3.99855 12 4.0843 11.9134 4.0843 11.8065V6.41672H5.58105C5.67837 6.41672 5.76026 6.34294 5.77138 6.24527L5.9987 4.25166C6.00494 4.19681 5.98775 4.14188 5.95142 4.10072C5.91507 4.05954 5.86303 4.03596 5.80842 4.03596H4.08439V2.78625C4.08439 2.40954 4.28515 2.2185 4.6812 2.2185C4.73764 2.2185 5.80842 2.2185 5.80842 2.2185C5.91426 2.2185 6 2.13183 6 2.02495V0.194977C6 0.0880547 5.91426 0.00142969 5.80842 0.00142969H4.25492C4.24397 0.000890625 4.21964 0 4.18377 0C3.91423 0 2.9773 0.0534609 2.23719 0.741328C1.41716 1.50361 1.53116 2.41629 1.5584 2.57454V4.03591H0.191575C0.0857425 4.03591 0 4.12254 0 4.22946V6.19763C2.31987e-05 6.30452 0.0857656 6.3912 0.191598 6.3912Z" fill="white" />
           </svg>
-          <span><a href="<?php echo $loginUrl ?>">Facebook</a></span>
+          <span><a href="<?php echo $fb_loginUrl ?>">Facebook</a></span>
         </button>
       </div>
     </div>
