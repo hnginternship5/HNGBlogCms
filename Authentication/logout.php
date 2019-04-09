@@ -1,8 +1,8 @@
 <?php
-require './googleinit.php';
+//require './googleinit.php';
 
 session_destroy();
 
-unset($_SESSION['access_token']);
-header("Location: index.php");
+unset($_SESSION);
+header("Location: ../index.php");
 ?>

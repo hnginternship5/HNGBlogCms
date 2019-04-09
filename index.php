@@ -55,7 +55,7 @@ include 'header.php';
                                             <p class="blog-item-tag text-center">Hotels</p>
 					</a>
                                         </div>
-                                        <a href="/blog-detail.php">
+                                        <a href="/auth.php">
                                             <p class="blog-item-more_action ">Read More</p>
                                         </a>
                                     </div>
@@ -108,7 +108,7 @@ include 'header.php';
                                             <p class="blog-item-tag text-center">Hotels</p>
 					</a>
                                         </div>
-                                        <a href="/blog-detail.php">
+                                        <a href="/auth.php">
                                             <p class="blog-item-more_action ">Read More</p>
                                         </a>
                                     </div>
@@ -160,7 +160,7 @@ include 'header.php';
                                             <p class="blog-item-tag text-center">Hotels</p>
 					</a>
                                         </div>
-                                        <a href="/blog-detail.php">
+                                        <a href="/auth.php">
                                             <p class="blog-item-more_action ">Read More</p>
                                         </a>
                                     </div>
@@ -214,7 +214,7 @@ include 'header.php';
                                             <p class="blog-item-tag text-center">Hotels</p>
 					</a>
                                         </div>
-                                        <a href="/blog-detail.php">
+                                        <a href="/auth.php">
                                             <p class="blog-item-more_action ">Read More</p>
                                         </a>
                                     </div>
@@ -267,7 +267,7 @@ include 'header.php';
                                             <p class="blog-item-tag text-center">Hotels</p>
 					</a>
                                         </div>
-                                        <a href="/blog-detail.php">
+                                        <a href="/auth.php">
                                             <p class="blog-item-more_action ">Read More</p>
                                         </a>
                                     </div>
@@ -319,7 +319,7 @@ include 'header.php';
                                             <p class="blog-item-tag text-center">Hotels</p>
 					</a>
                                         </div>
-                                        <a href="/blog-detail.php">
+                                        <a href="/auth.php">
                                             <p class="blog-item-more_action ">Read More</p>
                                         </a>
                                     </div>
