@@ -26,10 +26,10 @@ include 'header.php';
             </div>
           </div>
 
-          <div class="sidebar-icons text-center my-3">
-            <i class="fab fa-github social"></i>
-            <i class="fab fa-dribbble social"></i>
-            <i class="fas fa-rss social"></i>
+          <div class="sidebar-icons text-center my-3"> 
+            <a href="https://github.com"><i class="fab fa-github social"></i></a>
+            <a href="https://dribble.com"><i class="fab fa-dribbble social"></i></a>
+            <a href="https://rss.com"><i class="fas fa-rss social"></i></a>
           </div>
 
           <ul class="nav flex-column p-5 my-5 text-center">
@@ -46,6 +46,12 @@ include 'header.php';
         </div>
         <!-- Sidebar Ends -->
             <div class="col-md-9">
+            <div class="row justify-content-end">
+            <a href="/auth.php" class="btn align-self-end px-5 font-weight-bold"
+              >Log out</a
+            >
+          </div>
+
                 <!-- Post Box Begins -->
                 <div class="mx-auto mt-5 mb-2 px-5">
                     <div class="post-box p-2">
@@ -90,13 +96,14 @@ include 'header.php';
                 </div>
 
 
-                    <div class="row mx-0 d-flex flex-row align-items-center  justify-content-between">
+                    <!-- Feature not needed now
+                        <div class="row mx-0 d-flex flex-row align-items-center  justify-content-between">
                         <div class="col-md-8 line ml-md-5"></div>
                         <div class="col d-inline-flex mr-md-5 flex-row justify-content-between">
                             <p class="post-filter"><span class="post-filter-title">Sort by:</span> Most Recent Posts</p>
                             <img src="assets/img/caret.svg">
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="row mx-0 mt-md-4 blog-item-wrapper first-child">
                         <div class="d-flex flex-row px-0 blog-item">
@@ -128,10 +135,7 @@ include 'header.php';
                                             <a href="/blog-detail.php"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
-                                        <div class="d-flex flex-row align-items-center">
-                                            <img class="blog-item-action" src="assets/img/heart-filled.svg">
-                                            <img class="blog-item-action" src="assets/img/comment.svg">
-                                        </div>
+                                        
                                     </div>
                                     <p class="blog-item-date">3rd, April 2019 </p>
                                 </div>
@@ -171,10 +175,7 @@ include 'header.php';
                                             <a href="/blog-detail.php"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
-                                        <div class="d-flex flex-row align-items-center">
-                                            <img class="blog-item-action" src="assets/img/heart-filled.svg">
-                                            <img class="blog-item-action" src="assets/img/comment.svg">
-                                        </div>
+                                        
                                     </div>
                                     <p class="blog-item-date">3rd, April 2019 </p>
                                 </div>
@@ -214,10 +215,7 @@ include 'header.php';
                                             <a href="/blog-detail.php"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
-                                        <div class="d-flex flex-row align-items-center">
-                                            <img class="blog-item-action" src="assets/img/heart.svg">
-                                            <img class="blog-item-action" src="assets/img/comment.svg">
-                                        </div>
+                                        
                                     </div>
                                     <p class="blog-item-date">3rd, April 2019 </p>
                                 </div>
@@ -257,10 +255,7 @@ include 'header.php';
                                             <a href="/blog-detail.php"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
-                                        <div class="d-flex flex-row align-items-center">
-                                            <img class="blog-item-action" src="assets/img/heart-filled.svg">
-                                            <img class="blog-item-action" src="assets/img/comment.svg">
-                                        </div>
+                                        
                                     </div>
                                     <p class="blog-item-date">3rd, April 2019 </p>
                                 </div>
@@ -300,10 +295,7 @@ include 'header.php';
                                             <a href="/blog-detail.php"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
-                                        <div class="d-flex flex-row align-items-center">
-                                            <img class="blog-item-action" src="assets/img/heart.svg">
-                                            <img class="blog-item-action" src="assets/img/comment.svg">
-                                        </div>
+                                        
                                     </div>
                                     <p class="blog-item-date">3rd, April 2019 </p>
                                 </div>
@@ -342,10 +334,7 @@ include 'header.php';
                                             <a href="/blog-detail.php"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
-                                        <div class="d-flex flex-row align-items-center">
-                                            <img class="blog-item-action" src="assets/img/heart-filled.svg">
-                                            <img class="blog-item-action" src="assets/img/comment.svg">
-                                        </div>
+                                        
                                     </div>
                                     <p class="blog-item-date">3rd, April 2019 </p>
                                 </div>
