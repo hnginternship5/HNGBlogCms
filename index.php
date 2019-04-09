@@ -8,7 +8,7 @@ include 'header.php';
 
     <div class="container-fluid">
         <div class="row justify-content-between m-4">
-            <img class="img-fluid logo" src="assets/img/logo.png">
+            <img class="img-fluid logo" src="assets/img/zikilogo.png">
             <a href="/auth.php" class="btn btn-primary align-self-end px-5">Login</a>
         </div>
   <?php  }else {
