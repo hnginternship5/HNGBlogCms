@@ -7,8 +7,10 @@ include 'header.php'; ?>
         <!-- Sidebar Starts -->
         <div class="col-sm-3 side-info p-4">
           <div class="logo-area mb-5 mx-4">
+	 <a href="timeline.php">
             <img src="assets/img/zikilogo.png" alt="" class="logo" />
           </div>
+	</a>
 
           <div class="profile-pic-area mx-auto mt-5">
             <img src="assets/img/dp.png" alt="" class="profile-pic" />
