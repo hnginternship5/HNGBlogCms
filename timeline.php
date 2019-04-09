@@ -57,15 +57,15 @@ include 'header.php'; ?>
                 <!-- Post Box Begins -->
                 <div class="mx-auto mt-5 mb-2 px-5">
                     <div class="post-box p-2">
-                        <form action="">
+                        <form method="post" action="post.php">
                         <div class="form-group px-3">
                             <textarea
-                            name=""
+                            name="body"
                             id=""
                             rows="3"
-                            class="form-control post-text"
+                            class="editable medium-editor-textarea form-control post-text"
                             placeholder="What's Happening"
-                            ></textarea>
+                            >What's Happening</textarea>
                             <div class="toolbars row my-4 ">
                             <div class="col">
                                 <img src="assets/img/timeline_icons/type.png" alt="" />
@@ -351,7 +351,12 @@ include 'header.php'; ?>
         </div>
 
     </div>
-
+    <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
+    <script>
+        var editor = new MediumEditor('.editable', {
+            buttonLabels: 'fontawesome'
+        });
+    </script>
     <script>
     const toggleThemeBtn = document.querySelector('.toggle-theme');
     toggleThemeBtn.addEventListener('click', e => document.querySelector('body').classList.toggle('dark'));
