@@ -12,7 +12,124 @@ require_once './Authentication/auth/facebookinit.php';
     <title>Sign Up / Sign In</title>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Hind:400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/base.css">
+    <style>
+        /* =======================
+Authentication Styling
+======================= */
+.dark-theme .auth-main-container {
+	background: #07223e;
+}
+.auth-main-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	padding: 0 1.5rem;
+	background: #fff;
+	color: #000;
+}
+.dark-theme .auth-content-wrap {
+	background: #04274c;
+	color: #fff;
+}
+.auth-content-wrap {
+	max-width: 886px;
+	width: 100%;
+	height: 587px;
+	background: #f4f4f4;
+	color: #000000;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 1.5rem;
+	text-align: center;
+}
+@media screen and (max-width: 567px) {
+	.auth-content-wrap {
+		height: 500px;
+	}
+}
+/* To get the second theme;
+this is the only styling it needs */
+.auth-content-wrap.dark-theme {
+	background: #07223e;
+	color: #ffffff;
+}
+.auth-content {
+	max-width: 300px;
+	width: 100%;
+	text-align: center;
+}
+.auth-content h1 {
+	font-size: 1.5rem;
+}
+.auth-content p {
+	margin-top: 0.5rem;
+	font-size: 1rem;
+	font-weight: 500;
+}
+.auth-btns {
+	margin-top: 2.5rem;
+	position: relative;
+	z-index: 1;
+}
+.auth-btns a {
+	transition: 0.3s;
+	border: none;
+	outline: none;
+	width: 100%;
+	height: 40px;
+	border-radius: 3px;
+	font-weight: 500;
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.auth-btns a svg {
+	margin-right: 0.25rem;
+}
+.auth-btns a:hover {
+	transition: 0.3s;
+	opacity: 0.7;
+	cursor: pointer;
+}
+.auth-btns .auth-google-btn {
+	background: #ffffff;
+	color: #656565;
+	border: 1px solid #656565;
+}
+.auth-btns .auth-facebook-btn {
+	background: #385c8e;
+	color: #ffffff;
+}
+p.auth-demarcation-or {
+	color: #c4c4c4;
+	padding: 1.2rem 0;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.auth-demarcation-or::before,
+.auth-demarcation-or::after {
+	content: '';
+	display: inline-block;
+	width: 135px;
+	border: 0.65px solid #c4c4c4;
+}
+@media screen and (max-width: 567px) {
+	.auth-demarcation-or::before,
+	.auth-demarcation-or::after {
+		width: 100px;
+	}
+}
+    </style>
 </head>
 <body class="">
     <main class="auth-main-container">
