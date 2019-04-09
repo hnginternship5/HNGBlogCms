@@ -28,8 +28,15 @@
                 </h2>
                 <div class="details">
                     <div class="d-grid update">
+<<<<<<< HEAD
                         <img src="/assets/img/avatar-2.jpeg" alt="" class="avatar">
                         <input type="upload" value="update" class="upcase">
+=======
+                        <img src="/assets/img/avatar-2.jpeg" alt="" class="avatar"><br>
+                        <button class="upcase">
+                            update
+                        </button>
+>>>>>>> 2a76cc0e07679510d7e70e3651d2d903de5e191e
                     </div>
                     <form action="/action_page.php">
                         First name:<br>
@@ -68,11 +75,20 @@
                         Mode
                     </p>
                     <div class="d-flx no-justify">
+<<<<<<< HEAD
                         <label class="switch">
                         <input type="checkbox">
                         <span class="slider round"></span>
                         </label>
                         <p class="ml-1">
+=======
+                        <div class="toggle">
+                            <svg width="18" height="18" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="9" cy="9" r="9" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <p class="ml-2">
+>>>>>>> 2a76cc0e07679510d7e70e3651d2d903de5e191e
                             Lori Lightfoot
                         </p>
                     </div>
