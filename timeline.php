@@ -15,15 +15,24 @@ include 'header.php'; ?>
           </div>
 
           <div class="personal-info text-center ">
-            <h1><?php echo $name ?></h1>
+          <?php if (isset($name)) {?>
+            </h1><?php  echo $name ?></h1>
+
+          <?php }else {?>
+            <a href="auth.php">Login Here</a>
+        <?php  } ?>
+        <?php if (isset($name)) {?>
             <div class="font-weight-bold skillset">
             <?php echo $email ?>
             </div>
+          <?php } ?>
+          <?php if (isset($name)) {?>
             <div class="shortbio">
               I'm kinda weird in a good way..... I design for survival
             </div>
+            <?php } ?>
           </div>
-
+<?php if (isset($name)) {?>
           <div class="sidebar-icons text-center my-3">
             <a href="https://github.com"><i class="fab fa-github social"></i></a>
             <a href="https://dribble.com"><i class="fab fa-dribbble social"></i></a>
@@ -41,15 +50,21 @@ include 'header.php'; ?>
               <a class="nav-link" href="/user-profile-setting.php">Settings</a>
             </li>
           </ul>
+
+        <?php }else {?>
+          <p></p>
+      <?php  } ?>
         </div>
         <!-- Sidebar Ends -->
             <div class="col-md-9">
             <div class="row justify-content-end">
-              <?php if (isset($name)) {
-                // code...
-              } ?>
-            <a href="/Authentication\logout.php" class="btn align-self-end px-5 font-weight-bold">
-              Log out</a>
+              <?php if (isset($name)) {?>
+                <a href="/Authentication\logout.php" class="btn align-self-end px-5 font-weight-bold">Log out</a>
+
+              <?php }else {?>
+                <a href="/auth.php" class="btn align-self-end px-5 font-weight-bold">Log out</a>
+
+            <?php   } ?>
           </div>
 
                 <!-- Post Box Begins -->
