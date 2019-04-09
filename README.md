@@ -16,6 +16,7 @@ To design their themes, each team will need a designer - and not all designers r
  **This project works with PHP**
 * `git clone https://github.com/hnginternship5/ziki`
 * cd into the folder or directory
+* `php composer install`
 #Step 1
 * ```php -S localhost:8000```
 * open browser ``http://localhost:8000``    
@@ -28,3 +29,4 @@ OR
 * Create a well detailed Pull Request please. Add screenshots of tasks done. So we wont take time to review your PR.
 * Please and Please , dont override peoples work. So there won't be conflicts up and down.
 * Thanks . Enjoy!!!
+### 
