@@ -42,7 +42,10 @@ class Post {
         return $this->storyBody;
     }
     public function getStoryImage() {
-        $this->image;
+        return $this->imageUrl;
+    }
+    public function getMarkdownUrl() {
+        return $this->fileUrl;
     }
     public function getTimePosted() {
         return $this->postTimestamp;
@@ -50,12 +53,14 @@ class Post {
     static public function fetchAllPosts($postJson) {
         $result = array();
         //run check
+        //die(json_encode($postJson));
         if (!empty($postJson)) {
             foreach ($postJson as $row) {
                 $post = new Post();
                 $post->id = $row['id'];
                 $post->userId = $row['user_id'];
-                $post->image = $row['post_image'];
+                $post->fileUrl = $row['file_url'];
+                $post->imageUrl = $row['post_image'];
                 $post->postTimestamp = $row['post_timestamp'];
                 $result[] = $post;
             }
