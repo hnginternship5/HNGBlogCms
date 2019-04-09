@@ -14,13 +14,13 @@
 
 <body class="">
     <main class="justice-error-main">
-        <h1 class="fof-warning-text">Oops! Loooks like that page doesn't exist</h1>
+        <h1 class="fof-warning-text">Oops! Looks like that page doesn't exist</h1>
         <!-- <p class="fof-second-text"></p> -->
         <!-- <div class="fof-vector"> -->
         <img src="/assets/img/error-chain.svg" class="justice-error-vector" />
         <!-- </div> -->
 
-        <a href="/index.php" class="fof-return-button">Return to Homepage</a>
+        <a href="/ class="fof-return-button">Return to Homepage</a>
 
         <footer class="fof-navbar">
             <a href="#home" class="active">My blogs</a>
