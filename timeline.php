@@ -1,20 +1,6 @@
-<!-- mylo carson 2019-->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <title>Timeline</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/newtm.css">
-</head>
-<body class="">
-    <div class="container-fluid">
+<?php
+$title ="Timeline";
+include 'header.php'; ?>
 
         <div class="row">
 
@@ -31,16 +17,16 @@
           </div>
 
           <div class="personal-info text-center ">
-            <h1>Tamz Hallz</h1>
+            <h1><?php echo $name ?></h1>
             <div class="font-weight-bold skillset">
-              UI/UX Designer | Content Designer | Product Newbie
+            <?php echo $email ?>
             </div>
             <div class="shortbio">
               I'm kinda weird in a good way..... I design for survival
             </div>
           </div>
 
-          <div class="sidebar-icons text-center my-3"> 
+          <div class="sidebar-icons text-center my-3">
             <a href="https://github.com"><i class="fab fa-github social"></i></a>
             <a href="https://dribble.com"><i class="fab fa-dribbble social"></i></a>
             <a href="https://rss.com"><i class="fas fa-rss social"></i></a>
@@ -56,15 +42,16 @@
             <li class="nav-item">
               <a class="nav-link" href="/user-profile-setting.php">Settings</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/auth.php">Logout</a>
-            </li>
           </ul>
         </div>
         <!-- Sidebar Ends -->
             <div class="col-md-9">
             <div class="row justify-content-end">
-            
+              <?php if (isset($name)) {
+                // code...
+              } ?>
+            <a href="/Authentication\logout.php" class="btn align-self-end px-5 font-weight-bold">
+              Log out</a>
           </div>
 
                 <!-- Post Box Begins -->
@@ -131,34 +118,26 @@
                                 </div>
                                 <div class="d-flex flex-column blog-item-main-content">
                                      <div class="d-flex flex-row justify-content-between">
-					<a href="blog-detail.php">
                                          <h2 class="blog-item-header text-left">This is my first Post</h2>
-					</a>
-                                         
+
                                      </div>
                                      <h6 class="blog-item-author text-left">Oluwa Trumpeter </h6>
                                      <p class="blog-item-content text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nuor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nulla pariatur ....</p>
                                      <div class="row d-flex flex-row align-items-center justify-content-between mx-0">
                                         <div class="d-flex flex-row align-items-center">
                                             <div class="blog-item-tag-wrapper">
-                                            <a href="#">
-                                            <p class="blog-item-tag text-center">Javascript</p>
-					</a>
-                                        </div>
-                                        <div class="blog-item-tag-wrapper">
-					<a href="#">
-                                            <p class="blog-item-tag text-center">Tech</p>
-					</a>
-                                        </div>
-                                        <div class="blog-item-tag-wrapper">
-					<a href="#">
-                                            <p class="blog-item-tag text-center">Hotels</p>
-					</a>
-                                        </div>
+                                                <p class="blog-item-tag text-center">Javascript</p>
+                                            </div>
+                                            <div class="blog-item-tag-wrapper">
+                                                <p class="blog-item-tag text-center">Tech</p>
+                                            </div>
+                                            <div class="blog-item-tag-wrapper">
+                                                <p class="blog-item-tag text-center">Hotels</p>
+                                            </div>
                                             <a href="/blog-detail.php"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
-                                        
+
                                     </div>
                                     <p class="blog-item-date">3rd, April 2019 </p>
                                 </div>
@@ -179,34 +158,26 @@
                                 </div>
                                 <div class="d-flex flex-column blog-item-main-content">
                                      <div class="d-flex flex-row justify-content-between">
-					<a href="blog-detail.php">
                                          <h2 class="blog-item-header text-left">C.Ronaldo vs Messi</h2>
-					</a>
-                                         
+
                                      </div>
                                      <h6 class="blog-item-author text-left">Oluwa Trumpeter </h6>
                                      <p class="blog-item-content text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nuor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nulla pariatur ....</p>
                                      <div class="row d-flex flex-row align-items-center justify-content-between mx-0">
                                         <div class="d-flex flex-row align-items-center">
                                             <div class="blog-item-tag-wrapper">
-                                             <a href="#">
-                                            <p class="blog-item-tag text-center">Javascript</p>
-					</a>
-                                        </div>
-                                        <div class="blog-item-tag-wrapper">
-					<a href="#">
-                                            <p class="blog-item-tag text-center">Tech</p>
-					</a>
-                                        </div>
-                                        <div class="blog-item-tag-wrapper">
-					<a href="#">
-                                            <p class="blog-item-tag text-center">Hotels</p>
-					</a>
-                                        </div>
+                                                <p class="blog-item-tag text-center">Javascript</p>
+                                            </div>
+                                            <div class="blog-item-tag-wrapper">
+                                                <p class="blog-item-tag text-center">Tech</p>
+                                            </div>
+                                            <div class="blog-item-tag-wrapper">
+                                                <p class="blog-item-tag text-center">Hotels</p>
+                                            </div>
                                             <a href="/blog-detail.php"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
-                                        
+
                                     </div>
                                     <p class="blog-item-date">3rd, April 2019 </p>
                                 </div>
@@ -227,34 +198,26 @@
                                 </div>
                                 <div class="d-flex flex-column blog-item-main-content">
                                      <div class="d-flex flex-row justify-content-between">
-					<a href="blog-detail.php">
                                          <h2 class="blog-item-header text-left">The effect of culture on design trends</h2>
-					</a>
-                                         
+
                                      </div>
                                      <h6 class="blog-item-author text-left">Oluwa Trumpeter </h6>
                                      <p class="blog-item-content text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nuor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nulla pariatur ....</p>
                                      <div class="row d-flex flex-row align-items-center justify-content-between mx-0">
                                         <div class="d-flex flex-row align-items-center">
                                             <div class="blog-item-tag-wrapper">
-                                             <a href="#">
-                                            <p class="blog-item-tag text-center">Javascript</p>
-					</a>
-                                        </div>
-                                        <div class="blog-item-tag-wrapper">
-					<a href="#">
-                                            <p class="blog-item-tag text-center">Tech</p>
-					</a>
-                                        </div>
-                                        <div class="blog-item-tag-wrapper">
-					<a href="#">
-                                            <p class="blog-item-tag text-center">Hotels</p>
-					</a>
-                                        </div>
+                                                <p class="blog-item-tag text-center">Javascript</p>
+                                            </div>
+                                            <div class="blog-item-tag-wrapper">
+                                                <p class="blog-item-tag text-center">Tech</p>
+                                            </div>
+                                            <div class="blog-item-tag-wrapper">
+                                                <p class="blog-item-tag text-center">Hotels</p>
+                                            </div>
                                             <a href="/blog-detail.php"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
-                                        
+
                                     </div>
                                     <p class="blog-item-date">3rd, April 2019 </p>
                                 </div>
@@ -275,34 +238,26 @@
                                 </div>
                                 <div class="d-flex flex-column blog-item-main-content">
                                      <div class="d-flex flex-row justify-content-between">
-					<a href="blog-detail.php">
                                          <h2 class="blog-item-header text-left">This is my first Post</h2>
-					</a>
-                                         
+
                                      </div>
                                      <h6 class="blog-item-author text-left">Oluwa Trumpeter </h6>
                                      <p class="blog-item-content text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nuor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nulla pariatur ....</p>
                                      <div class="row d-flex flex-row align-items-center justify-content-between mx-0">
                                         <div class="d-flex flex-row align-items-center">
                                             <div class="blog-item-tag-wrapper">
-                                             <a href="#">
-                                            <p class="blog-item-tag text-center">Javascript</p>
-					</a>
-                                        </div>
-                                        <div class="blog-item-tag-wrapper">
-					<a href="#">
-                                            <p class="blog-item-tag text-center">Tech</p>
-					</a>
-                                        </div>
-                                        <div class="blog-item-tag-wrapper">
-					<a href="#">
-                                            <p class="blog-item-tag text-center">Hotels</p>
-					</a>
-                                        </div>
+                                                <p class="blog-item-tag text-center">Javascript</p>
+                                            </div>
+                                            <div class="blog-item-tag-wrapper">
+                                                <p class="blog-item-tag text-center">Tech</p>
+                                            </div>
+                                            <div class="blog-item-tag-wrapper">
+                                                <p class="blog-item-tag text-center">Hotels</p>
+                                            </div>
                                             <a href="/blog-detail.php"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
-                                        
+
                                     </div>
                                     <p class="blog-item-date">3rd, April 2019 </p>
                                 </div>
@@ -323,34 +278,26 @@
                                 </div>
                                 <div class="d-flex flex-column blog-item-main-content">
                                      <div class="d-flex flex-row justify-content-between">
-					<a href="blog-detail.php">
                                          <h2 class="blog-item-header text-left">This is my first Post</h2>
-					</a>
-                                         
+
                                      </div>
                                      <h6 class="blog-item-author text-left">Oluwa Trumpeter </h6>
                                      <p class="blog-item-content text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nuor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nulla pariatur ....</p>
                                      <div class="row d-flex flex-row align-items-center justify-content-between mx-0">
                                         <div class="d-flex flex-row align-items-center">
                                             <div class="blog-item-tag-wrapper">
-                                             <a href="#">
-                                            <p class="blog-item-tag text-center">Javascript</p>
-					</a>
-                                        </div>
-                                        <div class="blog-item-tag-wrapper">
-					<a href="#">
-                                            <p class="blog-item-tag text-center">Tech</p>
-					</a>
-                                        </div>
-                                        <div class="blog-item-tag-wrapper">
-					<a href="#">
-                                            <p class="blog-item-tag text-center">Hotels</p>
-					</a>
-                                        </div>
+                                                <p class="blog-item-tag text-center">Javascript</p>
+                                            </div>
+                                            <div class="blog-item-tag-wrapper">
+                                                <p class="blog-item-tag text-center">Tech</p>
+                                            </div>
+                                            <div class="blog-item-tag-wrapper">
+                                                <p class="blog-item-tag text-center">Hotels</p>
+                                            </div>
                                             <a href="/blog-detail.php"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
-                                        
+
                                     </div>
                                     <p class="blog-item-date">3rd, April 2019 </p>
                                 </div>
@@ -370,34 +317,26 @@
                                 </div>
                                 <div class="d-flex flex-column blog-item-main-content">
                                      <div class="d-flex flex-row justify-content-between">
-					<a href="blog-detail.php">
                                          <h2 class="blog-item-header text-left">This is my first Post</h2>
-					</a>
-                                         
+
                                      </div>
                                      <h6 class="blog-item-author text-left">Oluwa Trumpeter </h6>
                                      <p class="blog-item-content text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nuor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nulla pariatur ....</p>
                                      <div class="row d-flex flex-row align-items-center justify-content-between mx-0">
                                         <div class="d-flex flex-row align-items-center">
                                             <div class="blog-item-tag-wrapper">
-                                             <a href="#">
-                                            <p class="blog-item-tag text-center">Javascript</p>
-					</a>
-                                        </div>
-                                        <div class="blog-item-tag-wrapper">
-					<a href="#">
-                                            <p class="blog-item-tag text-center">Tech</p>
-					</a>
-                                        </div>
-                                        <div class="blog-item-tag-wrapper">
-					<a href="#">
-                                            <p class="blog-item-tag text-center">Hotels</p>
-					</a>
-                                        </div>
+                                                <p class="blog-item-tag text-center">Javascript</p>
+                                            </div>
+                                            <div class="blog-item-tag-wrapper">
+                                                <p class="blog-item-tag text-center">Tech</p>
+                                            </div>
+                                            <div class="blog-item-tag-wrapper">
+                                                <p class="blog-item-tag text-center">Hotels</p>
+                                            </div>
                                             <a href="/blog-detail.php"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
-                                        
+
                                     </div>
                                     <p class="blog-item-date">3rd, April 2019 </p>
                                 </div>
@@ -406,9 +345,9 @@
 
                     </div>
                 <!-- </div> -->
-                
+
             </div>
-            
+
         </div>
 
     </div>
