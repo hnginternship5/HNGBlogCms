@@ -29,7 +29,7 @@
                 </h2>
                 <div class="details">
                     <div class="d-grid update">
-                        <img src="/assets/img/avatar-2.jpeg" alt="" class="avatar">
+                        <img src="/assets/img/avatar-2.jpeg" alt="" class="avatar"><br>
                         <button class="upcase">
                             update
                         </button>
@@ -80,11 +80,11 @@
                     </p>
                     <div class="d-flx no-justify">
                         <div class="toggle">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="18" height="18" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="9" cy="9" r="9" fill="currentColor"/>
                             </svg>
                         </div>
-                        <p class="ml-1">
+                        <p class="ml-2">
                             Lori Lightfoot
                         </p>
                     </div>
