@@ -10,9 +10,9 @@
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Hind:400,500,700" rel="stylesheet">
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/profile-user-setting.css">
+    <link rel="stylesheet" href="assets/css/base.css">
 </head>
-<body>
+<body class="">
     <main class="motuns-main-container">
         <section class="motuns-side-bar">
             <h3 class="homepage-link">
@@ -29,23 +29,23 @@
                 </h2>
                 <div class="details">
                     <div class="d-grid update">
-                        <img src="/assets/img/avatar-2.jpeg" alt="" class="avatar"><br>
-                        <button class="upcase">
+                        <img src="/assets/img/avatar-2.jpeg" alt="" class="avatar">
+                        <button class="upcase user-profile-button">
                             update
                         </button>
                     </div>
-                    <form action="/action_page.php">
+                    <form class="user-profile-setting-form" action="/action_page.php">
                         First name:<br>
-                        <input type="text" name="firstname" value="Dragon">
+                        <input class="user-profile-input" type="text" name="firstname" value="Dragon">
                         <br>
                         Last name:<br>
-                        <input type="text" name="lastname" value="Blade">
+                        <input class="user-profile-input" type="text" name="lastname" value="Blade">
                         <br>
                         Email Address:<br>
-                        <input type="text" name="firstname">
+                        <input class="user-profile-input" type="text" name="firstname">
                         <br>
                         Change passord:<br>
-                        <input type="text" name="lastname">
+                        <input class="user-profile-input" type="text" name="lastname">
                         
                     </form> 
                     
@@ -67,7 +67,7 @@
                     <p>
                         Theme
                     </p>
-                    <button class="drop">
+                    <button class="drop user-profile-button">
                         DragonBlade Slicer Supreme 2000  
                         <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7 12L0.0717973 -6.02284e-07L13.9282 -1.81365e-06L7 12Z" fill="#9A9A9A"/>
@@ -90,7 +90,7 @@
                     </div>
                 </div>
             </section>
-            <button  class="capitalize lang">
+            <button  class="capitalize lang user-profile-button">
                 Save changes
             </button>
         </div>
