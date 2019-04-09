@@ -1,18 +1,4 @@
-<!-- mylo carson 2019-->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog Task</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/base.css">
-</head>
-<body class="">
-    <div class="container-fluid">
+<?php include 'header.php'; ?>
         <div class="row">
             <img class="header-img" src="assets/img/header.png" >
         </div>
@@ -24,8 +10,8 @@
                     <img class="profile-img" src="assets/img/profile.png">
                 </div>
                 <div class="profile-main">
-                    <h3 class="profile-name">Paul Jephtah</h3>
-                    <p class="profile-technologies"><span>UX Designer</span> | <span>Product Designer</span> | <span>Frontend Newbie </span></p>
+                    <h3 class="profile-name"><?php echo $name ?> </h3>
+                    <p class="profile-technologies"><span><?php echo $email ?></span></p>
                     <p class="profile-motto">I’m kinda weird in a very good way.... I design for survival</p>
                 </div>
                 <div class="profile-social-wrapper">
@@ -355,11 +341,4 @@
             </div>
         </div>
 
-    </div>
-
-    <script>
-    const toggleThemeBtn = document.querySelector('.toggle-theme');
-    toggleThemeBtn.addEventListener('click', e => document.querySelector('body').classList.toggle('dark'));
-    </script>
-</body>
-</html>
+  <?php include 'footer.php'; ?>

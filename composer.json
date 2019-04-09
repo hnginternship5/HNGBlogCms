@@ -1,10 +1,10 @@
 {
     "require": {
         "michelf/php-markdown": "^1.8",
-
         "league/html-to-markdown": "^4.8",
-
-		    "facebook/graph-sdk": "^5.7",
-        "google/apiclient": "^2.0"
+		"facebook/graph-sdk": "^5.7",
+        "google/apiclient": "^2.0",
+        "phpmailer/phpmailer": "^6.0",
+        "cebe/markdown": "~1.2.0"
     }
 }

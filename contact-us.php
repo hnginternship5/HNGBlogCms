@@ -18,7 +18,7 @@
         </div>
 
         <div class="row">
-            
+
             <div class="col-md-3 d-flex flex-column align-items-center profile-section">
                 <div class="profile-img-wrapper">
                     <img class="profile-img" src="assets/img/profile.png">
@@ -35,7 +35,7 @@
                 </div>
 
                 <div>
-                    
+
                     <ul class="menu-wrapper d-flex flex-column">
                         <a href=""><li class="menu-item text-center">Draft</li></a>
                         <a href="#"><li class="menu-item text-center">My Blogs</li> </a>
@@ -48,7 +48,7 @@
                 <div class="line"></div>
 
                 <div>
-                    
+
                     <ul class="menu-wrapper d-flex flex-column">
                         <a href="#"><li class="menu-item text-center">English (US)</li> </a>
                         <a href="#"><li class="menu-item text-center">Privacy</li> </a>
@@ -61,35 +61,32 @@
 
             </div>
             <div class="col-md-9">
-                
+
                 <!-- <div class=""> -->
 
                     <div class="row mx-0 mt-md-4 blog-item-wrapper first-child">
                         <div class="d-flex flex-row px-0 blog-item">
                             <div class="blog-item-main d-flex flex-row">
                                 <div class="d-flex flex-column blog-item-main-content">
-    
                                      <div class="contact-form-con">
                                      <h4 class="blog-item-author text-left">Get in Touch </h4>
                                      <p class="blog-item-content text-left">How can we help you? we'd love to hear from you</p>
-                                
-                                        <div class="">
-                                            <input type="text" class="post-input" id="usr" placeholder="First name">
-                                            <input type="text" class="post-input" id="usr" placeholder="Subject">
-                                            <input type="text" class="post-input" id="usr" placeholder="Email Address">
-                                            <textarea class="post-input" type="text" name="post-input" rows="8" placeholder="Message"></textarea>
-                                            <button class="publish-btn post-action-item">Send</button>
-                                        </div>
+                                     <form method="post" action="./config/contactMail.php">
+                                         <div class="">
+                                             <input type="text" name="name" class="post-input" id="usr" placeholder="First name">
+                                             <input type="text" name="subject" class="post-input" id="usr" placeholder="Subject">
+                                             <input type="text" name="email" class="post-input" id="usr" placeholder="Email Address">
+                                             <textarea class="post-input" type="text" name="message" rows="8" placeholder="Message"></textarea>
+<!--                                             <button name="submit" class="publish-btn post-action-item">Send</button>-->
+                                            <input class="publish-btn post-action-item" type="submit" name="submit" value="Send Email">
+                                         </div>
+                                     </form>
                                      </div>
-                                     
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
-
-
-
                 <!-- </div> -->
             </div>
         </div>
