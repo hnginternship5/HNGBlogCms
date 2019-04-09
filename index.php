@@ -1,8 +1,10 @@
 <?php
 $title = "Welcome";
 include 'header.php';
-?>
-<?php if (!isset($_SESSION['name'])) { ?>
+//print_r($_SESSION);
+ ?>
+ <?php if (!isset($_SESSION['name']))
+{?>
 
 
     <div class="container-fluid">
@@ -141,12 +143,18 @@ include 'header.php';
                                     <h2 class="blog-item-header text-left">The effect of culture on design trends</h2>
                                 </a>
                             </div>
-                            <h6 class="blog-item-author text-left">Oluwa Trumpeter </h6>
-                            <p class="blog-item-content text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nuor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nulla pariatur ....</p>
-                            <div class="row d-flex flex-row align-items-center justify-content-between mx-0">
-                                <div class="d-flex flex-row align-items-center">
-                                    <div class="blog-item-tag-wrapper">
-                                        <a href="#">
+                            <div class="d-flex flex-column blog-item-main-content">
+                                <div class="d-flex flex-row justify-content-between">
+				<a href="blog-detail.php">
+                                    <h2 class="blog-item-header text-left">The effect of culture on design trends</h2>
+				</a>
+                                </div>
+                                <h6 class="blog-item-author text-left">Oluwa Trumpeter </h6>
+                                <p class="blog-item-content text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nuor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nulla pariatur ....</p>
+                                <div class="row d-flex flex-row align-items-center justify-content-between mx-0">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div class="blog-item-tag-wrapper">
+                                         <a href="#">
                                             <p class="blog-item-tag text-center">Javascript</p>
                                         </a>
                                     </div>
