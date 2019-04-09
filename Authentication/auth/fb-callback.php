@@ -4,8 +4,8 @@ require_once __DIR__ . './vendor/autoload.php';
 
 $fb = new Facebook\Facebook([
   'app_id' => '325441314824736',
-  'app_secret' => 'ed3906d96895d0d31d0da6a4674174e5',
-  'default_graph_version' => 'v3.2',
+  'app_secret' => 'dc99854d60314fe5dc1cf55b15ee4e3a',
+  'default_graph_version' => 'v2.10',
 ]);
 
 $helper = $fb->getRedirectLoginHelper();
@@ -40,7 +40,7 @@ if (!isset($accessToken)) {
 echo '<h3>Access Token</h3>';
 var_dump($accessToken->getValue());
 
-
+$_SESSION['access_token'] =  $accessToken->getValue();
 
 
 $oAuth2Client = $fb->getOAuth2Client();
@@ -57,6 +57,8 @@ $tokenMetadata->validateAppId('325441314824736');
 //$tokenMetadata->validateUserId('123');
 $tokenMetadata->validateExpiration();
 
+
+
 if (!$accessToken->isLongLived()) {
   // Exchanges a short-lived access token for a long-lived one
   try {
@@ -70,64 +72,63 @@ if (!$accessToken->isLongLived()) {
   var_dump($accessToken->getValue());
 }
 
-$_SESSION['access_token'] = (string)$accessToken;
 
-
-
-if (isset($_SESSION['access_token'])) {
-  try {
-    $fb->setDefaultAccessToken($_SESSION['access_token']);
-    $result = $fb->get('/me?local=en_US&fields=name,email');
-    $user = $result->getGraphUser();
-    $name =   $user->getField('name');
-    $email =  $user->getField('email');
-    $_id = $user->getField('id');
-
-      //add details to settings.json
-
-    //set the filename
-    $filename = '../settings.json';
-
-    $firstname = $user || "";
-    $lastname = "";
-    $email = $email || "";
-    $id = $_id || "";
-    $profile_photo = "";
-
-    $user = [
-      'user' => [
-        "firstname" => $firstname,
-        "lastname" => $lastname,
-        "email" => $email,
-        "id" => $id,
-        "profile_photo" => $profile_photo,
-        "access_token" => $_SESSION['access_token']
-      ]
-    ];
-
-
-    //format the data
-    $formattedData = json_encode($user);
-
-
-    //open or create the file
-    $handle = fopen($filename, 'w+');
-
-    //write the data into the file
-    fwrite($handle, $formattedData);
-
-    //close the file
-    fclose($handle);
-
-    //  redirect
-      header('Location: https://ziki.hng.tech');
-
-  } catch (Exception $e) {
-    echo $e->getTraceAsString();
-  }
+try {
+  // Returns a `Facebook\FacebookResponse` object
+  $response = $fb->get('/me?fields=id,name,email', $accessToken->getValue());
+} catch (Facebook\Exceptions\FacebookResponseException $e) {
+  echo 'Graph returned an error: ' . $e->getMessage();
+  exit;
+} catch (Facebook\Exceptions\FacebookSDKException $e) {
+  echo 'Facebook SDK returned an error: ' . $e->getMessage();
+  exit;
 }
 
+$user = $response->getGraphUser();
+echo $user;
+
+//       //add details to settings.json
+
+//     //set the filename
+//     $filename = '../settings.json';
+
+//     $firstname = $user || "";
+//     $lastname = "";
+//     $email = $email || "";
+//     $id = $_id || "";
+//     $profile_photo = "";
+
+//     $user = [
+//       'user' => [
+//         "firstname" => $firstname,
+//         "lastname" => $lastname,
+//         "email" => $email,
+//         "id" => $id,
+//         "profile_photo" => $profile_photo,
+//         "access_token" => $_SESSION['access_token']
+//       ]
+//     ];
 
 
+//     //format the data
+//     $formattedData = json_encode($user);
 
-// User is logged in with a long-lived access token.
+
+//     //open or create the file
+//     $handle = fopen($filename, 'w+');
+
+//     //write the data into the file
+//     fwrite($handle, $formattedData);
+
+//     //close the file
+//     fclose($handle);
+
+//     // Check server protocol and load resources accordingly.
+//     if (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] != "off") {
+//       $location = "https://ziki.hng.tech";
+//     } else {
+//       $location = "http://localhost:8000";
+//     }
+
+//     //  redirect
+//       header("Location: $location");
