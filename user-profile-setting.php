@@ -9,13 +9,14 @@
     <title>Profile Setting</title>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Hind:400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/profile-user-setting.css">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/base.css">
 </head>
-<body>
+<body class="">
     <main class="motuns-main-container">
         <section class="motuns-side-bar">
-            <h3>
-                Homepage
+            <h3 class="homepage-link">
+                <a href="./timeline.php">Homepage</a>
             </h3>
             <a class="#">
                 Profile
@@ -31,19 +32,19 @@
                         <img src="/assets/img/avatar-2.jpeg" alt="" class="avatar">
                         <input type="upload" value="update" class="upcase">
                     </div>
-                    <form action="/action_page.php">
+                    <form class="user-profile-setting-form" action="/action_page.php">
                         First name:<br>
-                        <input type="text" name="firstname" value="Dragon">
+                        <input class="user-profile-input" type="text" name="firstname" value="Dragon">
                         <br>
                         Last name:<br>
-                        <input type="text" name="lastname" value="Blade">
+                        <input class="user-profile-input" type="text" name="lastname" value="Blade">
                         <br>
                         Email Address:<br>
-                        <input type="text" name="firstname">
+                        <input class="user-profile-input" type="text" name="firstname">
                         <br>
                         Change passord:<br>
                         <input type="password" name="lastname">
-                        
+                        <input class="user-profile-input" type="text" name="lastname">           
                     </form> 
                     
                 </div>
@@ -78,7 +79,7 @@
                     </div>
                 </div>
             </section>
-            <button  class="capitalize lang">
+            <button  class="capitalize lang user-profile-button">
                 Save changes
             </button>
         </div>
