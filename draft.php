@@ -18,8 +18,12 @@
 
             <div class="col-md-3 d-flex flex-column align-items-center profile-section">
                 <div class="profile-draft">
+                  <div class="logo-area mb-5 mx-4">
+        	 <a href="timeline.php">
+                    <img src="assets/img/zikilogo.png" alt="" class="logo" />
+                  </div>
                     <h1 class="profile-draft">Drafts</h1>
-                    <button type="button" class="btn btn-post">New Post</button>
+                    <a href="/editor.php"><button type="button" class="btn btn-post">New Post</button></a>
                 </div>
                 <div>
                     <h3 class="profile-tag">Tags</h3>
@@ -45,7 +49,7 @@
                                 </div>
                                 <div class="d-flex flex-column blog-item-main-content">
                                      <div class="d-flex flex-row justify-content-between">
-                                         <h2 class="blog-item-header text-left">This is my first Post</h2>
+                                         <a href="/blog-detail.php"><h2 class="blog-item-header text-left">This is my first Post</h2></a>
 
                                      </div>
 
@@ -86,7 +90,7 @@
                                 </div>
                                 <div class="d-flex flex-column blog-item-main-content">
                                      <div class="d-flex flex-row justify-content-between">
-                                         <h2 class="blog-item-header text-left">This is my first Post</h2>
+                                         <a href="/blog-detail.php"><h2 class="blog-item-header text-left">This is my first Post</h2></a>
 
                                      </div>
 
@@ -127,7 +131,7 @@
                                 </div>
                                 <div class="d-flex flex-column blog-item-main-content">
                                      <div class="d-flex flex-row justify-content-between">
-                                         <h2 class="blog-item-header text-left">This is my first Post</h2>
+                                         <a href="/blog-detail.php"><h2 class="blog-item-header text-left">This is my first Post</h2></a>
 
                                      </div>
 
@@ -168,7 +172,7 @@
                                 </div>
                                 <div class="d-flex flex-column blog-item-main-content">
                                      <div class="d-flex flex-row justify-content-between">
-                                         <h2 class="blog-item-header text-left">This is my first Post</h2>
+                                         <a href="/blog-detail.php"><h2 class="blog-item-header text-left">This is my first Post</h2></a>
 
                                      </div>
 
