@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog Task</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Timeline</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -37,10 +38,10 @@
             </div>
           </div>
 
-          <div class="sidebar-icons text-center my-3">
-            <i class="fab fa-github social"></i>
-            <i class="fab fa-dribbble social"></i>
-            <i class="fas fa-rss social"></i>
+          <div class="sidebar-icons text-center my-3"> 
+            <a href="https://github.com"><i class="fab fa-github social"></i></a>
+            <a href="https://dribble.com"><i class="fab fa-dribbble social"></i></a>
+            <a href="https://rss.com"><i class="fas fa-rss social"></i></a>
           </div>
 
           <ul class="nav flex-column p-5 my-5 text-center">
@@ -51,12 +52,18 @@
               <a class="nav-link" href="#">Insights</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Settings</a>
+              <a class="nav-link" href="/user-profile-setting.php">Settings</a>
             </li>
           </ul>
         </div>
         <!-- Sidebar Ends -->
             <div class="col-md-9">
+            <div class="row justify-content-end">
+            <a href="/auth.php" class="btn align-self-end px-5 font-weight-bold"
+              >Log out</a
+            >
+          </div>
+
                 <!-- Post Box Begins -->
                 <div class="mx-auto mt-5 mb-2 px-5">
                     <div class="post-box p-2">
@@ -101,13 +108,14 @@
                 </div>
 
 
-                    <div class="row mx-0 d-flex flex-row align-items-center  justify-content-between">
+                    <!-- Feature not needed now
+                        <div class="row mx-0 d-flex flex-row align-items-center  justify-content-between">
                         <div class="col-md-8 line ml-md-5"></div>
                         <div class="col d-inline-flex mr-md-5 flex-row justify-content-between">
                             <p class="post-filter"><span class="post-filter-title">Sort by:</span> Most Recent Posts</p>
                             <img src="assets/img/caret.svg">
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="row mx-0 mt-md-4 blog-item-wrapper first-child">
                         <div class="d-flex flex-row px-0 blog-item">
@@ -136,7 +144,7 @@
                                             <div class="blog-item-tag-wrapper">
                                                 <p class="blog-item-tag text-center">Hotels</p>
                                             </div>
-                                            <a href="#"><p class="blog-item-more_action ">Read More</p></a>
+                                            <a href="/blog-detail.php"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
                                         
@@ -176,7 +184,7 @@
                                             <div class="blog-item-tag-wrapper">
                                                 <p class="blog-item-tag text-center">Hotels</p>
                                             </div>
-                                            <a href="#"><p class="blog-item-more_action ">Read More</p></a>
+                                            <a href="/blog-detail.php"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
                                         
@@ -216,7 +224,7 @@
                                             <div class="blog-item-tag-wrapper">
                                                 <p class="blog-item-tag text-center">Hotels</p>
                                             </div>
-                                            <a href="#"><p class="blog-item-more_action ">Read More</p></a>
+                                            <a href="/blog-detail.php"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
                                         
@@ -256,7 +264,7 @@
                                             <div class="blog-item-tag-wrapper">
                                                 <p class="blog-item-tag text-center">Hotels</p>
                                             </div>
-                                            <a href="#"><p class="blog-item-more_action ">Read More</p></a>
+                                            <a href="/blog-detail.php"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
                                         
@@ -296,7 +304,7 @@
                                             <div class="blog-item-tag-wrapper">
                                                 <p class="blog-item-tag text-center">Hotels</p>
                                             </div>
-                                            <a href="#"><p class="blog-item-more_action ">Read More</p></a>
+                                            <a href="/blog-detail.php"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
                                         
@@ -335,7 +343,7 @@
                                             <div class="blog-item-tag-wrapper">
                                                 <p class="blog-item-tag text-center">Hotels</p>
                                             </div>
-                                            <a href="#"><p class="blog-item-more_action ">Read More</p></a>
+                                            <a href="/blog-detail.php"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
                                         
@@ -347,7 +355,7 @@
 
                     </div>
                 <!-- </div> -->
-    
+                
             </div>
             
         </div>
