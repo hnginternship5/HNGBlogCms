@@ -45,9 +45,11 @@ include 'header.php'; ?>
         <!-- Sidebar Ends -->
             <div class="col-md-9">
             <div class="row justify-content-end">
-            <a href="/auth.php" class="btn align-self-end px-5 font-weight-bold"
-              >Log out</a
-            >
+              <?php if (isset($name)) {
+                // code...
+              } ?>
+            <a href="/Authentication\logout.php" class="btn align-self-end px-5 font-weight-bold">
+              Log out</a>
           </div>
 
                 <!-- Post Box Begins -->
