@@ -139,10 +139,7 @@
                                             <a href="#"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
-                                        <div class="d-flex flex-row align-items-center">
-                                            <img class="blog-item-action" src="assets/img/heart-filled.svg">
-                                            <img class="blog-item-action" src="assets/img/comment.svg">
-                                        </div>
+                                        
                                     </div>
                                     <p class="blog-item-date">3rd, April 2019 </p>
                                 </div>
@@ -182,10 +179,7 @@
                                             <a href="#"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
-                                        <div class="d-flex flex-row align-items-center">
-                                            <img class="blog-item-action" src="assets/img/heart-filled.svg">
-                                            <img class="blog-item-action" src="assets/img/comment.svg">
-                                        </div>
+                                        
                                     </div>
                                     <p class="blog-item-date">3rd, April 2019 </p>
                                 </div>
@@ -225,10 +219,7 @@
                                             <a href="#"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
-                                        <div class="d-flex flex-row align-items-center">
-                                            <img class="blog-item-action" src="assets/img/heart.svg">
-                                            <img class="blog-item-action" src="assets/img/comment.svg">
-                                        </div>
+                                        
                                     </div>
                                     <p class="blog-item-date">3rd, April 2019 </p>
                                 </div>
@@ -268,10 +259,7 @@
                                             <a href="#"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
-                                        <div class="d-flex flex-row align-items-center">
-                                            <img class="blog-item-action" src="assets/img/heart-filled.svg">
-                                            <img class="blog-item-action" src="assets/img/comment.svg">
-                                        </div>
+                                        
                                     </div>
                                     <p class="blog-item-date">3rd, April 2019 </p>
                                 </div>
@@ -311,10 +299,7 @@
                                             <a href="#"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
-                                        <div class="d-flex flex-row align-items-center">
-                                            <img class="blog-item-action" src="assets/img/heart.svg">
-                                            <img class="blog-item-action" src="assets/img/comment.svg">
-                                        </div>
+                                        
                                     </div>
                                     <p class="blog-item-date">3rd, April 2019 </p>
                                 </div>
@@ -353,10 +338,7 @@
                                             <a href="#"><p class="blog-item-more_action ">Read More</p></a>
                                         </div>
 
-                                        <div class="d-flex flex-row align-items-center">
-                                            <img class="blog-item-action" src="assets/img/heart-filled.svg">
-                                            <img class="blog-item-action" src="assets/img/comment.svg">
-                                        </div>
+                                        
                                     </div>
                                     <p class="blog-item-date">3rd, April 2019 </p>
                                 </div>
@@ -365,7 +347,7 @@
 
                     </div>
                 <!-- </div> -->
-                <h6 class="text-center" style="margin-top:27px;margin-bottom:27px">Load More<h5>
+    
             </div>
             
         </div>
