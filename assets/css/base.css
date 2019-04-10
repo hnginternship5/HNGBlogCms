@@ -1088,6 +1088,7 @@ user profile settings styling
 .co-red {
   background-color: var(--red-btn);
   color: white;
+  width: 150px;
   /* font-size: 14px; */
   transition: all ease-in-out 0.3s;
 }
