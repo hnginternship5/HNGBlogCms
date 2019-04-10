@@ -1262,16 +1262,4 @@ user profile settings styling
   .user-profile-setting-form {
     margin-top: 0;
   }
-
-  .lang {
-    float: right;
-    margin-top: -30%;
-    margin-right: 13%;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .lang {
-    margin-top: -20%;
-    margin-right: 9%;
-  }
 }
