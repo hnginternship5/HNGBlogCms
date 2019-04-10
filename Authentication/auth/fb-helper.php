@@ -1,17 +1,10 @@
 <?php
-require("vendor/autoload.php");
 if (!session_id()) {
   session_start();
 }
 
-
-$fb = new Facebook\Facebook([
-  'app_id' => '325441314824736',
-  'app_secret' => 'dc99854d60314fe5dc1cf55b15ee4e3a',
-  'default_graph_version' => 'v2.10',
-]);
-
-$helper = $fb->getRedirectLoginHelper();
+require("vendor/autoload.php");
+require_once("./shared/utility.php");
 
 try {
   $accessToken = $helper->getAccessToken();
@@ -104,16 +97,14 @@ fclose($fp);
 $_SESSION['name'] = $name;
 $_SESSION['email'] = $email;
 
+sleep(1);
 
-echo 'Logged in as '.$name;
-echo '<br/>';
-echo 'With email ' . $email;
-echo '<br/>';
-echo 'And session variables';
-print_r($_SESSION);
-
-// OR
-
+// Check server protocol and load redirect link accordingly for facebook authentication.
+if (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] != "off") {
+  $location = "https://ziki.hng.tech";
+} else {
+  $location = "http://localhost:8000";
+}
 // User is logged in with a long-lived access token.
 // You can redirect them to a members-only page.
-// header( 'Location: http://localhost:8000/temp_landing_page.php');
+header("Location:$location/timeline.php");
