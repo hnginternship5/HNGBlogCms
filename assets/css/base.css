@@ -1039,6 +1039,7 @@ user profile settings styling
   font-size: 36px;
   font-weight: 500;
   margin-bottom: 4rem;
+  text-align: center;
 }
 .homepage-link {
   transition: all ease-in-out 0.3s;
@@ -1206,6 +1207,7 @@ user profile settings styling
     font-weight: 500;
     margin-bottom: 4rem;
     margin-top: 3rem;
+    text-align: left;
   }
 
   .user-profile-setting-form {
