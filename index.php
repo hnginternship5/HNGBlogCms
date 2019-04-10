@@ -1,6 +1,6 @@
 <?php
 include 'header.php';
-$title = "Welcome";
+
 //print_r($_SESSION);
 ?>
 <?php if (!isset($_SESSION['name'])) { ?>
@@ -24,4 +24,7 @@ $title = "Welcome";
     </div>
 </div>
 
+
 <?php include 'footer.php'; ?>
+=======
+<?php require_once('footer.php'); ?>
