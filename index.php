@@ -1,6 +1,7 @@
 <?php
 $title ="Welcome";
 include 'header.php';
+//print_r($_SESSION);
  ?>
  <?php if (!isset($_SESSION['name']))
 {?>
@@ -138,7 +139,7 @@ include 'header.php';
                             <div class="d-flex flex-column blog-item-main-content">
                                 <div class="d-flex flex-row justify-content-between">
 				<a href="blog-detail.php">
-                                    <h2 class="blog-item-header text-left">The effect of culture on design trends</h2>		
+                                    <h2 class="blog-item-header text-left">The effect of culture on design trends</h2>
 				</a>
                                 </div>
                                 <h6 class="blog-item-author text-left">Oluwa Trumpeter </h6>
