@@ -1,7 +1,5 @@
 <?php
 require_once './Authentication/auth/googleinit.php';
-// require_once("./Authentication/auth/shared/utility.php");
-
 if (!session_id()) {
   session_start();
 }
