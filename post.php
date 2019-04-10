@@ -10,9 +10,23 @@ if (!isset($_SESSION['token'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $title = isset($_POST['title']) ? trim($_POST['title']) : null;
+    //$title = isset($_POST['title']) ? trim($_POST['title']) : null;
     $body = isset($_POST['body']) ? trim($_POST['body']) : null;
+    die(json_encode(array('data' => $body)));
+    $db_json = file_get_contents("posts.json");
+    $newPost = new Post();
+    $newPost->setUserId($user);
+    $newPost->setStoryBody($body);
+    //$newPost->setStoryTitle($title);
+    //$newPost->setStoryImage($target_file);
+    if ($newPost->savePost($db_json)) {
+        $response = array('error' => false, 'message' => 'post published successfully');
+    } else {
+    $response = array('error' => true, 'message' => 'error occured while posting');
+    }
+    /*
     $file = $_FILES['image'];
+    die(var_dump($file));
     $user = $_SESSION['loggedUserId'];
     $new_file_name = date('dmYHis').str_replace(" ", "", basename($_FILES['image']['name']));
     $image_type = strtolower(pathinfo($new_file_name, PATHINFO_EXTENSION));
@@ -29,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $newPost = new Post();
                 $newPost->setUserId($user);
                 $newPost->setStoryBody($body);
-                $newPost->setStoryTitle($title);
+                //$newPost->setStoryTitle($title);
                 $newPost->setStoryImage($target_file);
                 if ($newPost->savePost($db_json)) {
                     $response = array('error' => false, 'message' => 'post published successfully');
@@ -46,6 +60,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $response['error'] = true;
             $response['message'] = 'Error, please select an image';
         }
-    }
+    }*/
     die(json_encode($response));
 }

@@ -57,11 +57,11 @@ include 'header.php'; ?>
                 <!-- Post Box Begins -->
                 <div class="mx-auto mt-5 mb-2 px-5">
                     <div class="post-box p-2">
-                        <form method="post" action="post.php">
+                        <form id = "publish">
                         <div class="form-group px-3">
                             <textarea
                             name="body"
-                            id=""
+                            id="postBody"
                             rows="3"
                             class="editable medium-editor-textarea form-control post-text"
                             placeholder="What's Happening"
@@ -356,6 +356,25 @@ include 'header.php'; ?>
         var editor = new MediumEditor('.editable', {
             buttonLabels: 'fontawesome'
         });
+        const url = "http://localhost:8000/post.php";
+        const $ = document.querySelector.bind(document);
+        $('#publish').addEventListener('submit', postData);
+        function postData(event){
+            console.log("good")
+            event.preventDefault();
+            let pBody = $('#postBody').value;
+            console.log(pBody);
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'multipart/form-data'
+                },
+                body:pBody
+            }).then((res) => res.text())
+            .then((data) =>  console.log(data))
+            .catch((err)=>console.log(err))
+        }
     </script>
     <script>
     const toggleThemeBtn = document.querySelector('.toggle-theme');
