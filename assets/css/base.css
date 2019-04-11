@@ -1,3 +1,6 @@
+/* only use fonts approved by the designers */
+/* otherwise, don't specify a font */
+
 :root {
   /* light theme is the default */
 
