@@ -30,8 +30,8 @@ $_SESSION['accesstoken'] = true;
                 </div>
 
                 <!-- user profile picture -->
-                <div class="profile-pic-area mx-auto mt-5" style="padding-left:100px;">
-                    <img src="<?php echo $img ?>" alt="Not Found" onerror=this.src="assets/img/avatar-2.jpeg" class="profile-pic" />
+                <div class="profile-pic-area mx-auto mt-5">
+                    <img src="<?php echo $img ?>" alt="Not Found" onerror=this.src="assets/img/avatar-2.jpeg" class="profile-img" />
                 </div>
 
                 <!-- User name, Skills, short bio -->
@@ -40,14 +40,14 @@ $_SESSION['accesstoken'] = true;
                         <?php
                              echo $name;// dear backend dev. just uncomment this
                             // and remove what echoes below. That's it.
-                            //echo 'Austin Asoluka';
+                            // echo 'Austin Asoluka';
                         ?>
                     </h3>
                     <h4 class="user-skills">
                         <?php
                              echo $email; //dear backend dev. just uncomment this
                             // and remove what echoes below. That's it.
-                            //echo 'Web | Software Developer';
+                            // echo 'Web | Software Developer';
                         ?>
                     </h4>
                     <p class="profile-motto">Software Engineer at AWS design enthusiast and music lover</p>
