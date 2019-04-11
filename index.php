@@ -13,10 +13,10 @@ include 'header.php';
             </button>
         </div>
         <div>
-            <div class="col-md-12 col-12 posts-area">
+            <div class="col-12 posts-area">
                 <!-- Post feeds start here -->
-                <div class="row posts">
-                    <div class="col-md-12 col-12">
+                <div class="row mt-5">
+                    <div class="col-12">
                         <div class="row">
                             <div class="col-2 px-0 blog-item-author-avatar-wrapper">
                                 <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
@@ -80,8 +80,8 @@ include 'header.php';
                     <!-- <div class="col-md-1"></div> -->
                 </div>
 
-                <div class="row posts">
-                    <div class="col-md-12 col-12">
+                <div class="row mt-5">
+                    <div class="col-12">
                         <div class="row">
                             <div class="col-2 px-0 blog-item-author-avatar-wrapper">
                                 <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
@@ -145,8 +145,8 @@ include 'header.php';
                     <!-- <div class="col-md-1"></div> -->
                 </div>
 
-                <div class="row posts">
-                    <div class="col-md-12 col-12">
+                <div class="row mt-5">
+                    <div class="col-12">
                         <div class="row">
                             <div class="col-2 px-0 blog-item-author-avatar-wrapper">
                                 <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
@@ -210,8 +210,8 @@ include 'header.php';
                     <!-- <div class="col-md-1"></div> -->
                 </div>
 
-                <div class="row posts">
-                    <div class="col-md-12 col-12">
+                <div class="row mt-5">
+                    <div class="col-12">
                         <div class="row">
                             <div class="col-2 px-0 blog-item-author-avatar-wrapper">
                                 <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
@@ -275,8 +275,8 @@ include 'header.php';
                     <!-- <div class="col-md-1"></div> -->
                 </div>
 
-                <div class="row posts">
-                    <div class="col-md-12 col-12">
+                <div class="row mt-5">
+                    <div class="col-12">
                         <div class="row">
                             <div class="col-2 px-0 blog-item-author-avatar-wrapper">
                                 <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">

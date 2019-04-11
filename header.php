@@ -79,10 +79,6 @@ extract($_SESSION);?>
             padding-bottom: 80px;
         }
 
-        div.posts{
-            margin-top: 40px;
-        }
-
         .star{
             color: #ffc107;
         }
@@ -307,10 +303,6 @@ extract($_SESSION);?>
             .post-img{
                 max-height: 200px;
                 border-radius: 15px 15px 0 0;
-            }
-
-            .posts{
-                margin-top: -20px;
             }
 
             .blog-main-item{
