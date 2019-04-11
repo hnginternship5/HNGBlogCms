@@ -71,3 +71,28 @@
   --sidebar-bg-color: var(--ziki-dark-blue);
   --selected-sidebar-item-bg-color: var(--default-bg-color);
 }
+
+html {
+  font-size: 16px;
+  height: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100%;
+  background-color: var(--default-bg-color);
+  color: var(--default-text-color);
+
+  /* smoothly transition the colors */
+  transition: background-color var(--theme-change-transition-duration)
+      var(--theme-change-timing-function),
+    color var(--theme-change-transition-duration)
+      var(--theme-change-timing-function);
+}
