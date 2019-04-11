@@ -664,17 +664,27 @@ Timeline && Contact Us Page Styling
   margin-bottom: -120px;
 }
 
+.profile-pic-area {
+  text-align: center;
+}
+
 .profile-img {
   /*position: absolute;
     top: -113px;
     margin-bottom: 113px;*/
   border-radius: 50%;
   max-width: 230px;
-  height: 230px;
+  width: 100%;
 }
 
 .profile-main {
-  margin-top: 100px;
+  height: 40px;
+  margin-right: 10px;
+  border: 0.5px solid var(--blog-author-avatar-border-color);
+
+  /* layer the image on top the blog post */
+  position: relative;
+  z-index: 2;
 }
 
 .profile-name {
@@ -687,6 +697,20 @@ Timeline && Contact Us Page Styling
   text-align: center;
   letter-spacing: -0.04em;
   margin-bottom: 6px;
+}
+
+.img-picker {
+  /* hide ugly file picker */
+  display: none;
+}
+
+.img-error {
+  color: var(--ziki-red);
+  padding: 0.2em;
+}
+
+.fa-paperclip:hover {
+  cursor: pointer;
 }
 
 .profile-technologies {
@@ -875,13 +899,8 @@ Timeline && Contact Us Page Styling
 }
 
 .post-section {
-  min-height: 160px;
   background-color: var(--post-section-bg-color);
   padding: 18px 30px;
-  margin-top: 47px;
-  margin-left: 48px;
-  margin-right: 45px;
-  margin-bottom: 22px;
 }
 
 .post-input {
@@ -1050,6 +1069,7 @@ user profile settings styling
   font-size: 36px;
   font-weight: 500;
   margin-bottom: 4rem;
+  text-align: center;
 }
 .homepage-link {
   transition: all ease-in-out 0.3s;
@@ -1151,6 +1171,9 @@ user profile settings styling
 
 .drop {
   margin-top: 1rem;
+
+  /* hacky, needs to be improved */
+  min-height: 60px;
 }
 
 .togg {
@@ -1217,6 +1240,7 @@ user profile settings styling
     font-weight: 500;
     margin-bottom: 4rem;
     margin-top: 3rem;
+    text-align: left;
   }
 
   .user-profile-setting-form {
@@ -1270,17 +1294,5 @@ user profile settings styling
 
   .user-profile-setting-form {
     margin-top: 0;
-  }
-
-  .lang {
-    float: right;
-    margin-top: -30%;
-    margin-right: 13%;
-  }
-}
-@media only screen and (min-width: 1440px) {
-  .lang {
-    margin-top: -20%;
-    margin-right: 9%;
   }
 }
