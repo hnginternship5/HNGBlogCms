@@ -1,9 +1,10 @@
 <!-- mylo carson 2019-->
 <?php include 'includes/config.php';
 //print_r($_SESSION);
-extract($_SESSION);?>
+extract($_SESSION); ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,7 @@ extract($_SESSION);?>
 
     <style type="text/css">
         /** mylo carson 2019 */
-        p{
+        p {
             /*font-family: 'Amiri', serif;*/
             font-family: 'Josefin Sans', sans-serif;
             font-size: 1.5em;
@@ -28,24 +29,30 @@ extract($_SESSION);?>
             letter-spacing: 0.02em;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'B612', sans-serif;
             /*font-weight: bold;*/
         }
 
-        html,body{
-            margin:0;
+        html,
+        body {
+            margin: 0;
             padding: 0;
             overflow-x: hidden;
             background-color: #fff;
         }
 
-        ul{
-            margin:0;
-            padding:0;
+        ul {
+            margin: 0;
+            padding: 0;
         }
 
-        .page-head{
+        .page-head {
             min-height: 350px;
             max-height: 400px;
             background-image: url(../img/header.png);
@@ -54,159 +61,168 @@ extract($_SESSION);?>
             background-repeat: no-repeat;
         }
 
-        .ziki-post{
+        .ziki-post {
             color: white;
             font-family: 'Source Sans Pro', sans-serif;
         }
 
-        div.header-caption{
+        div.header-caption {
             margin-top: 40px;
         }
 
-        h1.ziki-post{
+        h1.ziki-post {
             font-size: 8em !important;
         }
 
-        i.s-icons{
+        i.s-icons {
             margin: 20px 5px;
         }
 
-        .posts-area{
+        .posts-area {
             padding-top: 30px;
             padding-bottom: 80px;
         }
 
-        div.posts{
+        div.posts {
             margin-top: 40px;
         }
 
-        .star{
+        .star {
             color: #ffc107;
         }
 
-        .liked{
+        .liked {
             color: red;
         }
 
-        .blog-main-item{
+        .blog-main-item {
             background: #F8F8F8;
             box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.12);
-            border-radius: 11px
-            min-height: 200px;
+            border-radius: 11px min-height: 200px;
             /*margin-left: 10px;*/
             margin-right: 10px;
         }
 
-        .post-img{
+        .post-img {
             max-height: 200px;
             border-top-left-radius: 15px;
             border-bottom-left-radius: 15px;
         }
 
-        .post-heading{
+        .post-heading {
             margin-top: 15px;
         }
 
-        .post-text{
+        .post-text {
             font-size: 1.4em;
             line-height: normal;
             color: #000000;
         }
 
-        .read-more{
+        .read-more {
             color: #449f44;
             font-size: 0.8em;
             font-weight: bold;
         }
 
-        .post-icon{
+        .post-icon {
             font-size: 1.5em;
             /*color: red;
-        */}
+        */
+        }
 
-        .chat-icon{color: #007bff;}
+        .chat-icon {
+            color: #007bff;
+        }
 
-        .spaced-icon{
+        .spaced-icon {
             margin-left: 15px;
             margin-right: 15px;
         }
 
-        .post-date{
+        .post-date {
             font-weight: bold;
             font-size: 0.8em;
             margin: 10px 0;
         }
-        .post-footer{
+
+        .post-footer {
             /*margin-bottom: 15px;*/
         }
 
         /*WYSIWYG*/
-        .editor{
-            width:100%;
+        .editor {
+            width: 100%;
             min-height: 15rem;
             margin: 2rem;
             padding: 1rem;
             font-size: 1.2rem;
-            box-shadow: 0 .1rem .4rem rgba(0,0,0,0.03);
+            box-shadow: 0 .1rem .4rem rgba(0, 0, 0, 0.03);
             border: none;
             overflow-y: auto;
             font-size: 1.4rem;
             font-weight: 600;
             margin: 0 auto;
         }
+
         .editor:focus {
             outline: none;
         }
-        .toolbar{
-            display:grid;
-            grid-template-columns: repeat(auto-fit,minmax(20px,40px));
+
+        .toolbar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20px, 40px));
             color: rgb(0, 0, 0);
             grid-gap: 1rem;
             padding: 1rem;
             justify-content: center;
-            align-items:center;
+            align-items: center;
             opacity: 0;
             transition: all 0.5s;
         }
-        .tool{
+
+        .tool {
             border: none;
             padding: 1rem;
-            background-color: rgba(0,0,0,0.03);
-        } 
+            background-color: rgba(0, 0, 0, 0.03);
+        }
+
         .status-area {
             border-radius: 15px;
             outline: none;
         }
+
         .form-control {
             outline: none;
             font-weight: bold;
         }
+
         /*editor code ends here*/
-        li{
+        li {
             list-style-type: none;
         }
 
-        .profile-section{
+        .profile-section {
             background: rgba(243, 243, 243, 0.62);
         }
 
-        .profile-img-wrapper{
+        .profile-img-wrapper {
             position: absolute;
             top: -120px;
             margin-bottom: -120px;
         }
 
-        .profile-img{
+        .profile-img {
             border-radius: 50%;
             max-width: 230px;
             height: 230px;
         }
 
-        .profile-main{
+        .profile-main {
             /*margin-top: 100px;*/
         }
 
-        .profile-name{
+        .profile-name {
             font-family: 'B612', sans-serif;
             font-style: normal;
             line-height: normal;
@@ -227,7 +243,7 @@ extract($_SESSION);?>
             color: #000000;
         }
 
-        .profile-motto{
+        .profile-motto {
             font-family: 'Josefin Sans', sans-serif;
             font-style: normal;
             font-weight: normal;
@@ -239,39 +255,39 @@ extract($_SESSION);?>
             color: #000000;
         }
 
-        .menu-wrapper{
-            margin:68px 0;
+        .menu-wrapper {
+            margin: 68px 0;
         }
 
-        .menu-item{
+        .menu-item {
             margin: 15px 0;
         }
 
-        .line{
+        .line {
             width: 50%;
             height: 1px;
             background-color: rgba(0, 0, 0, 0.3);
         }
 
-        .blog-item-img{
+        .blog-item-img {
             border-radius: 11px;
             width: inherit;
             height: 165px;
         }
 
-        .blog-item-author-avatar-wrapper{
+        .blog-item-author-avatar-wrapper {
             max-width: 50px;
         }
 
-        .blog-item-author-avatar{
+        .blog-item-author-avatar {
             border-radius: 50%;
             max-width: 70px;
             height: 60px;
-            margin-right:  10px ; 
+            margin-right: 10px;
             border: 0.5px solid rgba(0, 0, 0, 0.5);
         }
 
-        .post-section{
+        .post-section {
             min-height: 160px;
             background: #F8F8F8;
             /*padding: 18px 30px;*/
@@ -281,7 +297,7 @@ extract($_SESSION);?>
             /*margin-bottom: 22px;*/
         }
 
-        .post-input{
+        .post-input {
             background-color: transparent;
             font-family: Open Sans;
             font-style: normal;
@@ -295,7 +311,7 @@ extract($_SESSION);?>
             resize: none;
         }
 
-        .post-filter{
+        .post-filter {
             font-style: normal;
             font-weight: bold;
             font-size: 13px;
@@ -304,64 +320,73 @@ extract($_SESSION);?>
             color: #333333;
         }
 
-        .post-filter-title{
+        .post-filter-title {
             font-weight: normal;
         }
 
-        a{
+        a {
             text-decoration: none;
-            color: #449f44;;
+            color: #449f44;
+            ;
         }
 
-        a:hover, a:focus, a:visited{
+        a:hover,
+        a:focus,
+        a:visited {
             text-decoration: none;
-            color: #000000;;
+            color: #000000;
+            ;
         }
 
-        .pagination-section{
+        .pagination-section {
             margin-top: 50px;
             margin-bottom: 50px;
         }
 
-        .padd{padding: 20px 0;}
+        .padd {
+            padding: 20px 0;
+        }
 
         /*Media query*/
         @media (max-width: 576px) {
-            .post-img{
+            .post-img {
                 max-height: 200px;
                 border-radius: 15px 15px 0 0;
             }
 
-            .blog-item-author-avatar{
+            .blog-item-author-avatar {
                 z-index: 9999999;
                 position: relative;
                 top: 30px;
             }
 
-            .posts{
+            .posts {
                 margin-top: -20px;
             }
 
-            .blog-main-item{
+            .blog-main-item {
                 margin-left: 10px;
             }
 
-            textarea{
+            textarea {
                 min-height: 40vh !important;
             }
 
-            .post-section{
+            .post-section {
                 min-width: 100%;
                 margin: 30px 0px;
             }
 
-            .fa, .fas, .fab{
+            .fa,
+            .fas,
+            .fab {
                 font-size: .9em;
                 padding: 5px;
             }
         }
     </style>
 </head>
+
 <body class="">
-  <div class="container-fluid">
-    <!-- mylo carson 2019-->
+    <div class="container-fluid">
+        <!-- mylo carson 2019-->
