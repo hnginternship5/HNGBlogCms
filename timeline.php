@@ -468,35 +468,37 @@ $_SESSION['accesstoken'] = true;
         });
 
         // handle submitting a post
-          const postSection = document.querySelector('.post-section');
-          postSection.addEventListener('submit', event => {
-            event.preventDefault();
-
-            const errSpan = document.querySelector('.img-error');
-
-            // handle other form inputs, like textarea
-            // ...
-            // ...
-
-            // validate size of image
-            const img = imgPicker.files[0];
-            if (img.size > 5000000) {
-              // image is too large (greater than 5000 kb)
-              errSpan.innerText = 'File too big';
-              return;
-            }
-            errSpan.innerText = '';
-
-            const formData = new FormData(event.target);
-
-            fetch('api/upload-image', {
-              method: 'POST',
-              body: formData
-            }).then(res => res.json()).then(data => {
-              // TODO: process server response
-            });
-
-          });
+        // DEACTIVATED FOR NOW UNTIL IMAGE UPLOAD AND FORM SUBMISSION
+        // ARE IN SYNC
+          // const postSection = document.querySelector('.post-section');
+          // postSection.addEventListener('submit', event => {
+          //   event.preventDefault();
+          //
+          //   const errSpan = document.querySelector('.img-error');
+          //
+          //   // handle other form inputs, like textarea
+          //   // ...
+          //   // ...
+          //
+          //   // validate size of image
+          //   const img = imgPicker.files[0];
+          //   if (img.size > 5000000) {
+          //     // image is too large (greater than 5000 kb)
+          //     errSpan.innerText = 'File too big';
+          //     return;
+          //   }
+          //   errSpan.innerText = '';
+          //
+          //   const formData = new FormData(event.target);
+          //
+          //   fetch('api/upload-image', {
+          //     method: 'POST',
+          //     body: formData
+          //   }).then(res => res.json()).then(data => {
+          //     // TODO: process server response
+          //   });
+          //
+          // });
         </script>
 
     </div>
