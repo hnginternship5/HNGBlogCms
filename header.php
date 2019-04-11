@@ -176,7 +176,7 @@ extract($_SESSION);?>
             border: none;
             padding: 1rem;
             background-color: rgba(0,0,0,0.03);
-        } 
+        }
         .status-area {
             border-radius: 15px;
             outline: none;
@@ -192,18 +192,6 @@ extract($_SESSION);?>
 
         .profile-section{
             background: rgba(243, 243, 243, 0.62);
-        }
-
-        .profile-img-wrapper{
-            position: absolute;
-            top: -120px;
-            margin-bottom: -120px;
-        }
-
-        .profile-img{
-            border-radius: 50%;
-            max-width: 230px;
-            height: 230px;
         }
 
         .profile-main{
@@ -271,7 +259,7 @@ extract($_SESSION);?>
             border-radius: 50%;
             max-width: 70px;
             height: 60px;
-            margin-right:  10px ; 
+            margin-right:  10px ;
             border: 0.5px solid rgba(0, 0, 0, 0.5);
         }
 

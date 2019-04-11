@@ -127,7 +127,7 @@ $_SESSION['accesstoken'] = true;
                 <div class="row posts">
                     <div class="col-md-12 col-12">
                         <div class="row">
-                            <div class="col-md-1">
+                            <div class="col-md-1 px-0">
                                 <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
                             </div>
                             <div class="col-md-11 col-12">
@@ -192,7 +192,7 @@ $_SESSION['accesstoken'] = true;
                 <div class="row posts">
                     <div class="col-md-12 col-12">
                         <div class="row">
-                            <div class="col-md-1">
+                            <div class="col-md-1 px-0 px-0">
                                 <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
                             </div>
                             <div class="col-md-11 col-12">
@@ -257,7 +257,7 @@ $_SESSION['accesstoken'] = true;
                 <div class="row posts">
                     <div class="col-md-12 col-12">
                         <div class="row">
-                            <div class="col-md-1">
+                            <div class="col-md-1 px-0">
                                 <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
                             </div>
                             <div class="col-md-11 col-12">
@@ -322,7 +322,7 @@ $_SESSION['accesstoken'] = true;
                 <div class="row posts">
                     <div class="col-md-12 col-12">
                         <div class="row">
-                            <div class="col-md-1">
+                            <div class="col-md-1 px-0">
                                 <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
                             </div>
                             <div class="col-md-11 col-12">
@@ -388,7 +388,7 @@ $_SESSION['accesstoken'] = true;
                 <div class="row posts">
                     <div class="col-md-12 col-12">
                         <div class="row">
-                            <div class="col-md-1">
+                            <div class="col-md-1 px-0">
                                 <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
                             </div>
                             <div class="col-md-11 col-12">
