@@ -175,7 +175,7 @@ extract($_SESSION);?>
             border: none;
             padding: 1rem;
             background-color: rgba(0,0,0,0.03);
-        } 
+        }
         .status-area {
             border-radius: 15px;
             outline: none;
@@ -248,18 +248,6 @@ extract($_SESSION);?>
             height: 165px;
         }
 
-        .blog-item-author-avatar-wrapper{
-            max-width: 50px;
-        }
-
-        .blog-item-author-avatar{
-            border-radius: 50%;
-            max-width: 70px;
-            height: 60px;
-            margin-right:  10px ; 
-            border: 0.5px solid rgba(0, 0, 0, 0.5);
-        }
-
         .post-section{
             min-height: 160px;
             background: #F8F8F8;
@@ -319,12 +307,6 @@ extract($_SESSION);?>
             .post-img{
                 max-height: 200px;
                 border-radius: 15px 15px 0 0;
-            }
-
-            .blog-item-author-avatar{
-                z-index: 9999999;
-                position: relative;
-                top: 30px;
             }
 
             .posts{

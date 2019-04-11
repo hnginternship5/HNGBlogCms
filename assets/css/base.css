@@ -824,14 +824,13 @@ Timeline && Contact Us Page Styling
 }
 
 .blog-item-author-avatar-wrapper {
-  max-width: 50px;
+  text-align: center;
 }
 
 .blog-item-author-avatar {
   border-radius: 50%;
   max-width: 50px;
-  height: 40px;
-  margin-right: 10px;
+  width: 100%;
   border: 0.5px solid var(--blog-author-avatar-border-color);
 }
 
