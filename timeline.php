@@ -3,6 +3,7 @@ $title = "Timeline";
 include 'header.php';
  ?>
 <?php
+$_SESSION['accesstoken'] = true;
             if(isset($_SESSION['accesstoken'])){
   try{
 
@@ -14,7 +15,7 @@ include 'header.php';
             }
 
             else{
-                // header("Location: index.php");
+                header("Location: index.php");
             }
         ?>
 
@@ -82,33 +83,35 @@ include 'header.php';
                <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
-                            <form class="row d-flex flex-column post-section">
-                                <textarea class="post-input" type="text" name="post-input" placeholder="What’s happening?"></textarea>
+                            <div class="row d-flex flex-column post-section">
+                                <form method="POST" action="post.php">
+                                    <textarea class="editable medium-editor-textarea post-input" type="text" name="body" placeholder="What’s happening?"></textarea>
 
-                                <div class="row mx-0 d-flex flex-row mt-auto justify-content-between">
-                                 <!--   <div class="post-action-right">
-                                        <button class="tool fa fa-underline"  onclick="document.execCommand('underline', false, '');"></button>
-                                        <button class="tool fa fa-italic" onclick="document.execCommand('italic', false, '');"></button>
-                                        <button class="tool fa fa-bold" onclick="document.execCommand('bold', false, '');"></button>
-                                        <button class="tool fas fa-cut" onclick="document.execCommand('cut',false,'')"></button>
-                                        <button class="tool fas fa-strikethrough" onclick="document.execCommand('strikeThrough',false,'')"></button>
-                                        <button class="tool fa fa-trash" onclick="document.execCommand('delete',false,'')"></button>
-                                        <button class="tool fab fa-scribd" onclick="document.execCommand('selectAll',false,'')"></button>
-                                        <button class="tool fa fa-align-center" onclick="document.execCommand('justifyCenter',false,'')"></button>
-                                        <button class="tool fa fa-align-left" onclick="document.execCommand('justifyLeft',false,'')"></button>
-                                        <button class="tool fa fa-align-right" onclick="document.execCommand('justifyRight',false,'')"></button>
+                                    <div class="row mx-0 d-flex flex-row mt-auto justify-content-between">
+                                    <!--   <div class="post-action-right">
+                                            <button class="tool fa fa-underline"  onclick="document.execCommand('underline', false, '');"></button>
+                                            <button class="tool fa fa-italic" onclick="document.execCommand('italic', false, '');"></button>
+                                            <button class="tool fa fa-bold" onclick="document.execCommand('bold', false, '');"></button>
+                                            <button class="tool fas fa-cut" onclick="document.execCommand('cut',false,'')"></button>
+                                            <button class="tool fas fa-strikethrough" onclick="document.execCommand('strikeThrough',false,'')"></button>
+                                            <button class="tool fa fa-trash" onclick="document.execCommand('delete',false,'')"></button>
+                                            <button class="tool fab fa-scribd" onclick="document.execCommand('selectAll',false,'')"></button>
+                                            <button class="tool fa fa-align-center" onclick="document.execCommand('justifyCenter',false,'')"></button>
+                                            <button class="tool fa fa-align-left" onclick="document.execCommand('justifyLeft',false,'')"></button>
+                                            <button class="tool fa fa-align-right" onclick="document.execCommand('justifyRight',false,'')"></button>
+                                        </div>
+                        -->
+                                        <div class="post-action-left" style="padding-left:700px;">
+                                          <input type="file" id="image" name="image" accept=".jpg,.jpeg,.svg,.png" class="img-picker">
+                                            <i class="fas fa-paperclip"></i>
+                                            <a class="post-action-item" href="#css"><img src="assets/img/mic.svg"></a>
+                                            <i class="fas fa-link"></i>
+                                            <span class="img-error"></span>
+                                            <button type="submit" class="btn btn-primary post-action-item">Publish</button>
+                                        </div>
                                     </div>
-					-->
-                                    <div class="post-action-left" style="padding-left:700px;">
-                                      <input type="file" id="image" name="image" accept=".jpg,.jpeg,.svg,.png" class="img-picker">
-                                        <i class="fas fa-paperclip"></i>
-                                        <a class="post-action-item" href="#css"><img src="assets/img/mic.svg"></a>
-                                        <i class="fas fa-link"></i>
-                                        <span class="img-error"></span>
-                                        <button class="btn btn-primary post-action-item" type="submit">Publish</button>
-                                    </div>
-                                </div>
                             </form>
+                          </div>
                         </div>
                     </div>
                     <div class="row mx-0 d-flex flex-row align-items-center justify-content-between padd">
