@@ -18,11 +18,11 @@ include 'header.php';
                 <div class="row mt-5">
                     <div class="col-12">
                         <div class="row">
-                            <div class="col-2 px-0 blog-item-author-avatar-wrapper">
+                            <div class="col-2 col-md-1 px-1 blog-item-author-avatar-wrapper">
                                 <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
                             </div>
-                            <div class="col-10 px-0">
-                                <div class="row blog-main-item">
+                            <div class="col-10 col-md-11">
+                                <div class="row blog-item-main">
                                     <div class="col-md-3 col-12 px-0">
                                         <div class="post-img">
                                         </div>
@@ -82,11 +82,11 @@ include 'header.php';
                 <div class="row mt-5">
                     <div class="col-12">
                         <div class="row">
-                            <div class="col-2 px-0 blog-item-author-avatar-wrapper">
+                            <div class="col-2 col-md-1 px-1 blog-item-author-avatar-wrapper">
                                 <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
                             </div>
-                            <div class="col-10 px-0">
-                                <div class="row blog-main-item">
+                            <div class="col-10 col-md-11">
+                                <div class="row blog-item-main">
                                     <div class="col-md-3 col-12 px-0">
                                         <div class="post-img">
                                         </div>
@@ -146,11 +146,11 @@ include 'header.php';
                 <div class="row mt-5">
                     <div class="col-12">
                         <div class="row">
-                            <div class="col-2 px-0 blog-item-author-avatar-wrapper">
+                            <div class="col-2 col-md-1 px-1 blog-item-author-avatar-wrapper">
                                 <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
                             </div>
-                            <div class="col-10 px-0">
-                                <div class="row blog-main-item">
+                            <div class="col-10 col-md-11">
+                                <div class="row blog-item-main">
                                     <div class="col-md-3 col-12 px-0">
                                         <div class="post-img">
                                         </div>
@@ -210,11 +210,11 @@ include 'header.php';
                 <div class="row mt-5">
                     <div class="col-12">
                         <div class="row">
-                            <div class="col-2 px-0 blog-item-author-avatar-wrapper">
+                            <div class="col-2 col-md-1 px-1 blog-item-author-avatar-wrapper">
                                 <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
                             </div>
-                            <div class="col-10 px-0">
-                                <div class="row blog-main-item">
+                            <div class="col-10 col-md-11">
+                                <div class="row blog-item-main">
                                     <div class="col-md-3 col-12 px-0">
                                         <div class="post-img">
                                         </div>
@@ -274,11 +274,11 @@ include 'header.php';
                 <div class="row mt-5">
                     <div class="col-12">
                         <div class="row">
-                            <div class="col-2 px-0 blog-item-author-avatar-wrapper">
+                            <div class="col-2 col-md-1 px-1 blog-item-author-avatar-wrapper">
                                 <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
                             </div>
-                            <div class="col-10 px-0">
-                                <div class="row blog-main-item">
+                            <div class="col-10 col-md-11">
+                                <div class="row blog-item-main">
                                     <div class="col-md-3 col-12 px-0">
                                         <div class="post-img">
                                         </div>

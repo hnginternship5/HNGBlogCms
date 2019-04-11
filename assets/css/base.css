@@ -784,8 +784,8 @@ Timeline && Contact Us Page Styling
 .blog-item-main {
   background-color: var(--blog-item-bg-color);
   box-shadow: 0px 4px 13px var(--blog-item-shadow-color);
-  border-radius: 11px;
-  margin-right: 45px;
+  border-radius: 15px;
+  min-height: 200px;
 }
 
 .blog-item-main-content {
@@ -825,7 +825,7 @@ Timeline && Contact Us Page Styling
 
 .blog-item-author-avatar {
   border-radius: 50%;
-  max-width: 50px;
+  max-width: 70px;
   width: 100%;
   border: 0.5px solid var(--blog-author-avatar-border-color);
 }
@@ -965,7 +965,7 @@ Timeline && Contact Us Page Styling
   font-weight: normal;
 }
 
-@media (min-width: 577px) {
+@media (min-width: 769px) {
   .post-img {
     border-radius: 15px 0 0 15px;
     height: 100%;

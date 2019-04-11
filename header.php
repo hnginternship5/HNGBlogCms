@@ -87,15 +87,6 @@ extract($_SESSION);?>
             color: red;
         }
 
-        .blog-main-item{
-            background: #F8F8F8;
-            box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.12);
-            border-radius: 11px
-            min-height: 200px;
-            /*margin-left: 10px;*/
-            margin-right: 10px;
-        }
-
         .post-heading{
             margin-top: 15px;
         }
@@ -294,10 +285,6 @@ extract($_SESSION);?>
 
         /*Media query*/
         @media (max-width: 576px) {
-            .blog-main-item{
-                margin-left: 10px;
-            }
-
             textarea{
                 min-height: 40vh !important;
             }
