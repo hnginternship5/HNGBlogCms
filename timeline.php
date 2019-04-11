@@ -14,7 +14,7 @@ include 'header.php';
             }
 
             else{
-                header("Location: index.php");
+                // header("Location: index.php");
             }
         ?>
 
@@ -25,7 +25,7 @@ include 'header.php';
                 <div class="logo-area mb-5 mx-4">
 		  <a href="/timeline.php">
                     <img src="assets/img/zikilogo.png" alt="" class="logo" />
-		 </a>		
+		 </a>
                 </div>
 
                 <!-- user profile picture -->
@@ -36,15 +36,15 @@ include 'header.php';
                 <!-- User name, Skills, short bio -->
                 <div class="text-center">
                     <h3 class="profile-name">
-                        <?php 
-                             echo $name;// dear backend dev. just uncomment this 
+                        <?php
+                             echo $name;// dear backend dev. just uncomment this
                             // and remove what echoes below. That's it.
                             //echo 'Austin Asoluka';
                         ?>
                     </h3>
                     <h4 class="user-skills">
-                        <?php 
-                             echo $email; //dear backend dev. just uncomment this 
+                        <?php
+                             echo $email; //dear backend dev. just uncomment this
                             // and remove what echoes below. That's it.
                             //echo 'Web | Software Developer';
                         ?>
@@ -52,7 +52,7 @@ include 'header.php';
                     <p class="profile-motto">Software Engineer at AWS design enthusiast and music lover</p>
                 </div>
 
-                <!-- social media links 
+                <!-- social media links
                 <div class="sidebar-icons text-center my-3">
                     <i class="fab fa-github social"></i>
                     <i class="fab fa-dribbble social"></i>
@@ -82,7 +82,7 @@ include 'header.php';
                <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="row d-flex flex-column post-section">
+                            <form class="row d-flex flex-column post-section">
                                 <textarea class="post-input" type="text" name="post-input" placeholder="What’s happening?"></textarea>
 
                                 <div class="row mx-0 d-flex flex-row mt-auto justify-content-between">
@@ -96,23 +96,24 @@ include 'header.php';
                                         <button class="tool fab fa-scribd" onclick="document.execCommand('selectAll',false,'')"></button>
                                         <button class="tool fa fa-align-center" onclick="document.execCommand('justifyCenter',false,'')"></button>
                                         <button class="tool fa fa-align-left" onclick="document.execCommand('justifyLeft',false,'')"></button>
-                                        <button class="tool fa fa-align-right" onclick="document.execCommand('justifyRight',false,'')"></button>  
+                                        <button class="tool fa fa-align-right" onclick="document.execCommand('justifyRight',false,'')"></button>
                                     </div>
 					-->
                                     <div class="post-action-left" style="padding-left:700px;">
+                                      <input type="file" id="image" name="image" accept=".jpg,.jpeg,.svg,.png" class="img-picker">
                                         <i class="fas fa-paperclip"></i>
                                         <a class="post-action-item" href="#css"><img src="assets/img/mic.svg"></a>
                                         <i class="fas fa-link"></i>
-                                        <button class="btn btn-primary post-action-item">Publish</button>
+                                        <button class="btn btn-primary post-action-item" type="submit">Publish</button>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                     <div class="row mx-0 d-flex flex-row align-items-center justify-content-between padd">
                         <div class="col-md-8 line ml-md-5"></div>
                         <div class="col d-inline-flex mr-md-5 flex-row justify-content-between">
-                            <!--<p class="post-filter"><span class="post-filter-title">Sort by:</span> Most Recent Posts</p> 
+                            <!--<p class="post-filter"><span class="post-filter-title">Sort by:</span> Most Recent Posts</p>
                             <img src="assets/img/caret.svg"> -->
                         </div>
                     </div>
@@ -136,7 +137,7 @@ include 'header.php';
                                         <div class="row post-heading">
                                             <div class="col-md-8 col-10">
 						<a href="/blog-detail.php">
-                                                <h4>UI/UX Concept</h4>	
+                                                <h4>UI/UX Concept</h4>
 						</a>
                                             </div>
                                             <div class="col-md-4 col-2 text-right">
@@ -407,7 +408,7 @@ include 'header.php';
                                             </div>
                                         </div>
                                         <div class="row">
-					
+
                                             <div class="col-md-12 col-12">
 						<h6 class="blog-item-author text-left">Oluwa Trumpeter </h6>
                                                 <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nuor sit amet, consectetur adipiscing elit, sed
@@ -453,6 +454,29 @@ include 'header.php';
             </div>
 
         </div>
+
+        <script>
+          const postSection = document.querySelector('.post-section');
+          postSection.addEventListener('submit', event => {
+            event.preventDefault();
+            const img = document.querySelector('.img-picker').files[0];
+            if (img.size > 5 * 1024 * 1024) {
+              // image is too large (greater than 5000 kb)
+              // TODO: give user feedback
+              return;
+            }
+
+            const formData = new FormData(event.target);
+
+            fetch('api/upload-image', {
+              method: 'POST',
+              body: formData
+            }).then(res => res.json()).then(data => {
+              // TODO: process server response
+            });
+
+          });
+        </script>
 
     </div>
 
