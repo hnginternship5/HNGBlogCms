@@ -23,9 +23,8 @@ include 'header.php';
                             </div>
                             <div class="col-10 px-0">
                                 <div class="row blog-main-item">
-                                    <div class="col-md-3 col-12">
-                                        <div class="row">
-                                            <img src="assets/img/wall.jpg" class="img-fluid post-img" alt="Profile Image">
+                                    <div class="col-md-3 col-12 px-0">
+                                        <div class="post-img">
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-12">
@@ -88,9 +87,8 @@ include 'header.php';
                             </div>
                             <div class="col-10 px-0">
                                 <div class="row blog-main-item">
-                                    <div class="col-md-3 col-12">
-                                        <div class="row">
-                                            <img src="assets/img/wall.jpg" class="img-fluid post-img" alt="Profile Image">
+                                    <div class="col-md-3 col-12 px-0">
+                                        <div class="post-img">
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-12">
@@ -153,9 +151,8 @@ include 'header.php';
                             </div>
                             <div class="col-10 px-0">
                                 <div class="row blog-main-item">
-                                    <div class="col-md-3 col-12">
-                                        <div class="row">
-                                            <img src="assets/img/wall.jpg" class="img-fluid post-img" alt="Profile Image">
+                                    <div class="col-md-3 col-12 px-0">
+                                        <div class="post-img">
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-12">
@@ -218,9 +215,8 @@ include 'header.php';
                             </div>
                             <div class="col-10 px-0">
                                 <div class="row blog-main-item">
-                                    <div class="col-md-3 col-12">
-                                        <div class="row">
-                                            <img src="assets/img/wall.jpg" class="img-fluid post-img" alt="Profile Image">
+                                    <div class="col-md-3 col-12 px-0">
+                                        <div class="post-img">
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-12">
@@ -283,9 +279,8 @@ include 'header.php';
                             </div>
                             <div class="col-10 px-0">
                                 <div class="row blog-main-item">
-                                    <div class="col-md-3 col-12">
-                                        <div class="row">
-                                            <img src="assets/img/wall.jpg" class="img-fluid post-img" alt="Profile Image">
+                                    <div class="col-md-3 col-12 px-0">
+                                        <div class="post-img">
                                         </div>
                                     </div>
                                     <div class="col-md-9 col-12">

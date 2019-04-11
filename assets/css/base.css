@@ -793,15 +793,11 @@ Timeline && Contact Us Page Styling
   margin-right: 20px;
 }
 
-.blog-item-img {
-  border-radius: 11px;
-  width: inherit;
-  height: 165px;
-}
-
-.blog-item-img-wrapper {
-  width: 230px;
-  margin: 22px 24px;
+.post-img {
+  background: url('/assets/img/wall.jpg') center / cover no-repeat;
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 200px;
 }
 
 .blog-item-header {
@@ -967,6 +963,14 @@ Timeline && Contact Us Page Styling
 
 .post-filter-title {
   font-weight: normal;
+}
+
+@media (min-width: 577px) {
+  .post-img {
+    border-radius: 15px 0 0 15px;
+    height: 100%;
+    background-position: 0 0;
+  }
 }
 
 @media (max-width: 1439px) {

@@ -96,12 +96,6 @@ extract($_SESSION);?>
             margin-right: 10px;
         }
 
-        .post-img{
-            max-height: 200px;
-            border-top-left-radius: 15px;
-            border-bottom-left-radius: 15px;
-        }
-
         .post-heading{
             margin-top: 15px;
         }
@@ -300,11 +294,6 @@ extract($_SESSION);?>
 
         /*Media query*/
         @media (max-width: 576px) {
-            .post-img{
-                max-height: 200px;
-                border-radius: 15px 15px 0 0;
-            }
-
             .blog-main-item{
                 margin-left: 10px;
             }
