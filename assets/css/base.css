@@ -879,6 +879,15 @@ Timeline && Contact Us Page Styling
   padding: 18px 30px;
 }
 
+.img-picker {
+  /* hide ugly file picker */
+  display: none;
+}
+
+.fa-paperclip:hover {
+  cursor: pointer;
+}
+
 .post-input {
   background-color: transparent;
   font-family: Open Sans;

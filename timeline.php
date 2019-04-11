@@ -456,10 +456,24 @@ include 'header.php';
         </div>
 
         <script>
+        // trigger file picker when paperclip icon is clicked
+        const imgPicker = document.querySelector('.img-picker');
+        const paperclip = document.querySelector('.fa-paperclip');
+        paperclip.addEventListener('click', () => {
+          imgPicker.click();
+        });
+
+        // handle submitting a post
           const postSection = document.querySelector('.post-section');
           postSection.addEventListener('submit', event => {
             event.preventDefault();
-            const img = document.querySelector('.img-picker').files[0];
+
+            // handle other form inputs, like textarea
+            // ...
+            // ...
+
+            // validate size of image
+            const img = imgPicker.files[0];
             if (img.size > 5 * 1024 * 1024) {
               // image is too large (greater than 5000 kb)
               // TODO: give user feedback
