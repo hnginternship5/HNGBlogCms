@@ -1,22 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>RSS Feeds</title>
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Hind:400,500,700"
-      rel="stylesheet"
-    />
+  <?php
+    $title ="RSS feeds";
+    include 'head.php';
+  ?>
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/rssfeed-light.css" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
-    />
   </head>
 
   <body>
