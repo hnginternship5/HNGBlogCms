@@ -103,10 +103,11 @@ input:checked + .slider:before {
                         <input class="user-profile-input" type="text" name="lastname" placeholder="Blade">
                         <br>
                         Email Address:<br>
-                        <input class="user-profile-input" type="text" name="firstname">
+                        <input class="user-profile-input"  type="email" name="Email" id="email">
                         <br>
                         Change password:<br>
-                        <input class="user-profile-input" type="text" name="lastname">
+                        <input class="user-profile-input" type="password" name="password" id="password">
+                        
 
                     </form>
 
