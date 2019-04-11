@@ -884,6 +884,11 @@ Timeline && Contact Us Page Styling
   display: none;
 }
 
+.img-error {
+  color: var(--ziki-red);
+  padding: 0.2em;
+}
+
 .fa-paperclip:hover {
   cursor: pointer;
 }

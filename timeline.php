@@ -104,6 +104,7 @@ include 'header.php';
                                         <i class="fas fa-paperclip"></i>
                                         <a class="post-action-item" href="#css"><img src="assets/img/mic.svg"></a>
                                         <i class="fas fa-link"></i>
+                                        <span class="img-error"></span>
                                         <button class="btn btn-primary post-action-item" type="submit">Publish</button>
                                     </div>
                                 </div>
@@ -468,17 +469,20 @@ include 'header.php';
           postSection.addEventListener('submit', event => {
             event.preventDefault();
 
+            const errSpan = document.querySelector('.img-error');
+
             // handle other form inputs, like textarea
             // ...
             // ...
 
             // validate size of image
             const img = imgPicker.files[0];
-            if (img.size > 5 * 1024 * 1024) {
+            if (img.size > 5000000) {
               // image is too large (greater than 5000 kb)
-              // TODO: give user feedback
+              errSpan.innerText = 'File too big';
               return;
             }
+            errSpan.innerText = '';
 
             const formData = new FormData(event.target);
 
