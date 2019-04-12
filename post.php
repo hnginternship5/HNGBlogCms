@@ -72,7 +72,7 @@ else {
     }
     else{
         $result['error'] = true;
-        $result['message'] = 'internal server error';
+        $result['message'] = 'internal server error, please add a default post on installation.';
     }
     echo(json_encode($result));
 }
