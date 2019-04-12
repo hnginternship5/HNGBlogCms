@@ -45,8 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $response['message'] = 'Error, please select an image';
         }
     }
-    die(json_encode($response));
-    //header("Location: {$site_url}/timeline.php");
+    header("Location: {$site_url}timeline.php");
 }
 else {
     $data = file_get_contents("posts.json");

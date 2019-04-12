@@ -57,11 +57,8 @@ require_once './Authentication/auth/fbook.php';
                                Facebook
                           </button>
                           </a>
-<<<<<<< HEAD
-=======
                           <p class="auth-demarcation-or">or</p>
-<a href="login.php">Log in Locally</a>
->>>>>>> 504f20f9a65451c6148652a85ff8974f6908082b
+                          <a href="login.php">Log in Locally</a>
                       </div>
                   </div>
               </div>

@@ -62,11 +62,13 @@ $site_address = ($link == $site) ? $site : die("Your url is not the same as the 
                                 <div class="row blog-main-item">
                                     <div class="col-md-3 col-12">
                                         <div class="row">
-                                            <img src="assets/img/wall.jpg" class="img-fluid post-img" alt="Profile Image">
+                                            <img src="${card.post_image}" class="img-fluid post-img" alt="Profile Image">
                                         </div>
                                     </div>
-                                    <div class="col-md-9 col-12">
-                                    <div class="markedcontent${i}"></div>
+                                    <div class="col-md-8 col-10">
+                                        <a href="/blog-detail.php">
+                                            <div class="markedcontent${i}"></div>
+                                        </a>
                                         <div class="row post-footer">
                                             <div class="col-md-8 col-7">
                                                 <a href="#">
