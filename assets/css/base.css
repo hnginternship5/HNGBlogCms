@@ -8,6 +8,7 @@
   --ziki-gray: #999;
   --ziki-light-gray: #ddd;
   --almost-white: #f8f8f8;
+  --ziki-star: #ffc107;
 
   /* these change across themes */
   --default-bg-color: white;
@@ -99,7 +100,18 @@ body {
 
 p {
   line-height: 24px;
-  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 0.02em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'B612', sans-serif;
 }
 
 a {
@@ -114,15 +126,22 @@ a:hover {
   text-decoration: none;
   opacity: 0.7;
 }
-
 ul {
   list-style-type: none;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
 }
 
 button {
   border: none;
   outline: none;
+}
+
+/* ==========================
+MISCELLANEOUS
+========================== */
+.star {
+  color: var(--ziki-star);
 }
 
 /* ==========================
@@ -648,6 +667,14 @@ Landing Page Styling
 /* ===================
 Timeline && Contact Us Page Styling
 ==================== */
+.posts-area {
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+
+div.posts {
+  margin-top: 40px;
+}
 
 .header-img {
   width: 100%;
@@ -786,6 +813,7 @@ Timeline && Contact Us Page Styling
   box-shadow: 0px 4px 13px var(--blog-item-shadow-color);
   border-radius: 11px;
   margin-right: 45px;
+  min-height: 200px;
 }
 
 .blog-item-main-content {
@@ -968,6 +996,12 @@ Timeline && Contact Us Page Styling
 
 .post-filter-title {
   font-weight: normal;
+}
+
+@media (min-width: 576px) {
+  .blog-item-main {
+    margin-left: 10px;
+  }
 }
 
 @media (max-width: 1439px) {

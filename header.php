@@ -23,84 +23,6 @@ extract($_SESSION);?>
 
     <style type="text/css">
         /** mylo carson 2019 */
-        p{
-            /*font-family: 'Amiri', serif;*/
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: 1.5em;
-            /*color: #2f2f2f;*/
-            color: #000;
-            letter-spacing: 0.02em;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'B612', sans-serif;
-            /*font-weight: bold;*/
-        }
-
-        html,body{
-            margin:0;
-            padding: 0;
-            overflow-x: hidden;
-            background-color: #fff;
-        }
-
-        ul{
-            margin:0;
-            padding:0;
-        }
-
-        .page-head{
-            min-height: 350px;
-            max-height: 400px;
-            background-image: url(../img/header.png);
-            background-attachment: fixed;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-
-        .ziki-post{
-            color: white;
-            font-family: 'Source Sans Pro', sans-serif;
-        }
-
-        div.header-caption{
-            margin-top: 40px;
-        }
-
-        h1.ziki-post{
-            font-size: 8em !important;
-        }
-
-        i.s-icons{
-            margin: 20px 5px;
-        }
-
-        .posts-area{
-            padding-top: 30px;
-            padding-bottom: 80px;
-        }
-
-        div.posts{
-            margin-top: 40px;
-        }
-
-        .star{
-            color: #ffc107;
-        }
-
-        .liked{
-            color: red;
-        }
-
-        .blog-main-item{
-            background: #F8F8F8;
-            box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.12);
-            border-radius: 11px
-            min-height: 200px;
-            /*margin-left: 10px;*/
-            margin-right: 10px;
-        }
-
         .post-img{
             max-height: 200px;
             border-top-left-radius: 15px;
@@ -176,7 +98,7 @@ extract($_SESSION);?>
             border: none;
             padding: 1rem;
             background-color: rgba(0,0,0,0.03);
-        } 
+        }
         .status-area {
             border-radius: 15px;
             outline: none;
@@ -271,7 +193,7 @@ extract($_SESSION);?>
             border-radius: 50%;
             max-width: 70px;
             height: 60px;
-            margin-right:  10px ; 
+            margin-right:  10px ;
             border: 0.5px solid rgba(0, 0, 0, 0.5);
         }
 
@@ -344,10 +266,6 @@ extract($_SESSION);?>
 
             .posts{
                 margin-top: -20px;
-            }
-
-            .blog-main-item{
-                margin-left: 10px;
             }
 
             textarea{
