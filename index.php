@@ -1,355 +1,127 @@
 <?php
 $title ="Welcome";
 include 'header.php';
-//print_r($_SESSION);
-if( $user->is_logged_in() ){ header('Location: timeline.php'); }
-
+require_once "config.php";
+$link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] .  $_SERVER['REQUEST_URI'];
+$site = (isset($site_url)) ? $site_url : die("please provide your site url in the config.php file.") ;
+$site_address = ($link == $site) ? $site : die("Your url is not the same as the url installed in the config.php file");
  ?>
 
+<style>
+    .post-date {
+        color: #515151;
+    }
 
-    <div class="container-fluid">
-        <div class="row justify-content-between m-4">
-	   <a href="/timeline.php">
+    @media only screen and (min-width: 750px) and (max-width: 1300px) {
+        .blog-item-author-avatar {
+            position: relative;
+            left: -3em;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .blog-item-author-avatar {
+            z-index: 1;
+            position: relative;
+            top: -0.5em;
+        }
+    }
+
+</style>
+
+<div class="container-fluid">
+    <div class="row justify-content-between m-4">
+        <a href="/timeline.php">
             <img class="img-fluid logo" src="assets/img/zikilogo.png">
-	</a>
-            <button type="button" class="btn btn-primary align-self-end px-5" data-toggle="modal" data-target="#exampleModalCenter">
-                Login
-            </button>
-        </div>
-        <div class="container justify-content-center">
-            <div class="col-md-12 col-12 posts-area">
-                <!-- Post feeds start here -->
-                <div class="row posts">
-                    <div class="col-md-12 col-12">
-                        <div class="row">
-                            <div class="col-md-1">
-                                <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
-                            </div>
-                            <div class="col-md-11 col-12">
-                                <div class="row blog-main-item">
-                                    <div class="col-md-3 col-12">
-                                        <div class="row">
-                                            <img src="assets/img/wall.jpg" class="img-fluid post-img" alt="Profile Image">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-9 col-12">
-                                        <div class="row post-heading">
-                                            <div class="col-md-8 col-10">
-						<a href="/blog-detail.php">
-                                                <h4>UI/UX Concept</h4>
-						</a>
-                                            </div>
-                                            <div class="col-md-4 col-2 text-right">
-                                                <!-- When user stars a post, change class to
-                                                    the one below-->
-                                                <!-- <i class="fas fa-star"></i> -->
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-12">
-						<h6 class="blog-item-author text-left">Oluwa Trumpeter </h6>
-                                                <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nuor sit amet, consectetur adipiscing elit, sed
-						<a href="/blog-detail.php">
-                                                <span class="read-more">....read more</span>
-						</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="row post-footer">
-                                            <div class="col-md-8 col-7">
-                                                <a href="#">
-                                                <span class="badge badge-primary">Tech</span>
-						</a>
-						<a href="#">
-                                                <span class="badge badge-primary">AI</span>
-						</a>
-						<a href="#">
-                                                <span class="badge badge-primary">Academic</span>
-						</a>
-                                                <div class="col-md-12">
-                                                    <div class="row">
-                                                        <p class="post-date">April 3, 2016</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 col-5 text-right">
-                                                <a href="/blog-detail.php"><i class="far fa-comment-alt post-icon chat-icon"></i></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="col-md-1"></div> -->
-                </div>
+        </a>
+        <button type="button" class="btn btn-primary align-self-end px-5" data-toggle="modal"
+            data-target="#exampleModalCenter">
+            Login
+        </button>
+    </div>
+    <div class="container justify-content-center">
+        <div class="col-md-12 col-12 posts-area">
+            <!-- Post feeds start here -->
 
-                <div class="row posts">
-                    <div class="col-md-12 col-12">
-                        <div class="row">
-                            <div class="col-md-1">
-                                <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
-                            </div>
-                            <div class="col-md-11 col-12">
-                                <div class="row blog-main-item">
-                                    <div class="col-md-3 col-12">
-                                        <div class="row">
-                                            <img src="assets/img/wall.jpg" class="img-fluid post-img" alt="Profile Image">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-9 col-12">
-                                        <div class="row post-heading">
-                                            <div class="col-md-8 col-10">
-						<a href="/blog-detail.php">
-                                                <h4>UI/UX Concept</h4>
-						</a>
-                                            </div>
-                                            <div class="col-md-4 col-2 text-right">
-                                                <!-- When user stars a post, change class to
-                                                    the one below-->
-                                                <!-- <i class="fas fa-star"></i> -->
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-12">
-						<h6 class="blog-item-author text-left">Oluwa Trumpeter </h6>
-                                                <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nuor sit amet, consectetur adipiscing elit, sed
-						<a href="/blog-detail.php">
-                                                <span class="read-more">....read more</span>
-						</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="row post-footer">
-                                            <div class="col-md-8 col-7">
-                                                <a href="#">
-                                                <span class="badge badge-primary">Tech</span>
-						</a>
-						<a href="#">
-                                                <span class="badge badge-primary">AI</span>
-						</a>
-						<a href="#">
-                                                <span class="badge badge-primary">Academic</span>
-						</a>
-                                                <div class="col-md-12">
-                                                    <div class="row">
-                                                        <p class="post-date">April 3, 2016</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 col-5 text-right">
-                                                <a href="/blog-detail.php"><i class="far fa-comment-alt post-icon chat-icon"></i></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="col-md-1"></div> -->
-                </div>
-
-                <div class="row posts">
-                    <div class="col-md-12 col-12">
-                        <div class="row">
-                            <div class="col-md-1">
-                                <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
-                            </div>
-                            <div class="col-md-11 col-12">
-                                <div class="row blog-main-item">
-                                    <div class="col-md-3 col-12">
-                                        <div class="row">
-                                            <img src="assets/img/wall.jpg" class="img-fluid post-img" alt="Profile Image">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-9 col-12">
-                                        <div class="row post-heading">
-                                            <div class="col-md-8 col-10">
-						<a href="/blog-detail.php">
-                                                <h4>UI/UX Concept</h4>
-						</a>
-                                            </div>
-                                            <div class="col-md-4 col-2 text-right">
-                                                <!-- When user stars a post, change class to
-                                                    the one below-->
-                                                <!-- <i class="fas fa-star"></i> -->
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-12">
-						<h6 class="blog-item-author text-left">Oluwa Trumpeter </h6>
-                                                <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nuor sit amet, consectetur adipiscing elit, sed
-						<a href="/blog-detail.php">
-                                                <span class="read-more">....read more</span>
-						</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="row post-footer">
-                                            <div class="col-md-8 col-7">
-                                                <a href="#">
-                                                <span class="badge badge-primary">Tech</span>
-						</a>
-						<a href="#">
-                                                <span class="badge badge-primary">AI</span>
-						</a>
-						<a href="#">
-                                                <span class="badge badge-primary">Academic</span>
-						</a>
-                                                <div class="col-md-12">
-                                                    <div class="row">
-                                                        <p class="post-date">April 3, 2016</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 col-5 text-right">
-                                                <a href="/blog-detail.php"><i class="far fa-comment-alt post-icon chat-icon"></i></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="col-md-1"></div> -->
-                </div>
-
-                <div class="row posts">
-                    <div class="col-md-12 col-12">
-                        <div class="row">
-                            <div class="col-md-1">
-                                <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
-                            </div>
-                            <div class="col-md-11 col-12">
-                                <div class="row blog-main-item">
-                                    <div class="col-md-3 col-12">
-                                        <div class="row">
-                                            <img src="assets/img/wall.jpg" class="img-fluid post-img" alt="Profile Image">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-9 col-12">
-                                        <div class="row post-heading">
-                                            <div class="col-md-8 col-10">
-						<a href="/blog-detail.php">
-                                                <h4>UI/UX Concept</h4>
-						</a>
-                                            </div>
-                                            <div class="col-md-4 col-2 text-right">
-                                                <!-- When user stars a post, change class to
-                                                    the one below-->
-                                                <!-- <i class="fas fa-star"></i> -->
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-12">
-						<h6 class="blog-item-author text-left">Oluwa Trumpeter </h6>
-                                                <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nuor sit amet, consectetur adipiscing elit, sed
-						<a href="/blog-detail.php">
-                                                <span class="read-more">....read more</span>
-						</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="row post-footer">
-                                            <div class="col-md-8 col-7">
-                                                <a href="#">
-                                                <span class="badge badge-primary">Tech</span>
-						</a>
-						<a href="#">
-                                                <span class="badge badge-primary">AI</span>
-						</a>
-						<a href="#">
-                                                <span class="badge badge-primary">Academic</span>
-						</a>
-                                                <div class="col-md-12">
-                                                    <div class="row">
-                                                        <p class="post-date">April 3, 2016</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 col-5 text-right">
-                                                <a href="/blog-detail.php"><i class="far fa-comment-alt post-icon chat-icon"></i></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="col-md-1"></div> -->
-                </div>
-
-
-                <div class="row posts">
-                    <div class="col-md-12 col-12">
-                        <div class="row">
-                            <div class="col-md-1">
-                                <img class="blog-item-author-avatar" src="assets/img/avatar-2.jpeg">
-                            </div>
-                            <div class="col-md-11 col-12">
-                                <div class="row blog-main-item">
-                                    <div class="col-md-3 col-12">
-                                        <div class="row">
-                                            <img src="assets/img/wall.jpg" class="img-fluid post-img" alt="Profile Image">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-9 col-12">
-                                        <div class="row post-heading">
-                                            <div class="col-md-8 col-10">
-						<a href="/blog-detail.php">
-                                                <h4>UI/UX Concept</h4>
-						</a>
-                                            </div>
-                                            <div class="col-md-4 col-2 text-right">
-                                                <!-- When user stars a post, change class to
-                                                    the one below-->
-                                                <!-- <i class="fas fa-star"></i> -->
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12 col-12">
-						<h6 class="blog-item-author text-left">Oluwa Trumpeter </h6>
-                                                <p class="post-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dgiat nuor sit amet, consectetur adipiscing elit, sed
-						<a href="/blog-detail.php">
-                                                <span class="read-more">....read more</span>
-						</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="row post-footer">
-                                            <div class="col-md-8 col-7">
-                                                <a href="#">
-                                                <span class="badge badge-primary">Tech</span>
-						</a>
-						<a href="#">
-                                                <span class="badge badge-primary">AI</span>
-						</a>
-						<a href="#">
-                                                <span class="badge badge-primary">Academic</span>
-						</a>
-                                                <div class="col-md-12">
-                                                    <div class="row">
-                                                        <p class="post-date">April 3, 2016</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 col-5 text-right">
-                                                <a href="/blog-detail.php"><i class="far fa-comment-alt post-icon chat-icon"></i></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="col-md-1"></div> -->
-                </div>
         </div>
     </div>
+    <script>
+        const $ = document.querySelector.bind(document)
 
+        function readTextFile(file, div) {
+            var rawFile = new XMLHttpRequest();
+            rawFile.open("GET", file, false);
+            rawFile.onreadystatechange = function () {
+                if (rawFile.readyState === 4) {
+                    if (rawFile.status === 200 || rawFile.status == 0) {
+                        var allText = rawFile.responseText;
+                        $(`.markedcontent${div}`).innerHTML = allText;
+                    }
+                }
+            }
+            rawFile.send(null);
+        }
+        const url = "<?php echo "{$site_url}/post.php" ?>";
+        fetch(url)
+            .then((resp) => resp.json())
+            .then(function (data) {
+                console.log(data)
+                let res = data.result;
+                for (let i = 0; i < res.length; i++) {
+                    let card = res[i];
+                    console.log(card);
+                    let post_card = `
+                <div class="row posts pb-3">
+                            <div class="col-md-1">
+                                <img class="blog-item-author-avatar" src="${card.author_image}">
+                            </div>
+                            <div class="col-md-11">
+                                <div class="row blog-item-main">
+                                    <div class="col-md-3">
+                                            <img src="${card.post_image}" class="img-fluid post-img" alt="Profile Image">
+                                    </div>
 
+                                    <div class="col-md-9">
+                                        <a href="/blog-detail.php">
+                                            <div class="markedcontent${i}"></div>
+                                        </a>
+                                        <div class="row post-footer mt-1">
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                <a href="#">
+                                                <span class="badge badge-primary">Tech</span>
+                                                    </a>
+                                                    <a href="#">
+                                                <span class="badge badge-primary">AI</span>
+                                                    </a>
+                                                    <a href="#">
+                                                <span class="badge badge-primary">Academic</span>
+					                            	</a>   
+                                            </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-end">
+                                                    <a href="/blog-detail.php"><i class="far fa-comment-alt post-icon chat-icon"></i></i></a>
+                                                </div>
+                                        </div>
 
-
+                                        <div class="row">
+                                                        <div class="col-md-12">
+                                                        <p class="post-date">${card.post_timestamp}</p>
+                                                        </div>
+                                                </div>
+                                    </div>
+                                </div>
+                            </div>
+                    <!-- <div class="col-md-1"></div> -->
+                </div>
+                `;
+                    $('.posts-area').innerHTML += post_card;
+                    readTextFile(card.markdown_url, i);
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        //$('body').style.background = '#ff1212'
+    </script>
     <script>
         const toggleThemeBtn = document.querySelector('.toggle-theme');
         toggleThemeBtn.addEventListener('click', e => document.querySelector('body').classList.toggle('dark'));
@@ -357,6 +129,6 @@ if( $user->is_logged_in() ){ header('Location: timeline.php'); }
 
     <?php include'auth.php' ;?>
 
-</body>
+    </body>
 
-</html>
+    </html>
