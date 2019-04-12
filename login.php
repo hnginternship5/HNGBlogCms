@@ -1,6 +1,6 @@
 <?php
 //include config
-require_once('/includes/config.php');
+require_once('includes/config.php');
 $title = 'Welcome';
 $location = 'login';
 //check if already logged in
