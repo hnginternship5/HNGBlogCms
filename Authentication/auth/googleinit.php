@@ -22,7 +22,7 @@ $glogin_url = $g_client->createAuthUrl();
 $code = isset($_GET['code']) ? $_GET['code'] : NULL;
 
 //Fetch access token
-if(isset($code)) { 
+if(isset($code)) {
   try {
 
       $_SESSION['accesstoken'] = $g_client->fetchAccessTokenWithAuthCode($code);

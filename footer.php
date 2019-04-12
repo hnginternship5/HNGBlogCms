@@ -1,4 +1,5 @@
 </div>
+<script src="./assets/js/te.js"></script>
 <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
 <script>
     let editor = new MediumEditor('.editable', {
