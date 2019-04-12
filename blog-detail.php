@@ -6,15 +6,10 @@ DO NOT WORK ON THE FRONT END FOR THIS PAGE YET
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="assets/css/theme1.css">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/base.css">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <title>Blog Detail</title>
+ <?php
+    $title ="Blog details";
+    include 'head-tag.php';
+  ?>
     <style>
         .margin-right-h {
             margin-right: .5rem;
@@ -29,7 +24,11 @@ DO NOT WORK ON THE FRONT END FOR THIS PAGE YET
 </head>
 
 <body class="">
-    <div class="blog-details-main-container">
+    <div id="loader-container">
+      <div id="loader"></div>
+    </div>
+    <!-- main content -->
+    <div id="content" class="blog-details-main-container">
         <div class="blog-details-heading">
 	<a href="/timeline.php">
             <img class="img-fluid logo" src="assets/img/zikilogo.png">
@@ -150,6 +149,8 @@ DO NOT WORK ON THE FRONT END FOR THIS PAGE YET
 
     <script src="./assets/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <!-- these 2 script tags should be deleted since they're already loaded from the top head-tag -->
     <script id="dsq-count-scr" src="//ziki-1.disqus.com/count.js" async></script>
+    <?php include 'footer-tag.php'?>
 </body>
 </html>

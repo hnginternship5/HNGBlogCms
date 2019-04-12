@@ -3,16 +3,19 @@
   <head>
   <?php
     $title ="RSS feeds";
-    include 'head.php';
+    include 'head-tag.php';
   ?>
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/rssfeed-light.css" />
   </head>
 
   <body>
-    <main>
+    <div id="loader-container">
+      <div id="loader"></div>
+    </div>
+    <main id="content">
       <aside>
         <h1>The Platform</h1>
-        <!--This represents the sidebar and contained in it are icon sets from font-awesome-->
+        <!--This page needs serious work-->
         <div class="news_category">
           <ul>
             
@@ -108,5 +111,6 @@
         </div>
       </section>
     </main>
+    <?php include 'footer-tag.php'?>
   </body>
 </html>
