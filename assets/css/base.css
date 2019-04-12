@@ -68,7 +68,7 @@
   --blog-item-bg-color: var(--ziki-dark-blue);
   --blog-author-color: #aaa;
   --blog-item-read-more-link-color: #a8b8e2;
-  --post-section-bg-color: var(--ziki-dark-blue);
+  --post-section-bg-color: #063a6b;
   --post-text-color: white;
   --post-filter-text-color: white;
   --form-input-bg-color: var(--ziki-dark-blue);
@@ -154,6 +154,10 @@ MISCELLANEOUS
 ========================== */
 .star {
   color: var(--ziki-star);
+}
+
+.padd {
+  padding: 20px 0;
 }
 
 /* ==========================
@@ -994,6 +998,39 @@ div.posts {
 
 .post-filter-title {
   font-weight: normal;
+}
+
+@media (max-width: 576px) {
+  .post-img {
+    max-height: 200px;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .blog-item-author-avatar {
+    z-index: 9999999;
+    position: relative;
+    top: 30px;
+  }
+
+  .posts {
+    margin-top: -20px;
+  }
+
+  textarea {
+    min-height: 40vh !important;
+  }
+
+  .post-section {
+    min-width: 100%;
+    margin: 30px 0px;
+  }
+
+  .fa,
+  .fas,
+  .fab {
+    font-size: 0.9em;
+    padding: 5px;
+  }
 }
 
 @media (min-width: 576px) {

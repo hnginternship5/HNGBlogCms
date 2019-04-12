@@ -20,47 +20,6 @@ extract($_SESSION);?>
     <!-- Markdown cdn link -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
-
-    <style type="text/css">
-        .pagination-section{
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
-
-        .padd{padding: 20px 0;}
-
-        /*Media query*/
-        @media (max-width: 576px) {
-            .post-img{
-                max-height: 200px;
-                border-radius: 15px 15px 0 0;
-            }
-
-            .blog-item-author-avatar{
-                z-index: 9999999;
-                position: relative;
-                top: 30px;
-            }
-
-            .posts{
-                margin-top: -20px;
-            }
-
-            textarea{
-                min-height: 40vh !important;
-            }
-
-            .post-section{
-                min-width: 100%;
-                margin: 30px 0px;
-            }
-
-            .fa, .fas, .fab{
-                font-size: .9em;
-                padding: 5px;
-            }
-        }
-    </style>
 </head>
 <body class="">
   <div class="container-fluid">
