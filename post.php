@@ -10,8 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //$title = isset($_POST['title']) ? trim($_POST['title']) : null;
     $body = isset($_POST['body']) ? trim($_POST['body']) : null;
     //$file = $_FILES['image'];
-    $name ="Ogundiji Bolade Adio";
-    $email = "kamponistullar@gmail.com";
     $user = $email;
     $db_json = file_get_contents("posts.json");
     $newPost = new Post();
@@ -19,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $newPost->setStoryBody($body);
     //$newPost->setStoryTitle($title);
     //$newPost->setStoryImage($target_file);
-    if ($newPost->savePost($db_json, $name, $img)) {
+    if ($newPost->savePost($db_json, $name, $img, $site_url)) {
         $response = array('error' => false, 'message' => 'post published successfully');
     } else {
     $response = array('error' => true, 'message' => 'error occured while posting');
@@ -58,8 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $response['message'] = 'Error, please select an image';
         }
     }*/
-    header("Location: https://ziki.hng.tech/timeline.php");
-    //header('Location: http://localhost:8000/timeline.php');
+    header("Location: {$site_url}/timeline.php");
 }
 else {
     $data = file_get_contents("posts.json");

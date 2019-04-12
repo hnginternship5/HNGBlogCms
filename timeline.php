@@ -1,6 +1,7 @@
 <?php
 $title = "Timeline";
 include 'header.php';
+require_once "config.php";
  ?>
 <?php
 $_SESSION['accesstoken'] = true;
@@ -15,7 +16,7 @@ $_SESSION['accesstoken'] = true;
             }
 
             else{
-                header("Location: index.php");
+                header("Location: {$site_url}");
             }
         ?>
 
@@ -84,7 +85,7 @@ $_SESSION['accesstoken'] = true;
                     <div class="row">
                         <div class="col-md-12">
                             <div class="row d-flex flex-column post-section">
-                                <form method="POST" action="post.php">
+                                <form method="POST" action="<?php echo "{$site_url}/post.php" ?>">
                                     <textarea class="editable medium-editor-textarea post-input" type="text" name="body" placeholder="What’s happening?"></textarea>
 
                                     <div class="row mx-0 d-flex flex-row mt-auto justify-content-between">

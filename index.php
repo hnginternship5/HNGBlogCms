@@ -1,6 +1,10 @@
 <?php
 $title ="Welcome";
 include 'header.php';
+require_once "config.php";
+$link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] .  $_SERVER['REQUEST_URI']; 
+$site = (isset($site_url)) ? $site_url : die("please provide your site url in the config.php file.") ;
+$site_address = ($link == $site) ? $site : die("Your url is not the same as the url installed in the config.php file");
  ?>
 
 
@@ -38,8 +42,7 @@ include 'header.php';
         }
         rawFile.send(null);
     }
-        //const url = 'http://localhost:8000/post.php'; //uncomment if you want to test locally
-        const url = 'https://ziki.hng.tech/post.php';
+        const url = "<?php echo "{$site_url}/post.php" ?>";
         fetch(url)
         .then((resp) => resp.json())
         .then(function(data) {
@@ -77,7 +80,7 @@ include 'header.php';
 						</a>
                                                 <div class="col-md-12">
                                                     <div class="row">
-                                                        <p class="post-date">April 3, 2016</p>
+                                                        <p class="post-date">${card.post_timestamp}</p>
                                                     </div>
                                                 </div>
                                             </div>

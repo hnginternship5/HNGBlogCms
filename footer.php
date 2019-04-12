@@ -26,8 +26,7 @@ const $ = document.querySelector.bind(document)
         }
         rawFile.send(null);
     }
-        //const url = 'http://localhost:8000/post.php'; //uncomment if you want to test locally
-        const url = 'https://ziki.hng.tech/post.php';
+        const url = "<?php echo "{$site_url}/post.php" ?>"; 
         fetch(url)
         .then((resp) => resp.json())
         .then(function(data) {
