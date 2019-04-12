@@ -30,6 +30,7 @@
   --badge-text-color: var(--default-text-color);
   --sidebar-bg-color: var(--almost-white);
   --selected-sidebar-item-bg-color: white;
+  --chat-icon-color: var(--ziki-blue);
 
   /* not changed across themes */
   --default-btn-bg-color: #3869df;
@@ -71,6 +72,7 @@
   --badge-text-color: black;
   --sidebar-bg-color: var(--ziki-dark-blue);
   --selected-sidebar-item-bg-color: var(--default-bg-color);
+  --chat-icon-color: var(--ziki-gray);
 }
 
 html {
@@ -812,7 +814,7 @@ div.posts {
   background-color: var(--blog-item-bg-color);
   box-shadow: 0px 4px 13px var(--blog-item-shadow-color);
   border-radius: 11px;
-  margin-right: 45px;
+  margin-right: 10px;
   min-height: 200px;
 }
 
@@ -853,6 +855,26 @@ div.posts {
 
 .blog-item-author-avatar-wrapper {
   max-width: 50px;
+}
+
+.post-img {
+  max-height: 200px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.post-icon {
+  font-size: 1.5em;
+}
+
+.chat-icon {
+  color: var(--chat-icon-color);
+}
+
+.post-date {
+  font-weight: bold;
+  font-size: 0.8em;
+  margin: 10px 0;
 }
 
 .blog-item-author-avatar {
