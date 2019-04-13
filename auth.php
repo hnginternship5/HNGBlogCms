@@ -13,7 +13,6 @@ require_once './authentication/auth/googleinit.php';
     <link href="https://fonts.googleapis.com/css?family=Hind:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/base.css">
 </head>
-<<<<<<< HEAD
 <body class="">
     <main class="auth-main-container">
         <div class="auth-content-wrap">
