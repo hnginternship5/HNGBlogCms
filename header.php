@@ -10,355 +10,254 @@ extract($_SESSION);?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="theme-color" content="#ffffff">
+<?php if (isset($l)){ ?>
+  <title> <?php echo $name ?> Profile Settings</title>
+<?php } else {?>
     <title><?php echo $title; ?></title>
+  <?php }?>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <script type="text/javascript" src="assets/js/jquery-331.min.js"></script>
     <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Hind:400,500,700|Josefin+Sans:300|B612:700|Source+Sans+Pro:900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/newtm.css">
 
     <!-- Markdown cdn link -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+  <link rel="stylesheet" href="assets/css/theme1.css">
+  <style media="screen">
+  :root{
+      --blog-detail-header: #07223E;
+      --prev-next-bg: #f8f8f8;
+      --prev-next-text: #3667e7;
+  }
+  .dark{
+      --blog-detail-header: #fff;
+      --prev-next-bg: #104B87;
+      --prev-next-text: #fff;
+    }
+    .blog-details-fluid{
+        padding:  0;
+        marging:  0;
+    }
+    .blog-details-header{
+        color: var(--blog-detail-header);
+    }
 
-    <style type="text/css">
-        /** mylo carson 2019 */
-        p{
-            /*font-family: 'Amiri', serif;*/
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: 1.5em;
-            /*color: #2f2f2f;*/
-            color: #000;
-            letter-spacing: 0.02em;
+    .blog-details-date, .blog-details-image-description{
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .blog-details-content:first-child{
+        margin-top: 100px;
+    }
+    .blog-details-content > div{
+        margin: 50px 0;
+    }
+    .subscribe{
+        font-size: 18px;
+    }
+    .btn-tags{
+        background-color: var(--default-btn-bg-color);
+        color: var(--default-btn-text-color);
+    }
+    .tag-btns-area{
+        margin-left: 6rem!important;
+    }
+    .prev-next{
+      background-color: var(--prev-next-bg);
+      color: var(--prev-next-text);
+    }
+    .prev, .next{
+        width:50%;
+    }
+    @media screen and (max-width: 768px){
+      .blog-details-content > div, .blog-tools{
+          margin: 20px 0!important;
+          padding: 0!important;
+      }
+      .fav-comment, .subscribe{
+          padding:20px 0!important;
+      }
+      .tag-btns-area{
+        margin-left: 0!important;
+    }
+  }
+  </style>
+
+  <?php if (isset($l)) {?>
+    <style>
+
+        .m-4 {
+            margin: 0 !important ;
+        }
+    .content {
+        margin-top:  3rem;
+    }
+
+    .update {
+        margin-bottom:  3rem;
+    }
+
+
+    .user-profile-setting-form {
+        margin-top: 0;
+    }
+
+    .log {
+        background-color: transparent;
+        font-weight: bold;
+    }
+
+    .co.red {
+        color: (--ziki-red) !important ;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
         }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'B612', sans-serif;
-            /*font-weight: bold;*/
-        }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
 
-        html,body{
-            margin:0;
-            padding: 0;
-            overflow-x: hidden;
-            background-color: #fff;
-        }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
 
-        ul{
-            margin:0;
-            padding:0;
-        }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
 
-        .page-head{
-            min-height: 350px;
-            max-height: 400px;
-            background-image: url(../img/header.png);
-            background-attachment: fixed;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
+    input:checked + .slider {
+      background-color: #111;
+    }
 
-        .ziki-post{
-            color: white;
-            font-family: 'Source Sans Pro', sans-serif;
-        }
+    input:focus + .slider {
+      box-shadow: 0 0 1px #111;
+    }
 
-        div.header-caption{
-            margin-top: 40px;
-        }
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
 
-        h1.ziki-post{
-            font-size: 8em !important;
-        }
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
 
-        i.s-icons{
-            margin: 20px 5px;
-        }
+    .slider.round:before {
+      border-radius: 50%;
+    }
 
-        .posts-area{
-            padding-top: 30px;
-            padding-bottom: 80px;
-        }
-
-        div.posts{
-            margin-top: 40px;
-        }
-
-        .star{
-            color: #ffc107;
-        }
-
-        .liked{
-            color: red;
-        }
-
-        .blog-main-item{
-            background: #F8F8F8;
-            box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.12);
-            border-radius: 11px
-            min-height: 200px;
-            /*margin-left: 10px;*/
-            margin-right: 10px;
-        }
-
-        .post-img{
-            max-height: 200px;
-            border-top-left-radius: 15px;
-            border-bottom-left-radius: 15px;
-        }
-
-        .post-heading{
-            margin-top: 15px;
-        }
-
-        .post-text{
-            font-size: 1.4em;
-            line-height: normal;
-            color: #000000;
-        }
-
-        .read-more{
-            color: #449f44;
-            font-size: 0.8em;
-            font-weight: bold;
-        }
-
-        .post-icon{
-            font-size: 1.5em;
-            /*color: red;
-        */}
-
-        .chat-icon{color: #007bff;}
-
-        .spaced-icon{
-            margin-left: 15px;
-            margin-right: 15px;
-        }
-
-        .post-date{
-            font-weight: bold;
-            font-size: 0.8em;
-            margin: 10px 0;
-        }
-        .post-footer{
-            /*margin-bottom: 15px;*/
-        }
-
-        /*WYSIWYG*/
-        .editor{
-            width:100%;
-            min-height: 15rem;
-            margin: 2rem;
-            padding: 1rem;
-            font-size: 1.2rem;
-            box-shadow: 0 .1rem .4rem rgba(0,0,0,0.03);
-            border: none;
-            overflow-y: auto;
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin: 0 auto;
-        }
-        .editor:focus {
-            outline: none;
-        }
-        .toolbar{
-            display:grid;
-            grid-template-columns: repeat(auto-fit,minmax(20px,40px));
-            color: rgb(0, 0, 0);
-            grid-gap: 1rem;
-            padding: 1rem;
-            justify-content: center;
-            align-items:center;
-            opacity: 0;
-            transition: all 0.5s;
-        }
-        .tool{
-            border: none;
-            padding: 1rem;
-            background-color: rgba(0,0,0,0.03);
-        }
-        .status-area {
-            border-radius: 15px;
-            outline: none;
-        }
-        .form-control {
-            outline: none;
-            font-weight: bold;
-        }
-        /*editor code ends here*/
-        li{
-            list-style-type: none;
-        }
-
-        .profile-section{
-            background: rgba(243, 243, 243, 0.62);
-        }
-
-        .profile-main{
-            /*margin-top: 100px;*/
-        }
-
-        .profile-name{
-            font-family: 'B612', sans-serif;
-            font-style: normal;
-            line-height: normal;
-            text-align: center;
-            letter-spacing: -0.04em;
-            margin-bottom: 6px
-        }
-
-        .user-skills {
-            font-family: 'B612', sans-serif;
-            font-style: normal;
-            /*font-weight: 600;*/
-            font-size: 12px;
-            line-height: normal;
-            text-align: center;
-            margin-top: 6px;
-            margin-bottom: 16px;
-        }
-
-        .profile-motto{
-            font-family: 'Josefin Sans', sans-serif;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 1.1em;
-            line-height: normal;
-            text-align: center;
-            margin-top: 16px;
-            margin-bottom: 24px;
-        }
-
-        .menu-wrapper{
-            margin:68px 0;
-        }
-
-        .menu-item{
-            margin: 15px 0;
-        }
-
-        .line{
-            width: 50%;
-            height: 1px;
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-
-        .blog-item-img{
-            border-radius: 11px;
-            width: inherit;
-            height: 165px;
-        }
-
-        .blog-item-author-avatar-wrapper{
-            max-width: 50px;
-        }
-
-        .blog-item-author-avatar{
-            border-radius: 50%;
-            max-width: 70px;
-            height: 60px;
-            margin-right:  10px ;
-            border: 0.5px solid rgba(0, 0, 0, 0.5);
-        }
-
-        .post-section{
-            min-height: 160px;
-            background: #F8F8F8;
-            /*padding: 18px 30px;*/
-            margin-top: 30px;
-            /*margin-left: 48px;*/
-            /*margin-right: 45px;*/
-            /*margin-bottom: 22px;*/
-        }
-
-        .post-input{
-            background-color: transparent;
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: normal;
-            outline: 0;
-            border: 0;
-            padding: 5px;
-            color: #000000;
-            resize: none;
-        }
-
-        .post-filter{
-            font-style: normal;
-            font-weight: bold;
-            font-size: 13px;
-            line-height: normal;
-            letter-spacing: -0.05em;
-            color: #333333;
-        }
-
-        .post-filter-title{
-            font-weight: normal;
-        }
-
-        a{
-            text-decoration: none;
-            color: #449f44;;
-        }
-
-        a:hover, a:focus, a:visited{
-            text-decoration: none;
-            color: #000000;;
-        }
-
-        .pagination-section{
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
-
-        .padd{padding: 20px 0;}
-
-        /*Media query*/
-        @media (max-width: 576px) {
-            .post-img{
-                max-height: 200px;
-                border-radius: 15px 15px 0 0;
-            }
-
-            .blog-item-author-avatar{
-                z-index: 9999999;
-                position: relative;
-                top: 30px;
-            }
-
-            .posts{
-                margin-top: -20px;
-            }
-
-            .blog-main-item{
-                margin-left: 10px;
-            }
-
-            textarea{
-                min-height: 40vh !important;
-            }
-
-            .post-section{
-                min-width: 100%;
-                margin: 30px 0px;
-            }
-
-            .fa, .fas, .fab{
-                font-size: .9em;
-                padding: 5px;
-            }
-        }
-        .dark{
-            background: #07223e;
-        }
-        .dark h4, p{
-            color : white
-        }
     </style>
+
+  <style>
+      @media only screen and (min-width: 768px) {
+
+      .user-profile-setting-form {
+          width: 35%;
+  }
+
+      .motuns-content-container {
+          margin: 4rem;
+          padding-right: 1rem;
+      }
+
+      .logo-profile{
+          margin: 0 1rem;
+          }
+
+      .details {
+          display: flex;
+          justify-content: space-between;
+          margin: 0;
+      }
+
+      .update {
+          order:  2;
+      }
+      .upcase {
+          margin-top: -19rem;
+      }
+
+      .theme {
+          display: inline-block;
+          float: right;
+          margin-top: -25rem;
+          margin-right: -4rem;
+      }
+
+      .drop {
+          min-height: auto;
+          background-color: transparent;
+          color: black;
+          border: 1px solid black;
+          outline: none;
+          font-size:  14px;
+  }
+      .capitalize {
+          margin-left: 0;
+      }
+
+      .fl-r {
+          float:      right;
+          color:      red;
+      }
+      }
+      @media only screen and (min-width: 1024px) {
+
+    .logo-profile{
+      margin: 1rem;
+      }
+      .body {
+          width:  80%;
+          margin: auto;
+      }
+      @media only screen and (min-width: 1440px) {
+          .body {
+              width:  80%;
+              margin: auto;
+              padding: 0 5% 0 15%;
+      }
+
+      }
+
+  }
+  </style>
+<?php } ?>
 </head>
-<body id="setCssClass">
-  <div class="container-fluid">
+<?php if (isset($l)) {?>
+  <body class="" id="setCssClass">
+<?php }else {?>
+  <body class="" id="bodySwitch">
+  <?php } ?>
     <!-- mylo carson 2019-->

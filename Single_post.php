@@ -45,15 +45,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $response['message'] = 'Error, please select an image';
         }
     }
-    header("Location: {$site_url}timeline.php");
+    die(json_encode($response));
+    //header("Location: {$site_url}/timeline.php");
 }
 else {
     $data = file_get_contents("posts.json");
     $posts = json_decode($data, true);
     $getAllPosts = Post::fetchAllPosts($posts);
     $posts = array();
+    $need =  array('id' => $_GET['post']);
     if (!empty($getAllPosts)) {
         foreach ($getAllPosts as $blog) {
+          if (in_array($blog->getId(),$need)) {
+
             $postId = $blog->getId();
             $postBody = $blog->getStoryBody();
             $postPic = $blog->getStoryImage();
@@ -66,13 +70,14 @@ else {
             $post['post_image'] = $postPic;
             $post['post_timestamp'] = date("jS F, Y h:i:s A", strtotime($postTimestamp));
             array_push($posts, $post);
+          }
         }
         $result['error'] = false;
         $result['result'] = $posts;
     }
     else{
         $result['error'] = true;
-        $result['message'] = 'internal server error, please add a default post on installation.';
+        $result['message'] = 'internal server error';
     }
     echo(json_encode($result));
 }
