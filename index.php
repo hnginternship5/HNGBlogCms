@@ -29,6 +29,36 @@ $site_address = ($link == $site) ? $site : die("Your url is not the same as the 
         }
     }
 
+    .btn-secondary {
+      color: #fff;
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-secondary:hover {
+      color: #fff;
+      background-color: #007bff;
+      border-color: #007bff;
+      -webkit-box-shadow: -4px 10px 28px 0px rgba(0,123,255,1);
+      -moz-box-shadow: -4px 10px 28px 0px rgba(0,123,255,1);
+      box-shadow: -4px 10px 28px 0px rgba(0,123,255,1);
+    }
+
+    .btn-group {
+    display: inline;
+    }
+
+    .btn {
+      border-radius: 0px;
+    }
+
+    .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    }
+}
+
 </style>
 
 <div class="container-fluid">
@@ -36,17 +66,15 @@ $site_address = ($link == $site) ? $site : die("Your url is not the same as the 
         <a href="/timeline.php">
             <img class="img-fluid logo" src="assets/img/zikilogo.png">
         </a>
-        <button type="button" class="btn btn-primary align-self-end px-5" data-toggle="modal"
-            data-target="#exampleModalCenter">
-            Login
-        </button>
+        <div class="btn-group" role="group" aria-label="sample">
+  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">Login</button>
+  <a href="https://ziki.hng.tech/about-ziki.php"><button type="button" class="btn btn-secondary">About Ziki</button></a>
+</div>
+
     </div>
     <div class="container justify-content-center">
         <div class="col-md-12 col-12 posts-area">
-            <div class="load-more" style="text-align: center">
-              <img src="assets/img/ziki.gif" alt="">
-
-            </div>
+            <!-- Post feeds start here -->
 
         </div>
     </div>
@@ -72,7 +100,6 @@ $site_address = ($link == $site) ? $site : die("Your url is not the same as the 
             .then(function (data) {
                 console.log(data)
                 let res = data.result;
-
                 for (let i = 0; i < res.length; i++) {
                     let card = res[i];
                     console.log(card);
@@ -89,8 +116,7 @@ $site_address = ($link == $site) ? $site : die("Your url is not the same as the 
 
                                     <div class="col-md-9">
                                         <a href="/blog.php?id=${card.id}">
-
-                                            <div class="">${card.postDesc}</div>
+                                            <div class="markedcontent${i}"></div>
                                         </a>
                                         <div class="row post-footer mt-1">
                                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -115,15 +141,12 @@ $site_address = ($link == $site) ? $site : die("Your url is not the same as the 
                 `;
                     $('.posts-area').innerHTML += post_card;
                     readTextFile(card.markdown_url, i);
-                    $('.load-more').remove();
                 }
                 $('.load-more').remove();
             })
             .catch(function (error) {
                 console.log(error);
             });
-
-
         //$('body').style.background = '#ff1212'
     </script>
     <script>
