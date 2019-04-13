@@ -98,16 +98,6 @@ const $ = document.querySelector.bind(document)
                                 <img class="blog-item-author-avatar" src="${card.author_image}">
                             </div>
                             <div class="col-md-11 col-12">
-<<<<<<< HEAD
-                                <div class="row blog-main-item">
-                                    <div class="col-md-3 col-12">
-                                        <div class="row">
-                                            <img src="assets/img/wall.jpg" class="img-fluid post-img" alt="Profile Image">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-9 col-12">
-                                    <div class="markedcontent${i}"></div>
-=======
                                 <div class="row blog-item-main">
                                     <div class="col-md-3 col-12">
                                         <div class="row">
@@ -118,7 +108,6 @@ const $ = document.querySelector.bind(document)
                                     <a href="/blog.php?id=${card.id}">
                                         <div class="markedcontent${i}"></div>
                                     </a>
->>>>>>> 68c88ab55e42b62bb3bb3723cf311b5afc7f413d
                                         <div class="row post-footer">
                                             <div class="col-md-8 col-7">
                                                 <a href="#">
@@ -137,11 +126,7 @@ const $ = document.querySelector.bind(document)
                                                 </div>
                                             </div>
                                             <div class="col-md-4 col-5 text-right">
-<<<<<<< HEAD
-                                                <a href="/blog-detail.php"><i class="far fa-comment-alt post-icon chat-icon"></i></i></a>
-=======
                                                 <a href="/blog.php?id=${card.id}"><i class="far fa-comment-alt post-icon chat-icon"></i></i></a>
->>>>>>> 68c88ab55e42b62bb3bb3723cf311b5afc7f413d
                                             </div>
                                         </div>
                                     </div>
