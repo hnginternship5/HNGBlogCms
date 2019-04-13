@@ -223,7 +223,7 @@ input:checked + .slider:before {
                         Full Name*<br>
                         <input class="user-profile-input" type="text" name="firstname" placeholder="Dragon"<?php 
                              echo $name;
-                        ?>">
+                        ?>" disabled>
                         <br>
 
                         Email Address<br>
