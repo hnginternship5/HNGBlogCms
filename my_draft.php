@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $response['message'] = 'Error, please select an image';
         }
     }
-    die(json_encode($response));
+    header("Location: {$site_url}draft.php");
 }
 else {
     $data = file_get_contents("drafts.json");
