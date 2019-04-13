@@ -69,6 +69,8 @@ $site_address = ($link == $site) ? $site : die("Your url is not the same as the 
             .then(function (data) {
                 console.log(data)
                 let res = data.result;
+              //  count(data);
+                console.log(res.length);
                 for (let i = 0; i < res.length; i++) {
                     let card = res[i];
                     console.log(card);
@@ -85,7 +87,8 @@ $site_address = ($link == $site) ? $site : die("Your url is not the same as the 
 
                                     <div class="col-md-9">
                                         <a href="/blog.php?id=${card.id}">
-                                            <div class="markedcontent${i}"></div>
+
+                                            <div class="">${card.postDesc}</div>
                                         </a>
                                         <div class="row post-footer mt-1">
                                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -122,6 +125,27 @@ $site_address = ($link == $site) ? $site : die("Your url is not the same as the 
             .catch(function (error) {
                 console.log(error);
             });
+
+//function count(data) {
+
+//let res = data.result;
+  for (let i = 0; i < 6; i++) {
+    /* Count of paragraphs shown */
+   var cutCount = 2;
+
+    $("markedcontent0 p").each(function (i) {
+        0++;
+        if(i == cutCount) {
+            $(this).append(' <a href="javascript:void(1)" onclick="$(\'#testID p\').show(); $(this).hide()">Read more</b>')
+        }
+        if(i > cutCount) {
+           $(this).hide();
+        };
+      })
+
+
+  };
+//}
         //$('body').style.background = '#ff1212'
     </script>
     <script>

@@ -106,7 +106,7 @@ const $ = document.querySelector.bind(document)
                                     </div>
                                     <div class="col-md-8 col-10">
                                     <a href="/blog.php?id=${card.id}">
-                                        <div class="markedcontent${i}"></div>
+                                        <div class="">${card.postDesc}</div>
                                     </a>
                                         <div class="row post-footer">
                                             <div class="col-md-8 col-7">
