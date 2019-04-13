@@ -8,29 +8,19 @@ extract($_SESSION);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //$title = isset($_POST['title']) ? trim($_POST['title']) : null;
+    $default_img = $site_url.'/markdowns/post-images/blog-details.png';
     $body = isset($_POST['body']) ? trim($_POST['body']) : null;
-    //$file = $_FILES['image'];
+    $file = isset($_FILES['image']) ? $_FILES['image'] : $default_img;
     $user = $email;
-    $db_json = file_get_contents("posts.json");
-    $newPost = new Post();
-    $newPost->setUserId($user);
-    $newPost->setStoryBody($body);
-    //$newPost->setStoryTitle($title);
-    //$newPost->setStoryImage($target_file);
-    if ($newPost->savePost($db_json, $name, $img, $site_url)) {
-        $response = array('error' => false, 'message' => 'post published successfully');
-    } else {
-    $response = array('error' => true, 'message' => 'error occured while posting');
-    }
-    /*
-    $new_file_name = date('dmYHis').str_replace(" ", "", basename($_FILES['image']['name']));
+    $new_file_name = date('dmYHis').str_replace(" ", "", basename($file['name']));
     $image_type = strtolower(pathinfo($new_file_name, PATHINFO_EXTENSION));
     if ($image_type != "jpg" && $image_type != "png" && $image_type != "jpeg") {
         $response['error'] = true;
         $response['message'] = 'Please make sure you uploading your image';
     }
     else{
-        $target_file = SITE_ROOT.'/uploads/'.$new_file_name;
+        $target_file = SITE_ROOT.'/markdowns/post-images/'.$new_file_name;
+        $url_link = $site_url.'markdowns/post-images/'.$new_file_name;
         if ($file['error'] === 0) {
             $upload = move_uploaded_file($file['tmp_name'], $target_file);
             if ($upload) {
@@ -38,9 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $newPost = new Post();
                 $newPost->setUserId($user);
                 $newPost->setStoryBody($body);
-                $newPost->setStoryTitle($title);
-                $newPost->setStoryImage($target_file);
-                if ($newPost->savePost($db_json)) {
+                $newPost->setStoryImage($url_link);
+                if ($newPost->savePost($db_json, $name, $img, $site_url)) {
                     $response = array('error' => false, 'message' => 'post published successfully');
                 } else {
                     $response = array('error' => true, 'message' => 'error occured while posting');
@@ -55,8 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $response['error'] = true;
             $response['message'] = 'Error, please select an image';
         }
-    }*/
-    header("Location: {$site_url}/timeline.php");
+    }
+    header("Location: {$site_url}timeline.php");
 }
 else {
     $data = file_get_contents("posts.json");
@@ -66,7 +55,6 @@ else {
     if (!empty($getAllPosts)) {
         foreach ($getAllPosts as $blog) {
             $postId = $blog->getId();
-            //$postTitle = $blog->getStoryTitle();
             $postBody = $blog->getStoryBody();
             //$postPic = $blog->getStoryImage();
             $markdownLink = $blog->getMarkdownUrl();
@@ -75,7 +63,8 @@ else {
             $post['id'] = $postId;
             $post['author_image'] = $authPic;
             $post['markdown_url'] = $markdownLink;
-            $post['post_timestamp'] = date("jS F, Y", strtotime($postTimestamp));
+            $post['post_image'] = $postPic;
+            $post['post_timestamp'] = date("jS F, Y h:i:s A", strtotime($postTimestamp));
             array_push($posts, $post);
         }
         $result['error'] = false;
@@ -83,7 +72,7 @@ else {
     }
     else{
         $result['error'] = true;
-        $result['message'] = 'internal server error';
+        $result['message'] = 'internal server error, please add a default post on installation.';
     }
     echo(json_encode($result));
 }

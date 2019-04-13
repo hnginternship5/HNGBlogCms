@@ -1,33 +1,12 @@
-<?php include 'includes/config.php';
+<?php
+//include 'includes/config.php';
+//include 'config.php';
+//extract($_SESSION);
+$l="user";
+include 'header.php';
 //print_r($_SESSION);
-extract($_SESSION);?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#ffffff">
-    <title>Profile Setting</title>
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Hind:400,500,700" rel="stylesheet">
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/base.css">
-</head>
-<style>
-    @media only screen and (min-width: 768px) {
-    .logo-profile{
-        margin: 0 1rem;
-        }
-    }
-    @media only screen and (min-width: 1024px) {
-    
-  .logo-profile{
-    margin: 1rem;
-    }
-}
-</style>
+?>
+
 <?php
             if(isset($_SESSION['accesstoken'])){
   try{
@@ -40,65 +19,64 @@ extract($_SESSION);?>
             }
 
             else{
-                header("Location: index.php");
+                header("Location: $site_url");
             }
         ?>
-<body class="">
+
     <main class="motuns-main-container">
-        <section class="motuns-side-bar">
-        <div class="logo-area logo-profile">
-	      <a href="timeline.php">
-            <img src="assets/img/zikilogo.png" alt="" class="logo" />
-            </a>
-          </div>
-            
-            <p class="">
-                Profile
-            </p>
-        </section>
-        <div class="container">
-            <section class="motuns-content-container">
-                <h2>
-                    Settings
-                </h2>
+    <div class=" blog-item motuns-content-container">
+        <div class="d-flx">
+	   <a href="/timeline.php">
+            <img class="img-fluid logo" src="assets/img/zikilogo.png">
+	</a>
+            <a href="/logout.php"><button type="button" class="log" data-toggle="modal" data-target="#exampleModalCenter">
+             Log Out
+            </button></a>
+        </div>
+        <div class="body">
+            <section class="content">
                 <div class="details">
                     <div class="d-grid update">
-                        <img src="/assets/img/avatar-2.jpeg" alt="" class="avatar">
+                    <img src="<?php if (isset($img) && $img !==''){echo $img ;
+                    }else {
+                      echo "assets/img/noavatar92.png";
+                    }?>" alt="Not Found" onerror=this.src="assets/img/noavatar92.png" class="avatar" />
+                    <br/>
                         <button class="upcase user-profile-button">
                             update
                         </button>
                     </div>
-                    <form class="user-profile-setting-form" action="/action_page.php">
-                        First name:<br>
-                        <input class="user-profile-input" type="text" name="firstname" placeholder="Dragon">
+                    <form class="user-profile-setting-form" action="#">
+                        First Name*<br>
+                        <input class="user-profile-input" type="text" name="firstname" placeholder="Dragon"<?php
+                             echo $name;
+                        ?>">
                         <br>
-                        Last name:<br>
-                        <input class="user-profile-input" type="text" name="lastname" placeholder="Blade">
+
+                        Last Name*<br>
+                        <input class="user-profile-input" type="text" name="lastname" placeholder="Blade"<?php
+
+                        ?>">
                         <br>
-                        Email Address:<br>
-                        <input class="user-profile-input" type="text" name="firstname">
+
+                        Email Address*<br>
+                        <input class="user-profile-input" type="text" name="email" placeholder="<?php
+                             echo $email;
+                        ?>">
                         <br>
-                        Change password:<br>
+                        Change password*<br>
                         <input class="user-profile-input" type="text" name="lastname">
-
+                        <br>
+                        Github<br>
+                        <input class="user-profile-input" type="text" name="lastname" placeholder="http://github.com/myusername">
+                        <br>
+                        Dribble<br>
+                        <input class="user-profile-input" type="text" name="lastname" placeholder="http://dribbble.com/myusername">
                     </form>
-
-                </div>
-                <div class="sub">
-                  <div>
-                    <span class="btn mb-3 user-profile-button co-red">
-                        Delete account
-                    </span>
-                  </div>
-                    <p class="lang">
-                        Language
-                        <span class="en">
-                            en
-                        </span>
-                    </p>
                 </div>
             </section>
             <section class="theme">
+
                 <div>
                     <p>
                         Theme
@@ -115,16 +93,20 @@ extract($_SESSION);?>
                         Mode
                     </p>
                     <div class="d-flx no-justify">
-                        <div class="toggle">
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="9" cy="9" r="9" fill="black"/>
-                            </svg>
+                        <div class="">
+                        <label class="switch">
+                             <input type="checkbox" class="toggleFocus" id="toggleThemeMode">
+                             <span class="slider round"></span>
+                        </label>
                         </div>
-                        <p class="ml-1">
-                            Lori Lightfoot
+                        <p class="ml-1 themeModeLabel">
+                            Light Mode
                         </p>
                     </div>
                 </div>
+                <a role = "button" href = "delete_user.php" class="btn mb-3 user-profile-button co-red">
+                        Delete account
+                    </a>
             </section>
             <button  class="capitalize lang user-profile-button">
                 Save changes
@@ -132,4 +114,6 @@ extract($_SESSION);?>
         </div>
     </main>
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="SwitchTheme.js"></script>
 </html>
