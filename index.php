@@ -115,6 +115,7 @@ $site_address = ($link == $site) ? $site : die("Your url is not the same as the 
                 `;
                     $('.posts-area').innerHTML += post_card;
                     readTextFile(card.markdown_url, i);
+                    $('.load-more').remove();
                 }
                 $('.load-more').remove();
             })
