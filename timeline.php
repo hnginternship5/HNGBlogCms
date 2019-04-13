@@ -143,7 +143,7 @@ if (!isset($_SESSION['name'])) {
 
 <!-- Post feeds start here -->
 <div class="feeds">
-  <div class="" style="text-align: center">
+  <div class="load-more" style="text-align: center">
     <img src="assets/img/ziki.gif" alt="">
 
   </div>

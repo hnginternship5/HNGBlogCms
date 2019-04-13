@@ -54,6 +54,7 @@
                   `;
                   $('.blog').innerHTML += post_card;
                   readTextFile(card.markdown_url, i);
+                  $('.load-more').remove();
               }
           })
           .catch(function(error) {
@@ -139,6 +140,7 @@ const $ = document.querySelector.bind(document)
                 `;
                 $('.feeds').innerHTML += post_card;
                 readTextFile(card.markdown_url, i);
+                $('.load-more').remove();
             }
         })
         .catch(function(error) {

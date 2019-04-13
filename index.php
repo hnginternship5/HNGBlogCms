@@ -43,9 +43,9 @@ $site_address = ($link == $site) ? $site : die("Your url is not the same as the 
     </div>
     <div class="container justify-content-center">
         <div class="col-md-12 col-12 posts-area">
-            <div class="" style="text-align: center">
+            <div class="load-more" style="text-align: center">
               <img src="assets/img/ziki.gif" alt="">
-    
+
             </div>
 
         </div>
@@ -72,8 +72,7 @@ $site_address = ($link == $site) ? $site : die("Your url is not the same as the 
             .then(function (data) {
                 console.log(data)
                 let res = data.result;
-              //  count(data);
-                console.log(res.length);
+
                 for (let i = 0; i < res.length; i++) {
                     let card = res[i];
                     console.log(card);
@@ -124,32 +123,14 @@ $site_address = ($link == $site) ? $site : die("Your url is not the same as the 
                 `;
                     $('.posts-area').innerHTML += post_card;
                     readTextFile(card.markdown_url, i);
+                    $('.load-more').remove();
                 }
             })
             .catch(function (error) {
                 console.log(error);
             });
 
-//function count(data) {
 
-//let res = data.result;
-  for (let i = 0; i < 6; i++) {
-    /* Count of paragraphs shown */
-   var cutCount = 2;
-
-    $("markedcontent0 p").each(function (i) {
-        0++;
-        if(i == cutCount) {
-            $(this).append(' <a href="javascript:void(1)" onclick="$(\'#testID p\').show(); $(this).hide()">Read more</b>')
-        }
-        if(i > cutCount) {
-           $(this).hide();
-        };
-      })
-
-
-  };
-//}
         //$('body').style.background = '#ff1212'
     </script>
     <script>
