@@ -84,11 +84,7 @@ $site_address = ($link == $site) ? $site : die("Your url is not the same as the 
                                     </div>
 
                                     <div class="col-md-9">
-<<<<<<< HEAD
-                                        <a href="/blog-detail.php">
-=======
                                         <a href="/blog.php?id=${card.id}">
->>>>>>> upstream/fe-backend-dev
                                             <div class="markedcontent${i}"></div>
                                         </a>
                                         <div class="row post-footer mt-1">
@@ -101,17 +97,10 @@ $site_address = ($link == $site) ? $site : die("Your url is not the same as the 
                                                     </a>
                                                     <a href="#">
                                                 <span class="badge badge-primary">Academic</span>
-<<<<<<< HEAD
-					                            	</a>   
-                                            </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-end">
-                                                    <a href="/blog-detail.php"><i class="far fa-comment-alt post-icon chat-icon"></i></i></a>
-=======
 					                            	</a>
                                             </div>
                                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-end">
                                                     <a href="/blog.php?id=${card.id}"><i class="far fa-comment-alt post-icon chat-icon"></i></i></a>
->>>>>>> upstream/fe-backend-dev
                                                 </div>
                                         </div>
 
@@ -144,8 +133,4 @@ $site_address = ($link == $site) ? $site : die("Your url is not the same as the 
 
     </body>
 
-<<<<<<< HEAD
     </html>
-=======
-    </html>
->>>>>>> upstream/fe-backend-dev
