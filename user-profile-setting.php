@@ -46,32 +46,26 @@ include 'header.php';
                             update
                         </button>
                     </div>
-                    <form class="user-profile-setting-form" action="#">
+                    <form class="user-profile-setting-form" action="savechanges.php" method = "POST">
                         First Name*<br>
-                        <input class="user-profile-input" type="text" name="firstname" placeholder="Dragon"<?php
+                        <input class="user-profile-input" type="text" name="firstname" value="<?php
                              echo $name;
-                        ?>">
-                        <br>
-
-                        Last Name*<br>
-                        <input class="user-profile-input" type="text" name="lastname" placeholder="Blade"<?php
-
-                        ?>">
+                        ?>" disabled>
                         <br>
 
                         Email Address*<br>
-                        <input class="user-profile-input" type="text" name="email" placeholder="<?php
+                        <input class="user-profile-input" type="text" name="email" value="<?php
                              echo $email;
-                        ?>">
-                        <br>
-                        Change password*<br>
-                        <input class="user-profile-input" type="text" name="lastname">
+                        ?>" disabled>
                         <br>
                         Github<br>
-                        <input class="user-profile-input" type="text" name="lastname" placeholder="http://github.com/myusername">
+                        <input class="user-profile-input" type="text" name="git" placeholder="http://github.com/myusername">
                         <br>
                         Dribble<br>
-                        <input class="user-profile-input" type="text" name="lastname" placeholder="http://dribbble.com/myusername">
+                        <input class="user-profile-input" type="text" name="dribble" placeholder="http://dribbble.com/myusername">
+                        <button type = "submit" class="capitalize lang user-profile-button">
+                Save changes
+            </button>
                     </form>
                 </div>
             </section>
@@ -108,9 +102,7 @@ include 'header.php';
                         Delete account
                     </a>
             </section>
-            <button  class="capitalize lang user-profile-button">
-                Save changes
-            </button>
+           
         </div>
     </main>
 </body>
