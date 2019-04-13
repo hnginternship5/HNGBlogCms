@@ -75,11 +75,7 @@ else {
     }
     else{
         $result['error'] = true;
-        $result['message'] = '
-        {"error":false,"result":[{"id":"1","author_image":"/assets\img\zikilogo.png","markdown_url":"http:\/\/localhost:8000\/\/markdowns\/default\/default.md","post_image":"http:\/\/localhost:8000\/markdowns\/post-images\/blog-details.png","postDesc":"
-  Welcome","post_timestamp":"13th April, 2019 01:34:10 PM"}
-      }
-        ';
+        $result['message'] = 'internal server error, please add a default post on installation.';
     }
     echo(json_encode($result));
 }

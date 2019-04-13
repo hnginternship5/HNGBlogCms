@@ -69,7 +69,7 @@ include 'header.php';
     height: 34px;
     }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -132,8 +132,8 @@ input:checked + .slider:before {
 }
 
     .motuns-content-container {
-        margin: 4rem;  
-        padding-right: 1rem;  
+        margin: 4rem;
+        padding-right: 1rem;
     }
 
     .logo-profile{
@@ -143,7 +143,7 @@ input:checked + .slider:before {
     .details {
         display: flex;
         justify-content: space-between;
-        margin: 0;    
+        margin: 0;
     }
 
     .update {
@@ -178,7 +178,7 @@ input:checked + .slider:before {
     }
     }
     @media only screen and (min-width: 1024px) {
-    
+
   .logo-profile{
     margin: 1rem;
     }
@@ -219,26 +219,19 @@ input:checked + .slider:before {
                             update
                         </button>
                     </div>
-<<<<<<< HEAD
-                    <form class="user-profile-setting-form" action="savechanges.php" method = "POST">
-                        First Name*<br>
-                        <input class="user-profile-input" type="text" name="firstname" value="<?php
-=======
+
+
                     <form class="user-profile-setting-form" action="#">
                         Full Name*<br>
-                        <input class="user-profile-input" type="text" name="firstname" placeholder="<?php 
->>>>>>> b99cff4989e0969167093352facbf45b2c01a841
+                        <input class="user-profile-input" type="text" name="firstname" placeholder="<?php
+
                              echo $name;
                         ?>" disabled>
                         <br>
 
-<<<<<<< HEAD
-                        Email Address*<br>
-                        <input class="user-profile-input" type="text" name="email" value="<?php
-=======
-                        Email Address<br>
-                        <input class="user-profile-input" type="text" name="email" placeholder="<?php 
->>>>>>> b99cff4989e0969167093352facbf45b2c01a841
+          Email Address<br>
+                        <input class="user-profile-input" type="text" name="email" placeholder="<?php
+
                              echo $email;
                         ?>" disabled>
                         <br>
@@ -254,7 +247,7 @@ input:checked + .slider:before {
                 </div>
             </section>
             <section class="theme">
-                
+
                 <div>
                     <p>
                         Theme
@@ -286,11 +279,10 @@ input:checked + .slider:before {
                         Delete account
                     </a>
             </section>
-           
+
         </div>
     </main>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="SwitchTheme.js"></script>
 </html>
-

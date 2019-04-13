@@ -43,7 +43,10 @@ $site_address = ($link == $site) ? $site : die("Your url is not the same as the 
     </div>
     <div class="container justify-content-center">
         <div class="col-md-12 col-12 posts-area">
-            <!-- Post feeds start here -->
+            <div class="" style="text-align: center">
+              <img src="assets/img/ziki.gif" alt="">
+    
+            </div>
 
         </div>
     </div>
