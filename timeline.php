@@ -9,7 +9,7 @@ if (!isset($_SESSION['name'])) {
 
 <!-- code BELOW this line -->
 
-<p>Timeline Page</p> <!-- delete this -->
+<p>Post-login Timeline Page</p> <!-- delete this -->
 
 <!-- code ABOVE this line -->
 

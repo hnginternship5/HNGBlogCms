@@ -1,4 +1,3 @@
-<!-- mylo carson 2019-->
 <?php
 include 'includes/config.php';
 include 'config.php';

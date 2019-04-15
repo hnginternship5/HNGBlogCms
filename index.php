@@ -11,7 +11,7 @@ $site_address = ($link == $site) ? $site : die("Your url is not the same as the 
 
 <!-- code BELOW this line -->
 
-<p>Blog Page (before logging in)</p> <!-- delete this -->
+<p>Pre-login blog page</p> <!-- delete this -->
 
 <!-- code ABOVE this line -->
 
@@ -86,7 +86,5 @@ $('.load-more').remove();
 });
 //$('body').style.background = '#ff1212'
 </script>
-
-<?php include 'auth.php'; ?>
 
 <?php include 'footer.php'; ?>
