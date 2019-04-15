@@ -25,7 +25,7 @@ extract($_SESSION);
     <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Hind:400,500,700|Josefin+Sans:300|B612:700|Source+Sans+Pro:900" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/base.css">
+    <link rel="stylesheet" type="text/css" href="build/main.css?ver=<?php echo filemtime($_SERVER['DOCUMENT_ROOT'] . '/build/main.css'); ?>">
     <link rel="stylesheet" href="assets/css/newtm.css">
 
     <!-- Markdown cdn link -->
