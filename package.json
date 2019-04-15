@@ -1,0 +1,20 @@
+{
+  "name": "ziki",
+  "version": "1.0.0",
+  "description": "A self-hosted blogging web app.",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hnginternship5/ziki.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hnginternship5/ziki/issues"
+  },
+  "homepage": "https://github.com/hnginternship5/ziki#readme"
+}
