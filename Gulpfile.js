@@ -28,6 +28,12 @@ function watchCSS() {
   return gulp.watch(cssFiles, gulp.series(processCSS));
 }
 
+const phpFiles = './**/*.php';
+
+function watchPHP() {
+  return gulp.watch(phpFiles, browserSync.reload);
+}
+
 function phpServerInit() {
   // uses port 8080 because browser-sync will proxy it on 8000
   php.server({ base: './', port: 8080, keepalive: true });
@@ -37,6 +43,9 @@ function phpServerInit() {
 
 function startLocalhost() {
   watchCSS();
+
+  // need to resolve some issues with watching PHP files
+  // watchPHP();
 
   browserSync.init({
     proxy: 'localhost:8080',
