@@ -9,14 +9,19 @@ const browserSync = require('browser-sync').create();
 const cssFiles = 'assets/css/*.css';
 
 function processCSS() {
-  return gulp
-    .src(cssFiles)
-    .pipe(sourcemaps.init())
-    .pipe(cleanCSS())
-    .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
-    .pipe(concat('main.css'))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('build'));
+  return (
+    gulp
+      .src(cssFiles)
+      .pipe(sourcemaps.init())
+      .pipe(cleanCSS())
+      .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
+      .pipe(concat('main.css'))
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest('build'))
+
+      // live reload
+      .pipe(browserSync.stream())
+  );
 }
 
 function watchCSS() {
