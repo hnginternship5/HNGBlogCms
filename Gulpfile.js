@@ -35,8 +35,8 @@ function watchPHP() {
 }
 
 function phpServerInit() {
-  // uses port 8080 because browser-sync will proxy it on 8000
-  php.server({ base: './', port: 8080, keepalive: true });
+  // uses port 8000, browser-sync will proxy it on 9000
+  php.server({ base: './', port: 8000, keepalive: true });
 
   startLocalhost();
 }
@@ -48,8 +48,8 @@ function startLocalhost() {
   // watchPHP();
 
   browserSync.init({
-    proxy: 'localhost:8080',
-    port: 8000,
+    proxy: 'localhost:8000',
+    port: 9000,
     baseDir: './',
     open: true,
     notify: false
