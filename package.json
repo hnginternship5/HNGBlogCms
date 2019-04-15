@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/hnginternship5/ziki/issues"
   },
-  "homepage": "https://github.com/hnginternship5/ziki#readme"
+  "homepage": "https://github.com/hnginternship5/ziki#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sourcemaps": "^2.6.5"
+  }
 }
