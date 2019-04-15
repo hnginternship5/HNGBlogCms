@@ -1,7 +1,6 @@
 <!-- mylo carson 2019-->
-<?php include 'includes/config.php';
-//print_r($_SESSION);
-//if( $user->is_logged_in() ){ header('Location: timeline.php'); }
+<?php
+include 'includes/config.php';
 include 'config.php';
 extract($_SESSION);
 
@@ -12,10 +11,8 @@ extract($_SESSION);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="msapplication-TileColor" content="#ffffff">
-      <meta name="theme-color" content="#ffffff">
 <?php if (isset($l)){ ?>
-  <title> <?php echo $name ?> Profile Settings</title>
+  <title>Page Title</title> <!-- needs to be set -->
 <?php } else {?>
     <title><?php echo $title; ?></title>
   <?php }?>
@@ -34,7 +31,7 @@ extract($_SESSION);
 </head>
 <?php if (isset($l)) {?>
   <body class="" id="setCssClass">
-<?php }else {?>
+<?php } else {?>
   <body class="" id="bodySwitch">
-  <?php } ?>
-    <!-- mylo carson 2019-->
+<?php } ?>
+  <div class="container">
