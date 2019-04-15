@@ -3,3 +3,4 @@
 posts.json
 /posts.json
 node_modules/
+build/
