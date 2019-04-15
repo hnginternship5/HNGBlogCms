@@ -3,14 +3,47 @@ const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
+const php = require('gulp-connect-php');
+const browserSync = require('browser-sync').create();
 
-gulp.task('css', () =>
-  gulp
-    .src('assets/css/*.css')
+const cssFiles = 'assets/css/*.css';
+
+function processCSS() {
+  return gulp
+    .src(cssFiles)
     .pipe(sourcemaps.init())
     .pipe(cleanCSS())
     .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
     .pipe(concat('main.css'))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('build'))
-);
+    .pipe(gulp.dest('build'));
+}
+
+function watchCSS() {
+  return gulp.watch(cssFiles, gulp.series(processCSS));
+}
+
+function phpServerInit() {
+  // uses port 8080 because browser-sync will proxy it on 8000
+  php.server({ base: './', port: 8080, keepalive: true });
+
+  startLocalhost();
+}
+
+function startLocalhost() {
+  watchCSS();
+
+  browserSync.init({
+    proxy: 'localhost:8080',
+    port: 8000,
+    baseDir: './',
+    open: true,
+    notify: false
+  });
+}
+
+function devStart(done) {
+  gulp.series(processCSS, phpServerInit, startLocalhost)(done);
+}
+
+gulp.task(devStart);
